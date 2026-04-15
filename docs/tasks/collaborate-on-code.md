@@ -3,41 +3,65 @@
 ## When to use this
 
 You want to:
-
-- work with others on code or scripts
-- track changes and versions of your work
-- share code across a team or project
-- manage contributions from multiple people
+- work on code with others
+- manage versions of your code
+- track changes and contributions
 
 ---
 
-## What this involves
+## What you need to decide first
 
-Collaborating on code at UCT typically uses:
+1. **Where will your code be hosted?**
+   - GitLab (UCT)
+   - GitHub or external platform
 
-- Git-based version control to track changes
-- UCT GitLab for hosting and collaboration
-- Shared workflows to coordinate development and analysis
+2. **Who needs access?**
+   - private (restricted collaborators)
+   - public (open collaboration)
 
----
-
-## Start here
-
-1. **Use GitLab for collaboration**
-   - [UCT GitLab](../services/research-software/uct-gitlab.md)
-
-2. **Set up and manage your project**
-   - (how-to coming soon)
-
-3. **Run your code where needed**
-   - [Run large-scale analysis](run-large-scale-analysis.md)
+3. **How will changes be managed?**
+   - individual work with occasional updates  
+   - collaborative development with branches and reviews  
 
 ---
 
-## If you are not sure
+## Recommended path
 
-- Not sure how Git-based collaboration works?  
-  → [Research software service overview](../services/research-software/index.md)
+1. Create or clone a repository  
+   → Service: Research software / GitLab  
 
-- Need to understand how code fits into research workflows?  
-  → [HPC reference](../reference/hpc/index.md)
+2. Structure your project  
+   - code  
+   - data (if appropriate)  
+   - documentation  
+
+3. Use version control  
+   - commit changes regularly  
+   - push updates to remote repository  
+
+---
+
+## Common mistakes
+
+- working without version control  
+- storing large data directly in repositories  
+- unclear project structure  
+- not documenting how to run code  
+
+---
+
+## If your situation is different
+
+- **Working on HPC**  
+  → clone repositories into your project directory  
+
+- **Large data dependencies**  
+  → store data separately from code  
+
+---
+
+## Next steps
+
+- document how to run your code  
+- tag versions for reproducibility  
+- share repository with collaborators

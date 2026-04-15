@@ -3,42 +3,65 @@
 ## When to use this
 
 You want to:
-
-- run analyses that take a long time
+- run analyses that take hours or days
 - process large datasets
-- scale work across multiple cores or nodes
-- use GPUs for compute-intensive workloads
+- scale work across CPUs or GPUs
 
 ---
 
-## What this involves
+## What you need to decide first
 
-Running large-scale analysis at UCT typically uses:
+1. **Does your job fit on a single machine?**
+   - yes → use a single-node job
+   - no → you may need parallel or distributed computing
 
-- HPC for compute
-- research data storage for input and output data
-- data transfer tools to move data between systems
+2. **Does your workload need GPUs?**
+   - yes → request GPU access and use a GPU partition
+   - no → use CPU partitions
 
----
-
-## Start here
-
-1. **Use HPC**  
-   [HPC service overview](../services/hpc/index.md)
-
-2. **Understand how jobs run**  
-   [Scheduler and job submission](../reference/hpc/scheduler-and-job-submission.md)
-
-3. **Check storage and data movement**  
-   [Storage and file systems](../reference/hpc/storage-and-file-systems.md)  
-   [Data transfer and movement](../reference/hpc/data-transfer-and-movement.md)
-
-4. **If you need GPUs**  
-   [GPU access and partitions](../reference/hpc/gpu-access-and-partitions.md)
+3. **Where will your data live during computation?**
+   - large data → `/scratch`
+   - small inputs → `/home`
 
 ---
 
-## If you are not sure
+## Recommended path
 
-- Not sure if HPC is the right fit? → [Choose the right service](../start-here/choose-the-right-service.md)
-- Need help? → [Support](../support/index.md)
+1. Prepare your working directory  
+   → How-to: Manage files and storage
+
+2. Load required software  
+   → How-to: Use software modules
+
+3. Create a job script  
+   → How-to: Submit a job
+
+4. If needed, configure GPU usage  
+   → How-to: Use GPUs
+
+---
+
+## Common mistakes
+
+- running work on the login node instead of submitting jobs  
+- writing large data to `/home` instead of `/scratch`  
+- requesting more resources than needed, leading to long queue times  
+- skipping small test runs before scaling  
+
+---
+
+## If your situation is different
+
+- **Interactive or exploratory work**  
+  → Use Open OnDemand or interactive jobs
+
+- **Workflow automation or pipelines**  
+  → Structure jobs as repeatable scripts
+
+---
+
+## Next steps
+
+- Monitor job progress  
+- Review output and logs  
+- Move results to persistent storage

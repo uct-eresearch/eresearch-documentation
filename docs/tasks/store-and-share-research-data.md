@@ -3,39 +3,66 @@
 ## When to use this
 
 You want to:
-
-- store research data securely
-- organise data for ongoing work
+- store research data during a project
 - share data with collaborators
-- prepare data for publication or long-term access
+- prepare data for publication or archiving
 
 ---
 
-## What this involves
+## What you need to decide first
 
-Storing and sharing research data at UCT typically uses:
+1. **Is this active or long-term data?**
+   - active → use HPC or working storage
+   - long-term → use RDS or managed storage
 
-- research data storage services for secure and managed storage
-- data transfer tools to move data between systems and people
-- access controls to manage who can view or use the data
+2. **Where is your data currently located?**
+   - local machine
+   - HPC
+   - institutional storage
 
----
-
-## Start here
-
-1. **Use research data storage**  
-   [Research data storage service](../services/storage/index.md)
-
-2. **Move or share data**  
-   [Data transfer service](../services/data-transfer/index.md)
-
-3. **Understand storage and movement constraints**  
-   [Storage and file systems](../reference/hpc/storage-and-file-systems.md)  
-   [Data transfer and movement](../reference/hpc/data-transfer-and-movement.md)
+3. **Who needs access?**
+   - only you
+   - internal collaborators
+   - external collaborators
 
 ---
 
-## If you are not sure
+## Recommended path
 
-- Not sure where your data should live? → [Choose the right service](../start-here/choose-the-right-service.md)
-- Need help? → [Support](../support/index.md)
+1. Store active data appropriately  
+   → Service: Research data storage  
+   → Reference: Storage and file systems
+
+2. Move data between systems  
+   → Service: Data transfer  
+   → Reference: Data transfer and movement
+
+3. Manage access and sharing  
+   → Use appropriate access controls or transfer tools
+
+---
+
+## Common mistakes
+
+- storing long-term data on HPC `/scratch`  
+- duplicating large datasets unnecessarily  
+- transferring data repeatedly instead of synchronising  
+- not planning where final data will live  
+
+---
+
+## If your situation is different
+
+- **Large datasets (100GB+)**  
+  → use efficient transfer tools (e.g. rsync, Globus)
+
+- **Sensitive or restricted data**  
+  → confirm storage and sharing requirements before transfer
+
+---
+
+## Next steps
+
+- document where your data is stored  
+- clean up unused or duplicate data  
+- prepare datasets for reuse or publication

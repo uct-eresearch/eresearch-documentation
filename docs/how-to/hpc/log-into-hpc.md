@@ -1,8 +1,8 @@
-# Connect to HPC
+# Logging into the HPC
 
 ## Purpose
 
-Connect to the HPC system to prepare work, submit jobs, and inspect results.
+Log in to the HPC system to prepare work, submit jobs, and inspect results.
 
 ---
 
@@ -15,7 +15,7 @@ You need:
 
 ---
 
-## Connect
+## Logging in
 
 ```bash
 ssh <username>@hpc.uct.ac.za
