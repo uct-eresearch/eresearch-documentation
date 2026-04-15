@@ -2,79 +2,62 @@
 
 ## Purpose
 
-Organise, inspect, and control data on HPC systems.
+Organise files and prepare data for computation.
 
 ---
 
-## Storage types (conceptual)
-
-- home
-- project
-- scratch
-
-Each differs in:
-- performance
-- persistence
-- quota
-
----
-
-## Structure
+## Create a project directory
 
 ```bash
-~/project/
-  code/
-  data/
-  results/
-  logs/
+mkdir -p ~/projects/my-project
+cd ~/projects/my-project
 ```
 
 ---
 
-## Key commands
+## Create a structure
+
+```bash
+mkdir -p code data results logs
+```
+
+---
+
+## Inspect storage
 
 ```bash
 ls -lah
 du -sh .
-df -h
+df -h .
 ```
 
 ---
 
-## Movement
+## Move and organise files
 
 ```bash
-cp
-mv
-rm
+cp input.txt data/
+mv results.txt results/
 ```
 
 ---
 
-## Constraints
+## Remove files
 
-- avoid duplication
-- do not misuse scratch for long-term storage
-- respect quotas
-
----
-
-## Common issues
-
-- disk full
-- permission denied
-- missing outputs
+```bash
+rm unwanted-file.txt
+```
 
 ---
 
-## Good practice
+## Notes
 
-- structured directories
-- explicit naming
-- clean up intermediates
+- Use `/home` for code and small files  
+- Use `/scratch` for large data and job output  
 
 ---
 
-## Next step
+## Next
 
-use-software-modules.md
+- Use software modules  
+- Submit a job

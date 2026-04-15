@@ -1,123 +1,74 @@
 # GPU access and partitions
 
-## Using GPUs on UCT HPC
+## Overview
 
-Some HPC workloads require access to **Graphics Processing Units (GPUs)**, which provide accelerated computation for tasks such as machine learning, simulation, and data processing.
+GPU resources provide accelerated computation for suitable workloads.
 
-GPU resources on HPC are limited and managed separately from standard CPU resources.
-
----
-
-## GPU access is not enabled by default
-
-Access to GPU resources is **not automatically granted**.
-
-You typically need to:
-- request access
-- provide a justification for your use case
-- obtain approval before submitting GPU jobs
-
-This ensures fair and appropriate use of specialised resources.
+They are limited and managed separately from standard CPU resources.
 
 ---
 
-## What GPUs are used for
+## Access
 
-GPUs are suited to workloads such as:
+GPU access is not enabled by default.
 
-- machine learning and deep learning  
-- large-scale numerical simulations  
-- image and signal processing  
-- parallelisable data processing tasks  
+You must be granted access before submitting GPU jobs.
 
-Not all workloads benefit from GPUs. Many analyses run more efficiently on standard CPU resources.
+Jobs that request GPUs without access will not start.
 
 ---
 
-## Partitions
+## GPU partitions
 
-HPC resources are organised into **partitions**, which group compute nodes with similar capabilities.
+GPU-enabled nodes are grouped into specific partitions, such as:
 
-GPU-enabled nodes are typically accessed through a **specific GPU partition**.
+- `l40s`
+- `a100`
 
-To use GPUs, your job must:
-- request GPU resources
-- target the appropriate partition
+Check available partitions:
 
----
-
-## Requesting GPU resources
-
-When submitting a job, GPU usage is specified in the job script.
-
-This typically includes:
-- selecting the GPU partition
-- requesting one or more GPUs
-- defining CPU, memory, and time requirements alongside GPU usage
-
-→ See job submission details: `Reference > HPC > Scheduler and job submission`
+```bash
+sinfo
+```
 
 ---
 
-## Resource constraints
+## Requesting GPUs
 
-GPU resources are:
-- limited in number  
-- shared across users  
-- often in high demand  
+Example job configuration:
 
-This means:
-- jobs may wait longer in the queue  
-- over-requesting resources can delay scheduling  
-- efficient usage is important  
+```bash
+#SBATCH --partition=l40s
+#SBATCH --gres=gpu:l40s:1
+```
+
+The partition and GPU type must match.
 
 ---
 
-## Good usage practices
+## Behaviour
 
-- only request GPUs if your workload requires them  
-- test your code on CPUs before scaling to GPUs  
-- request the minimum number of GPUs needed  
-- release resources promptly by ending jobs when complete  
+GPU jobs:
+- may queue longer due to limited availability
+- require correct configuration to use GPU resources
+
+Not all workloads benefit from GPUs.
 
 ---
 
 ## Common issues
 
-### Job does not start
+Jobs may not start if:
+- GPU access has not been granted
+- incorrect partition is specified
 
-- GPU resources may not be available  
-- check whether you are using the correct partition  
-- verify that you have GPU access enabled  
-
----
-
-### Poor performance
-
-- not all code is GPU-optimised  
-- ensure your software is configured to use GPUs  
-- confirm that your workload benefits from parallel execution  
+GPUs may not be used if:
+- software is not configured for GPU execution
 
 ---
 
-### Access denied
+## Good practice
 
-- GPU access has not been approved  
-- contact support or follow the appropriate request process  
-
----
-
-## Relationship to other resources
-
-- **CPU-based jobs** → run on standard compute nodes  
-- **GPU-based jobs** → run on specialised nodes in GPU partitions  
-- **Storage** → both use the same `/home` and `/scratch` systems  
-
----
-
-## Related pages
-
-- HPC overview → `Services > HPC`
-- Scheduler and job submission → `Reference > HPC > Scheduler and job submission`
-- Storage → `Reference > HPC > Storage and file systems`
-- Support → `Support`
+- test workflows on CPU first
+- request only the GPUs required
+- confirm configuration before scaling

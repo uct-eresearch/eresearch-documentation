@@ -2,19 +2,11 @@
 
 ## Purpose
 
-Load and manage software environments.
+Load software environments required for your work.
 
 ---
 
-## Why modules exist
-
-- avoid conflicts
-- support multiple versions
-- isolate environments
-
----
-
-## Discover
+## List available modules
 
 ```bash
 module avail
@@ -22,15 +14,15 @@ module avail
 
 ---
 
-## Load
+## Load a module
 
 ```bash
-module load python
+module load python/miniconda3-py3.12
 ```
 
 ---
 
-## Verify
+## Check loaded modules
 
 ```bash
 module list
@@ -39,7 +31,7 @@ which python
 
 ---
 
-## Unload
+## Unload a module
 
 ```bash
 module unload python
@@ -47,21 +39,12 @@ module unload python
 
 ---
 
-## Common issues
+## Notes
 
-- wrong version loaded
-- missing dependency
-- module not found
+Load modules inside job scripts to ensure consistent environments.
 
 ---
 
-## Good practice
+## Next
 
-- explicitly load modules in job scripts
-- avoid relying on defaults
-
----
-
-## Next step
-
-submit-a-job.md
+- Submit a job

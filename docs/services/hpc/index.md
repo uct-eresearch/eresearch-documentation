@@ -40,7 +40,7 @@ HPC gives researchers access to:
 - high-performance storage integration
 - a platform for running research software at scale
 
-UCT HPC uses scheduled job submission rather than direct execution on shared infrastructure, and the reference section already separates core topics such as scheduling, storage, GPU access, graphical applications, and Open OnDemand. :contentReference[oaicite:1]{index=1}
+UCT HPC uses scheduled job submission rather than direct execution on shared infrastructure, and the reference section already separates core topics such as scheduling, storage, GPU access, graphical applications, and Open OnDemand. 
 
 ---
 

@@ -2,45 +2,40 @@
 
 ## Purpose
 
-Establish a secure connection to the HPC system so you can:
-- access files
-- prepare jobs
-- inspect outputs
+Connect to the HPC system to prepare work, submit jobs, and inspect results.
 
 ---
 
-## Preconditions
+## Before you begin
 
-You must have:
-- HPC access approved
-- valid credentials
-- a terminal or browser
+You need:
+- approved HPC access
+- your username
+- a terminal (Linux/macOS) or SSH client (Windows)
 
 ---
 
-## SSH connection
+## Connect
 
 ```bash
-ssh <username>@<host>
+ssh <username>@hpc.uct.ac.za
 ```
 
-On first login:
-- accept host key
-- complete authentication
+If you are off-campus, connect via VPN first.
 
 ---
 
-## Validate environment
+## Confirm connection
 
 ```bash
-hostname
 whoami
+hostname
 pwd
 ```
 
 ---
 
-## Working directory setup
+## Create a working directory
 
 ```bash
 mkdir -p ~/projects/my-project
@@ -49,26 +44,7 @@ cd ~/projects/my-project
 
 ---
 
-## Open OnDemand (optional)
+## Next
 
-Use browser-based access for:
-- file browsing
-- light interactive work
-- graphical tools
-
-See:
-../../reference/hpc/open-ondemand.md
-
----
-
-## Constraints
-
-- do not run heavy compute on login nodes
-- use scheduler for all compute jobs
-
----
-
-## Next step
-
-Proceed to:
-submit-a-job.md
+- [Manage files and storage](./manage-files-and-storage.md)  
+- [Submit a job](./submit-a-job.md)
