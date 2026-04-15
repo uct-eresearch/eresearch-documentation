@@ -1,200 +1,123 @@
 # High Performance Computing (HPC)
 
-## What this service is
+## Run large-scale analyses on shared compute infrastructure
 
-The UCT High Performance Computing (HPC) service is a shared computing cluster designed to support data-intensive and computationally demanding research.
+The UCT High Performance Computing (HPC) service provides access to powerful shared computing resources for running large-scale, compute-intensive research workloads.
 
-It provides access to:
-- large-scale compute resources (CPUs, GPUs, high-memory nodes)
-- parallel processing capabilities
-- a controlled, multi-user research environment
-
-HPC allows you to run analyses that would be too slow or impossible on a personal computer.
-
----
-
-## Who this is for
-
-HPC is suitable for researchers who:
-
-- work with large datasets
-- run long or computationally intensive analyses
-- need parallel processing or batch execution
-- require specialised resources (e.g. GPUs, large RAM)
-
-It is commonly used in:
-- bioinformatics
-- engineering and physics simulations
-- machine learning and AI workflows
-- data science and large-scale statistical analysis
-
----
-
-## How HPC works at UCT
-
-The HPC system is a **cluster-based environment** made up of:
-
-- a **login (head) node**  
-  → where you connect and prepare your work
-
-- multiple **compute (worker) nodes**  
-  → where your jobs are executed
-
-- a **job scheduler** (e.g. SLURM)  
-  → manages how jobs are queued and run across the cluster
-
-You do not run analysis directly on the login node.  
-Instead, you submit jobs to the scheduler, which allocates resources and runs them on available compute nodes.
-
----
-
-## How work is done
-
-HPC uses a **job-based workflow**, not an interactive one.
-
-Typical workflow:
-
-1. Connect to the cluster via SSH  
-2. Prepare a job script (resources + commands)  
-3. Submit the job to the scheduler  
-4. The system runs the job when resources are available  
-5. Results are written to output files  
-
-This allows:
-- efficient use of shared resources
-- reproducible and scalable workflows
-- unattended execution of long-running jobs
-
----
-
-## Storage on HPC
-
-HPC provides two main types of storage:
-
-### `/home`
-- small, persistent storage
-- used for scripts, configuration, and small files
-- limited quota
-
----
-
-### `/scratch`
-- high-performance temporary storage
-- used during active computation
-- not intended for long-term storage
-- **not backed up**
-
----
-
-### When to use external storage (RDS)
-
-For most research workflows, you should use HPC together with the Research Data Store (RDS):
-
-Use RDS when:
-- your data is large or long-lived
-- you need reliable storage between jobs
-- you exceed HPC storage limits
-
-RDS can be mounted on HPC and provides:
-- persistent storage
-- backup and recovery
-- high-performance access
-
-→ See: [Research data storage](../storage/index.md)
-
----
-
-## What HPC supports
-
-The HPC service supports:
-
-- batch job execution via scheduler
-- parallel computing (multi-core, distributed jobs)
-- GPU workloads
-- custom research software environments
-- command-line workflows (Linux-based)
-
-Researchers can:
-- install and run their own software (within guidelines)
-- automate workflows through scripts
-- scale analyses across multiple nodes
-
----
-
-## What HPC does not provide
-
-It is important to understand what HPC is not:
-
-- not a desktop environment  
-- not designed for interactive, GUI-based work  
-- not a storage service for long-term data  
-- not suitable for small, lightweight tasks  
-
-If your work fits comfortably on a laptop or workstation, HPC is not necessary.
-
----
-
-## Constraints and responsibilities
-
-Because HPC is a shared resource:
-
-- jobs must be submitted through the scheduler  
-- heavy computation on login nodes is not allowed  
-- resources (CPU, memory, time) must be requested appropriately  
-- inefficient use of resources affects other users  
-
-Researchers are expected to:
-- test jobs on small datasets first
-- request only the resources they need
-- structure workflows for batch execution
-
----
-
-## How HPC fits with other services
-
-HPC is most effective when used together with other UCT services:
-
-- **RDS (Research Data Store)**  
-  → for storing and managing large datasets
-
-- **GitLab**  
-  → for version control and collaboration on code
-
-- **Data transfer tools (e.g. Globus, Nextcloud)**  
-  → for moving data to and from the cluster
-
-These services work together as part of a complete research workflow.
+It is designed for workloads that go beyond what a personal computer or standard server can handle.
 
 ---
 
 ## When to use HPC
 
-Use HPC when:
-- your analysis is too slow or large for local machines
-- you need parallel processing or batch jobs
-- your workflow requires GPUs or high-memory nodes
+Use HPC if you need to:
 
-If you are unsure:
-→ [Choose the right service](../../start-here/choose-the-right-service.md)
+- run long or computationally intensive analyses  
+- process large datasets  
+- run parallel or batch workloads  
+- use specialised resources such as GPUs  
+
+If your work involves small datasets, interactive analysis, or simple scripting, HPC is likely not necessary.
 
 ---
 
-## Get started
+## How HPC works (in brief)
+
+HPC is a shared system where:
+
+- you connect to a **login node** to prepare your work  
+- you submit jobs to a **scheduler**  
+- your jobs run on **compute nodes**  
+- results are written to shared storage  
+
+Work is not run directly on the login node. Instead, all compute-intensive tasks are submitted as jobs.
+
+→ See technical details: `Reference > HPC > Scheduler and job submission`
+
+---
+
+## What HPC supports
+
+HPC supports a wide range of research workloads, including:
+
+- simulations and modelling  
+- data analysis pipelines  
+- machine learning and AI workloads  
+- batch processing of large datasets  
+
+Work is typically done via the command line in a Linux environment.
+
+---
+
+## Storage on HPC
+
+HPC provides two main storage areas:
+
+- `/home` for code and small files  
+- `/scratch` for active computations and temporary data  
+
+You should run jobs using data in `/scratch` and move important results to long-term storage when complete.
+
+→ See full details: `Reference > HPC > Storage and file systems`
+
+---
+
+## GPUs and specialised resources
+
+Some HPC resources, such as GPUs, are not enabled by default and may require a request or approval process.
+
+→ See details: `Reference > HPC > GPU access and partitions`
+
+---
+
+## How HPC fits into your workflow
+
+HPC is typically used alongside other services:
+
+- **RDS** → for long-term storage of research data  
+- **Data transfer tools** → to move data to and from HPC  
+- **GitLab** → for version control and collaboration on code  
+
+A typical workflow:
+1. develop code locally or in GitLab  
+2. transfer data to HPC  
+3. run analysis on HPC  
+4. move results to RDS or another storage system  
+
+---
+
+## Getting started
 
 To begin using HPC:
 
-- → [Log into HPC](../../how-to/hpc/log-into-hpc.md)  
-- → [Submit your first job](../../how-to/hpc/submit-your-first-job.md)
+- apply for access  
+- connect to the system  
+- prepare and submit your first job  
+
+→ See:
+- `How-to > Log into HPC`
+- `How-to > Submit your first job`
 
 ---
 
-## Related tasks
+## Important considerations
 
-- → [Run large-scale analysis](../../tasks/run-large-scale-analysis.md)  
-- → [Store and share research data](../../tasks/store-and-share-research-data.md)
+HPC is a shared resource. This means:
+
+- resources are allocated through a scheduler  
+- usage must follow service policies  
+- misuse (e.g. running heavy workloads on login nodes) may result in restrictions  
+
+→ See: `Reference > HPC > Policies and service conditions`
 
 ---
 
 ## Need help?
 
-- → [Support](../../support/index.md)
+If you need assistance with:
+
+- access or accounts  
+- troubleshooting jobs  
+- software availability  
+
+→ See: `Support`
