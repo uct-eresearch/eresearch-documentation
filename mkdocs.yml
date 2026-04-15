@@ -1,12 +1,13 @@
 site_name: UCT eResearch Documentation
-site_url: 
+site_description: Research computing, software, data, and infrastructure guidance at the University of Cape Town
+site_url: https://uct-eresearch.github.io/eresearch-documentation/
 
 use_directory_urls: true
 
 theme:
   name: material
-  logo: 
-  favicon: 
+  logo: assets/images/eresearch-logo.png
+  favicon: assets/images/favicon.png
   features:
     - navigation.top
     - navigation.tabs
@@ -28,6 +29,8 @@ theme:
 
   palette:
     - scheme: default
+      primary: custom
+      accent: custom
 
 extra_css:
   - stylesheets/extra.css
@@ -77,9 +80,10 @@ plugins:
   - glightbox
   - search
 
-
-
 extra:
+  homepage: /
+  social: []
+  generator: false
   consent:
     title: Cookie consent
     description: >- 
