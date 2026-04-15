@@ -1,67 +1,77 @@
-# Collaborate on code
+# Collaborate on Code
 
-## When to use this
+## What you are trying to do
 
-You want to:
-- work on code with others
-- manage versions of your code
-- track changes and contributions
+You want to work with others on code in a structured and reproducible way.
+
+This typically involves:
+- sharing code with collaborators
+- tracking changes over time
+- coordinating contributions across a team
 
 ---
 
-## What you need to decide first
+## Key decisions
 
-1. **Where will your code be hosted?**
-   - GitLab (UCT)
-   - GitHub or external platform
+Before choosing an approach, clarify:
 
-2. **Who needs access?**
-   - private (restricted collaborators)
-   - public (open collaboration)
+### Who is involved?
 
-3. **How will changes be managed?**
-   - individual work with occasional updates  
-   - collaborative development with branches and reviews  
+- individual work
+- small team
+- distributed or external collaborators
+
+### What kind of work are you managing?
+
+- scripts and analysis code
+- software projects
+- shared notebooks or workflows
+
+### How will changes be managed?
+
+- simple updates
+- coordinated contributions
+- formal review processes
 
 ---
 
 ## Recommended path
 
-1. Create or clone a repository  
-   → Service: Research software / GitLab  
+### 1. Use a version-controlled repository
 
-2. Structure your project  
-   - code  
-   - data (if appropriate)  
-   - documentation  
-
-3. Use version control  
-   - commit changes regularly  
-   - push updates to remote repository  
+Start here:
+- [Research software service](../services/research-software/index.md)
 
 ---
 
-## Common mistakes
+### 2. Create or access a repository
 
-- working without version control  
-- storing large data directly in repositories  
-- unclear project structure  
-- not documenting how to run code  
+If you are starting a new project or joining an existing one:
 
----
-
-## If your situation is different
-
-- **Working on HPC**  
-  → clone repositories into your project directory  
-
-- **Large data dependencies**  
-  → store data separately from code  
+- [Clone a repository](../how-to/research-software/clone-a-repository.md)
 
 ---
 
-## Next steps
+### 3. Keep your work in sync
 
-- document how to run your code  
-- tag versions for reproducibility  
-- share repository with collaborators
+Ensure your local work stays aligned with the shared repository:
+
+- [Sync a repository](../how-to/research-software/sync-repository.md)
+
+---
+
+### 4. Share and collaborate
+
+Use repository features to:
+- share access with collaborators
+- manage contributions
+- coordinate work across the team
+
+(See the research software service page for available platforms and features.)
+
+---
+
+## Related tasks
+
+- [Store and share research data](store-and-share-research-data.md)
+- [Run large-scale analysis](run-large-scale-analysis.md)

@@ -1,65 +1,77 @@
-# Move data securely
+# Move Data Securely
 
-## When to use this
+## What you are trying to do
 
-You want to:
-- transfer data between systems
-- move data to or from HPC
-- share data with collaborators
+You want to move data between systems, such as:
+
+- from your local machine to a research environment
+- between storage systems
+- between institutions or collaborators
+
+This requires choosing an appropriate transfer method based on data size, location, and reliability requirements.
 
 ---
 
-## What you need to decide first
+## Key decisions
 
-1. **Where is your data now?**
-   - local machine
-   - HPC
-   - institutional storage
+Before transferring data, clarify:
 
-2. **How large is the dataset?**
-   - small (<1GB) → simple tools are sufficient  
-   - large (10GB+) → use efficient transfer methods  
+### How large is the data?
 
-3. **Is this a one-time transfer or ongoing sync?**
-   - one-time → direct copy  
-   - repeated → use tools like `rsync`  
+- small files
+- medium datasets
+- large datasets (100s of GB or more)
+
+### Where is the data moving?
+
+- local machine to UCT systems
+- between internal systems
+- between institutions
+
+### How reliable does the transfer need to be?
+
+- one-off transfer
+- repeated or ongoing transfers
+- transfers that must be monitored or resumed if interrupted
 
 ---
 
 ## Recommended path
 
-1. Choose a transfer method  
-   → Service: Data transfer  
+### 1. Choose an appropriate transfer method
 
-2. Understand constraints  
-   → Reference: Data transfer and movement  
+Start here:
+- [Data transfer](../services/data-transfer/index.md)
 
-3. Execute transfer using appropriate tool  
-   (scp, rsync, or managed service)
-
----
-
-## Common mistakes
-
-- transferring large datasets through login nodes  
-- copying the same data repeatedly instead of syncing  
-- working with many small files without grouping them  
-- interrupting transfers without using resumable tools  
+Understand available approaches:
+- [Data transfer methods](../reference/data-transfer/methods.md)
 
 ---
 
-## If your situation is different
+### 2. Perform the transfer
 
-- **Very large datasets (100GB+)**  
-  → use managed transfer tools (e.g. Globus)
+Use the appropriate method:
 
-- **Frequent updates**  
-  → use `rsync` to avoid re-copying unchanged data  
+- [Move data](../how-to/data-transfer/move-data.md)
+
+For specific tools:
+
+- [Transfer with Globus](../how-to/data-transfer/transfer-with-globus.md)
+- [Transfer with Nextcloud](../how-to/data-transfer/transfer-with-nextcloud.md)
 
 ---
 
-## Next steps
+### 3. Verify the transfer
 
-- verify transferred data  
-- organise data in target location  
-- clean up unnecessary copies
+After transfer:
+
+- confirm that all files are present
+- check file sizes where relevant
+- ensure the data is accessible in the target system
+
+---
+
+## Related tasks
+
+- [Store and share research data](store-and-share-research-data.md)
+- [Run large-scale analysis](run-large-scale-analysis.md)

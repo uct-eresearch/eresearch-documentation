@@ -1,67 +1,85 @@
-# Run large-scale analysis
+# Run Large-Scale Analysis
 
-## When to use this
+## What you are trying to do
 
-You want to:
-- run analyses that take hours or days
-- process large datasets
-- scale work across CPUs or GPUs
+You want to run analysis that exceeds the capacity of a local machine.
+
+This typically involves:
+- using shared compute infrastructure
+- running jobs in a managed environment
+- working with larger datasets or longer-running processes
 
 ---
 
-## What you need to decide first
+## Key decisions
 
-1. **Does your job fit on a single machine?**
-   - yes → use a single-node job
-   - no → you may need parallel or distributed computing
+Before starting, clarify:
 
-2. **Does your workload need GPUs?**
-   - yes → request GPU access and use a GPU partition
-   - no → use CPU partitions
+### What type of workload are you running?
 
-3. **Where will your data live during computation?**
-   - large data → `/scratch`
-   - small inputs → `/home`
+- batch processing
+- parallel or distributed workloads
+- GPU-accelerated computation
+
+### How large is the data?
+
+- data that fits locally
+- large datasets requiring shared storage
+- data generated during computation
+
+### How will the analysis run?
+
+- short interactive runs
+- long-running jobs
+- repeated or automated workflows
 
 ---
 
 ## Recommended path
 
-1. Prepare your working directory  
-   → How-to: Manage files and storage
+### 1. Use an appropriate compute service
 
-2. Load required software  
-   → How-to: Use software modules
-
-3. Create a job script  
-   → How-to: Submit a job
-
-4. If needed, configure GPU usage  
-   → How-to: Use GPUs
+Start here:
+- [HPC service](../services/hpc/index.md)
 
 ---
 
-## Common mistakes
+### 2. Prepare your data
 
-- running work on the login node instead of submitting jobs  
-- writing large data to `/home` instead of `/scratch`  
-- requesting more resources than needed, leading to long queue times  
-- skipping small test runs before scaling  
+Ensure that:
+- your data is available in the compute environment
+- input and output locations are clearly defined
 
----
+If data needs to be moved:
 
-## If your situation is different
-
-- **Interactive or exploratory work**  
-  → Use Open OnDemand or interactive jobs
-
-- **Workflow automation or pipelines**  
-  → Structure jobs as repeatable scripts
+- [Move data securely](move-data-securely.md)
 
 ---
 
-## Next steps
+### 3. Run your analysis
 
-- Monitor job progress  
-- Review output and logs  
-- Move results to persistent storage
+Submit and manage your workload using the appropriate tools:
+
+- [Submit a job](../how-to/hpc/submit-a-job.md)
+
+If needed:
+
+- [Use GPUs](../how-to/hpc/use-gpus.md)
+- [Use modules](../how-to/hpc/use-modules.md)
+
+---
+
+### 4. Retrieve and manage results
+
+After the analysis:
+
+- retrieve output data
+- store results in an appropriate location
+- share results if required
+
+---
+
+## Related tasks
+
+- [Store and share research data](store-and-share-research-data.md)
+- [Move data securely](move-data-securely.md)

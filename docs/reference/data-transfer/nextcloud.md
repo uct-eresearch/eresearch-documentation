@@ -1,144 +1,124 @@
 # Nextcloud
 
+## Purpose
+
+This page describes Nextcloud as a system used for file access, synchronisation, and sharing.
+
+It covers:
+- how Nextcloud is structured
+- how data is accessed and synchronised
+- key characteristics of the platform
+
+This page does not provide instructions for using Nextcloud.
+
+---
+
 ## Overview
 
-Nextcloud is a web-based collaboration and file sharing platform available at UCT.
+Nextcloud is a file synchronisation and sharing platform.
 
-At UCT, Nextcloud should be understood as a **collaboration and data transfer layer**, not as a primary research storage service. It provides a browser-based interface for sharing, receiving, and managing files, and it can connect to other storage systems such as the Research Data Store (RDS).
+It provides a user-facing interface for accessing and managing files stored on server-side infrastructure.
 
-This makes it useful for collaboration and secure file exchange, especially when researchers need a simpler, more user-friendly interface on top of institutional storage.
+Users interact with Nextcloud through:
 
----
-
-## What Nextcloud is
-
-Nextcloud is:
-- a web-based file management and sharing platform
-- available to UCT users with their UCT credentials
-- useful for collaboration and secure data transfer
-- able to connect to supported storage backends such as SMB/CIFS or SSH-accessible systems
-
-At UCT, it can be used to:
-- share files with collaborators
-- receive files securely from external parties
-- manage files stored on connected backends such as RDS
-- provide a more accessible interface for working with institutional storage
+- a web interface
+- desktop synchronisation clients
+- mobile applications
 
 ---
 
-## What Nextcloud is not
+## Data model
 
-Nextcloud is **not**:
-- a primary research storage service
-- a replacement for RDS
-- a replacement for HPC-connected storage
-- a long-term archival service
+Nextcloud manages files within a central storage system.
 
-This distinction is important.
+Data is:
 
-The default Nextcloud allocation is small and should not be treated as the main location for research data. Researchers should store research data in an appropriate storage service such as RDS or Microsoft storage, and use Nextcloud as the interface for sharing, collaboration, or transfer where appropriate.
+- stored on server-side infrastructure
+- accessed through user accounts
+- synchronised across connected devices
 
----
+Files may exist as:
 
-## Access
-
-Nextcloud is available to:
-- UCT staff
-- UCT students
-- approved third-party users with UCT credentials
-
-Access is via UCT login credentials.
+- server-side copies
+- synchronised local copies on user devices
 
 ---
 
-## Typical use cases
+## Access model
 
-Use Nextcloud when you need:
+Access to data is controlled through:
 
-### Secure file exchange
-Nextcloud supports upload-only sharing through FileDrop, which allows external users to upload files to a designated folder without seeing existing contents.
+- user authentication
+- permissions assigned to files and directories
+- sharing mechanisms between users
 
-### Web-based access to institutional storage
-Researchers can connect external storage and manage files through a browser rather than only through mapped drives or VPN-based desktop access.
+Access may be:
 
-### Sharing with collaborators
-Nextcloud can generate share links and support controlled access to specific files or folders.
-
-### A simpler interface for storage already hosted elsewhere
-Where data is already stored in RDS or another suitable backend, Nextcloud can provide a more convenient interface for browsing and sharing.
+- individual (private files)
+- shared within groups
+- shared externally via links or permissions
 
 ---
 
-## Connection to storage backends
+## Synchronisation
 
-Nextcloud can connect to supported external storage systems.
+Nextcloud supports file synchronisation between:
 
-Common examples include:
-- RDS via SMB/CIFS
-- other endpoints accessible via SSH/SFTP
+- server storage
+- user devices
 
-This means the data may live in another approved storage service while being accessed through the Nextcloud interface.
+Changes made in one location are propagated to other connected devices.
 
----
+Synchronisation behaviour depends on:
 
-## FileDrop
-
-FileDrop is one of the most useful Nextcloud features for research workflows.
-
-It allows a user to:
-- designate a target folder
-- generate an upload link
-- send that link to an external person
-- receive files without exposing the rest of the folder contents
-
-This is useful when:
-- collaborators need to send files to UCT researchers
-- the sender should not browse other files
-- a lightweight alternative to more complex transfer tools is sufficient
+- client configuration
+- network connectivity
+- file size and structure
 
 ---
 
-## Limitations
+## Key characteristics
 
-### Not primary storage
-Nextcloud should not be presented as the main storage location for research data.
+### User-facing access
 
-### Not HPC storage
-Nextcloud does not replace storage that must be directly attached to HPC workflows.
+- provides a graphical interface for file interaction
+- accessible from multiple device types
 
-### Performance depends on the backend
-If Nextcloud is connected to another storage system, the performance experienced through the web interface may differ from direct access.
+### Sharing
 
-### Backup depends on where the data actually lives
-Backup and recovery depend on the underlying storage backend, not on the fact that the data is visible in Nextcloud.
+- supports file and directory sharing
+- enables controlled access through permissions and links
 
-### Not for long-term preservation
-If data needs to be retained or published long-term, other services are more appropriate.
+### Synchronisation
 
----
+- maintains consistency between server and client copies
+- allows files to be accessed across devices
 
-## When to recommend Nextcloud
+### Performance
 
-Recommend Nextcloud when:
-- researchers need secure upload from external collaborators
-- browser-based sharing is more practical than direct filesystem access
-- the main storage is elsewhere, but an easier collaboration layer is needed
-- the transfer task does not require large-scale system-to-system tooling
+- suitable for general file access and collaboration
+- not optimised for high-performance or large-scale data workflows
 
 ---
 
-## When not to recommend Nextcloud
+## Relationship to other systems
 
-Do not recommend Nextcloud as the primary solution when:
-- the main requirement is high-performance active storage
-- the workflow depends on HPC-attached storage
-- the dataset requires a formal archival or publication destination
-- the researcher needs institutional storage rather than an interface layer
+Nextcloud is part of the broader research data environment.
+
+It is distinct from:
+
+- storage systems that manage authoritative research data
+- compute-attached file systems
+- data transfer tools used for system-to-system movement
+
+For comparison across systems, see:
+
+- [Storage comparison](../storage/storage-comparison.md)
 
 ---
 
-## Related pages
+## Working with Nextcloud
 
-- `services/data-transfer/index.md`
-- `reference/storage/rds.md`
-- `how-to/data-transfer/transfer-with-nextcloud.md`
+To transfer or access files using Nextcloud, see:
+
+- [Transfer with Nextcloud](../../how-to/data-transfer/transfer-with-nextcloud.md)

@@ -27,7 +27,7 @@ If you are new to HPC, work through these guides in order:
 
 ## Guides
 
-- [Connect to HPC](connect-to-hpc.md)
+- [Log into the HPC](log-into-hpc.md)
 - [Manage files and storage](manage-files-and-storage.md)
 - [Use software modules](use-software-modules.md)
 - [Submit a job](submit-a-job.md)

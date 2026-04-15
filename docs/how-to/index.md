@@ -30,7 +30,8 @@ Each guide is designed to be:
 
 ## Research software
 
-- [Create a GitLab project](research-software/create-a-gitlab-project.md)
+- [Clone a repository](research-software/clone-a-repository.md)
+- [Sync a repository](research-software/sync-repository.md)
 
 ---
 

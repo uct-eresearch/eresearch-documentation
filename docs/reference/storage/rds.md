@@ -1,76 +1,105 @@
-# Research Data Storage
+# Research Data Store (RDS)
 
-## What this service is
+## Purpose
 
-Research data storage provides managed, secure storage for active research data at UCT.
+This page describes the Research Data Store (RDS) and how it behaves as a storage system.
 
-It supports storing, organising, and accessing data throughout a research project, including integration with compute environments such as HPC.
+It covers:
+- the role of RDS in research workflows
+- how data is organised and accessed
+- key characteristics such as persistence and sharing
 
----
-
-## When to use this service
-
-Use research data storage when you need to:
-
-- store active research data during a project
-- organise datasets for ongoing analysis
-- share data with collaborators within or across institutions
-- ensure data is stored in a managed and backed-up environment
-- connect storage to compute platforms such as HPC
-
-If your data is small, temporary, or not part of a research workflow, other storage options may be more appropriate.
-
-If you are unsure where to begin, see [Choose the right service](../../start-here/choose-the-right-service.md).
+This page does not provide instructions for accessing or using RDS.
 
 ---
 
-## What this service provides
+## Overview
 
-Research data storage typically includes:
+The Research Data Store (RDS) is a managed storage system for research data.
 
-- centrally managed storage systems
-- controlled access for individuals and teams
-- integration with HPC and other research services
-- support for large datasets and structured organisation
+It provides shared storage that can be accessed by individuals and research groups across different environments.
 
-Storage is designed for active research use, not long-term archiving or publication.
+RDS is designed to support ongoing research activities where data needs to be retained and accessed over time.
 
 ---
 
-## How this fits with other services
+## Data organisation
 
-Research data storage is part of a broader workflow and is commonly used with:
+RDS is typically structured around:
 
-- [High Performance Computing (HPC)](../hpc/index.md) for large-scale analysis
-- [Data transfer](../data-transfer/index.md) for moving data between systems
-- [Research software](../research-software/index.md) for managing code and workflows
+- project or group-based storage areas
+- shared directories accessible to multiple users
+- controlled access based on project membership
 
----
-
-## Start from your task
-
-If you know what you want to do, go to:
-
-- [Store and share research data](../../tasks/store-and-share-research-data.md)
-- [Move data securely](../../tasks/move-data-securely.md)
-- [Run large-scale analysis](../../tasks/run-large-scale-analysis.md)
+Data is organised to support collaboration within a research project.
 
 ---
 
-## Understand how storage works
+## Access model
 
-Go to Reference when you need concepts or system behaviour:
+RDS is accessible from multiple environments, which may include:
 
-- [Storage and file systems](../../reference/hpc/storage-and-file-systems.md)
-- [Data transfer and movement](../../reference/hpc/data-transfer-and-movement.md)
-- [Policies and service conditions](../../reference/hpc/policies-and-service-conditions.md)
+- institutional systems
+- research compute environments
+- user workstations (depending on configuration)
+
+Access is managed through permissions assigned to users or groups.
 
 ---
 
-## Need help?
+## Key characteristics
 
-If you need support, go to:
+### Persistence
 
-- [Support overview](../../support/index.md)
-- [FAQ](../../support/faq.md)
-- [Contact points](../../support/contact-points.md)
+- RDS is intended for ongoing storage of research data
+- data is retained according to system policies
+
+### Sharing
+
+- supports group-based access
+- multiple users can read and write within shared project spaces
+
+### Performance
+
+- suitable for general research data access
+- not optimised for high-performance, compute-intensive workloads
+
+### Capacity
+
+- designed for medium to large datasets
+- subject to allocation limits and quotas
+
+---
+
+## Data management responsibilities
+
+Users are responsible for:
+
+- organising data within project spaces
+- managing access within their research group (where applicable)
+- ensuring that data is stored in appropriate locations for its use
+
+---
+
+## Relationship to other systems
+
+RDS is one component of the broader research data environment.
+
+It is distinct from:
+
+- compute-attached file systems used during analysis
+- synchronisation and sharing platforms
+- data transfer tools
+
+For comparison across systems, see:
+
+- [Storage comparison](storage-comparison.md)
+
+---
+
+## Working with RDS
+
+To request or access RDS storage, see:
+
+- [Request storage](../../how-to/storage/request-storage.md)
+- [Mount RDS](../../how-to/storage/mount-rds.md)

@@ -19,7 +19,7 @@ There are three main ways to find what you need.
 
 If you want to see how different stages of research connect — from planning to analysis to sharing results — start here:
 
-→ [Research workflow at UCT](research-workflow.md)
+→ [Research workflow at UCT](../index.md/#research-workflow-at-uct)
 
 This gives you a high-level view of how tools and services fit together across a typical research project.
 

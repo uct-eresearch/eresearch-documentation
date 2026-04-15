@@ -1,50 +1,114 @@
-# Logging into the HPC
+# Log into HPC
 
-## Purpose
+## Overview
 
-Log in to the HPC system to prepare work, submit jobs, and inspect results.
+Connect to the HPC system using SSH from your local machine.
 
 ---
 
 ## Before you begin
 
-You need:
-- approved HPC access
-- your username
-- a terminal (Linux/macOS) or SSH client (Windows)
+Make sure:
+
+- you have an HPC account
+- you know your HPC username
+- you have network access to the HPC system
+- you have an SSH client installed (Linux, macOS, or Windows with SSH support)
 
 ---
 
-## Logging in
+## Steps
+
+### 1. Open a terminal
+
+On your local machine, open a terminal application.
+
+---
+
+### 2. Connect using SSH
+
+Run the following command:
 
 ```bash
 ssh <username>@hpc.uct.ac.za
 ```
 
-If you are off-campus, connect via VPN first.
+Replace `<username>` with your HPC username.
 
 ---
 
-## Confirm connection
+### 3. Enter your password
+
+When prompted:
+
+- enter your HPC password
+- press Enter
+
+Note:
+- no characters will appear while typing the password
+- this is normal behaviour
+
+---
+
+### 4. Confirm login
+
+After successful login, you should see:
+
+- a welcome message or system notice
+- a command prompt on the HPC system
+
+---
+
+## Verify
+
+Confirm that you are connected to the HPC system:
 
 ```bash
-whoami
 hostname
+```
+
+The output should show the name of an HPC login node.
+
+You can also check your home directory:
+
+```bash
 pwd
 ```
 
 ---
 
-## Create a working directory
+## Troubleshooting
 
-```bash
-mkdir -p ~/projects/my-project
-cd ~/projects/my-project
-```
+### Permission denied
+
+Possible causes:
+
+- incorrect username
+- incorrect password
+- account not yet activated
 
 ---
 
-## Next
+### Connection timed out
 
-- [Manage files and storage](./manage-files-and-storage.md)  
-- [Submit a job](./submit-a-job.md)
+Possible causes:
+
+- no network access
+- VPN required but not connected
+- incorrect hostname
+
+---
+
+### Command not found: ssh
+
+Possible cause:
+
+- SSH client is not installed or not available in your environment
+
+---
+
+## Related pages
+
+- [Submit a job](submit-a-job.md)
+- [Use modules](use-modules.md)
+- [Use GPUs](use-gpus.md)

@@ -1,68 +1,86 @@
-# Store and share research data
+# Store and Share Research Data
 
-## When to use this
+## What you are trying to do
 
-You want to:
-- store research data during a project
-- share data with collaborators
-- prepare data for publication or archiving
+You want to store research data so that it can be:
+- accessed during your project
+- shared with collaborators
+- organised and maintained over time
+
+This usually involves choosing the right storage location and deciding how others will access the data.
 
 ---
 
-## What you need to decide first
+## Key decisions
 
-1. **Is this active or long-term data?**
-   - active → use HPC or working storage
-   - long-term → use RDS or managed storage
+Before choosing a solution, clarify:
 
-2. **Where is your data currently located?**
-   - local machine
-   - HPC
-   - institutional storage
+### Who needs access?
 
-3. **Who needs access?**
-   - only you
-   - internal collaborators
-   - external collaborators
+- only you
+- a research team at UCT
+- collaborators outside UCT
+
+### How will the data be used?
+
+- active analysis or computation
+- shared project datasets
+- documents and smaller files for collaboration
+
+### How large is the data?
+
+- small files (documents, scripts)
+- medium datasets (GB scale)
+- large datasets (100s of GB to TB)
+
+### Where does the data need to be available?
+
+- on your local machine
+- in shared storage
+- in a compute environment
 
 ---
 
 ## Recommended path
 
-1. Store active data appropriately  
-   → Service: Research data storage  
-   → Reference: Storage and file systems
+### 1. Choose the appropriate storage approach
 
-2. Move data between systems  
-   → Service: Data transfer  
-   → Reference: Data transfer and movement
+Start here:
+- [Storage service](../services/storage/index.md)
 
-3. Manage access and sharing  
-   → Use appropriate access controls or transfer tools
+Compare options:
+- [Storage comparison](../reference/storage/storage-comparison.md)
 
 ---
 
-## Common mistakes
+### 2. Request or confirm access
 
-- storing long-term data on HPC `/scratch`  
-- duplicating large datasets unnecessarily  
-- transferring data repeatedly instead of synchronising  
-- not planning where final data will live  
+If storage is not yet available:
 
----
-
-## If your situation is different
-
-- **Large datasets (100GB+)**  
-  → use efficient transfer tools (e.g. rsync, Globus)
-
-- **Sensitive or restricted data**  
-  → confirm storage and sharing requirements before transfer
+- [Request storage](../how-to/storage/request-storage.md)
 
 ---
 
-## Next steps
+### 3. Access shared storage
 
-- document where your data is stored  
-- clean up unused or duplicate data  
-- prepare datasets for reuse or publication
+If storage has already been provisioned:
+
+- [Mount RDS](../how-to/storage/mount-rds.md)
+
+---
+
+### 4. Share data with collaborators
+
+If data needs to be shared:
+
+- use appropriate access or sharing mechanisms provided by the storage system
+- use collaboration tools where needed
+
+(See storage service page for available approaches.)
+
+---
+
+## Related tasks
+
+- [Move data securely](move-data-securely.md)
+- [Run large-scale analysis](run-large-scale-analysis.md)

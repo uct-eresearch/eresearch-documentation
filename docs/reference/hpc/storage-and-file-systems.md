@@ -1,84 +1,126 @@
-# Storage and file systems
+# HPC Storage and File Systems
+
+## Purpose
+
+This page describes the file systems available in the HPC environment and how they behave.
+
+It covers:
+- the different storage areas available
+- how they are intended to be used
+- key constraints such as performance and data persistence
+
+This page does not provide instructions for managing files.
+
+---
 
 ## Overview
 
-UCT HPC provides two main storage locations:
+The HPC system provides multiple file systems.
 
-- `/home` — persistent storage
-- `/scratch` — high-performance temporary storage
+These are designed for different roles within a research workflow and are not interchangeable.
 
-Each is designed for a specific purpose.
+The main file systems are:
 
----
-
-## /home
-
-Use `/home` for:
-- code and scripts
-- configuration files
-- small datasets
-
-Characteristics:
-- persistent
-- limited capacity
-- suitable for low I/O workloads
-
-Avoid using `/home` for large or compute-intensive data operations.
+- home directories
+- project spaces
+- scratch storage
 
 ---
 
-## /scratch
+## Home directories
 
-Use `/scratch` for:
-- job input and output
-- large datasets
-- intermediate files
+Home directories are allocated to individual users.
 
-Characteristics:
-- high-performance
+### Characteristics
+
+- small storage allocation
+- intended for personal files
+- suitable for code, scripts, and configuration
+- typically persistent
+
+### Constraints
+
+- not intended for large datasets
+- limited capacity compared to other file systems
+
+---
+
+## Project spaces
+
+Project spaces are shared storage areas for research groups.
+
+### Characteristics
+
+- accessible to multiple users within a project
+- larger capacity than home directories
+- used for active research data
+
+### Constraints
+
+- shared across a group
+- subject to allocation limits
+- performance is suitable for general workflows but not optimised for temporary high-throughput workloads
+
+---
+
+## Scratch storage
+
+Scratch storage is temporary, high-performance storage.
+
+### Characteristics
+
+- optimised for fast read/write operations
+- suitable for active computation and intermediate data
+- typically provides the highest performance of the available file systems
+
+### Constraints
+
 - not persistent
-- subject to quotas and cleanup
-
-Data in `/scratch` may be removed.  
-Move results you want to keep to a persistent location.
+- data may be deleted automatically according to system policies
+- not backed up
 
 ---
 
-## Typical workflow
+## Key distinctions
 
-1. store code in `/home`
-2. copy data to `/scratch`
-3. run jobs using `/scratch`
-4. move results out of `/scratch`
-5. remove temporary files
-
----
-
-## Checking usage
-
-```bash
-df -h
-du -sh *
-```
+| Feature | Home | Project | Scratch |
+|--------|------|---------|---------|
+| Intended use | Personal files | Shared project data | Temporary working data |
+| Persistence | Yes | Yes | No |
+| Performance | Standard | Standard | High |
+| Capacity | Small | Medium to large | High (temporary) |
+| Sharing | Individual | Group | Limited |
 
 ---
 
-## Common issues
+## Data persistence and lifecycle
 
-Jobs may fail if:
-- storage quota is exceeded
-- large data is written to `/home`
+Different file systems have different expectations for how long data is retained:
 
-Performance may be reduced if:
-- heavy I/O is performed outside `/scratch`
+- home and project spaces are intended for ongoing use
+- scratch storage is temporary and may be cleared automatically
 
-Data may be lost if:
-- results are left in `/scratch`
+Users are responsible for ensuring that important data is stored in appropriate locations.
 
 ---
 
-## Good practice
+## Relationship to other storage systems
 
-- keep `/home` small and organised
-- use `/scratch` for computation
-- remove unnecessary files regularly
+HPC file systems are part of the compute environment.
+
+They are distinct from:
+
+- managed research storage systems
+- synchronisation and sharing tools
+
+For comparison across storage systems, see:
+
+- [Storage comparison](../storage/storage-comparison.md)
+
+---
+
+## Working with files
+
+To manage files within these storage locations, see:
+
+- [Manage files and storage](../../how-to/hpc/manage-files-and-storage.md)
