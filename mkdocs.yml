@@ -1,0 +1,139 @@
+site_name: UCT eResearch Documentation
+site_url: 
+
+use_directory_urls: true
+
+theme:
+  name: material
+  logo: 
+  favicon: 
+  features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tracking
+    - navigation.sections
+    - navigation.indexes
+    - navigation.footer
+    - content.tabs.link
+    - toc.integrate
+    - navigation.path
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - toc.follow          # Highlight on scroll
+
+  palette:
+    - scheme: default
+
+extra_css:
+  - stylesheets/extra.css
+
+# extra_javascript:
+#   - javascripts/passwords.js
+
+markdown_extensions:
+  - footnotes
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - tables
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.details
+  - attr_list
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true 
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - toc:
+      permalink: true      # Add anchor links
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+      toc_depth: 2       # Maximum depth
+
+
+plugins:
+  - glightbox
+  - search
+
+
+
+extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - manage
+      - reject
+
+copyright: >
+  Copyright &copy; 2026 University of Cape Town. This site is published under <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a> - <a href="#__consent">Change cookie settings</a>
+nav:
+  - Home: index.md
+
+  - Start here:
+      - Overview: start-here/index.md
+      - Research workflow at UCT: start-here/research-workflow.md
+      - Choose the right service: start-here/choose-the-right-service.md
+
+  - Tasks:
+      - Overview: tasks/index.md
+      - Run large-scale analysis: tasks/run-large-scale-analysis.md
+      - Store and share research data: tasks/store-and-share-research-data.md
+      - Move data securely: tasks/move-data-securely.md
+      - Collaborate on code: tasks/collaborate-on-code.md
+
+  - Services:
+      - Overview: services/index.md
+      - HPC: services/hpc/index.md
+      - Research data storage: services/storage/index.md
+      - Data transfer: services/data-transfer/index.md
+      - UCT GitLab: services/research-software/uct-gitlab.md
+
+  - How-to guides:
+      - Overview: how-to/index.md
+      - Log into HPC: how-to/hpc/log-into-hpc.md
+      - Submit your first job: how-to/hpc/submit-your-first-job.md
+      - Transfer data using Globus: how-to/storage/transfer-data-using-globus.md
+      - Create a GitLab project: how-to/research-software/create-a-gitlab-project.md
+
+  - Good practice:
+      - Overview: good-practice/index.md
+      - Reproducible research: good-practice/reproducible-research.md
+      - Project structure: good-practice/project-structure.md
+
+  - Reference:
+      - Overview: reference/index.md
+      - Glossary: reference/glossary.md
+      - HPC scheduler reference: reference/hpc-scheduler-reference.md
+
+  - Support:
+      - Overview: support/index.md
+      - FAQ: support/faq.md
+      - Contact points: support/contact-points.md
