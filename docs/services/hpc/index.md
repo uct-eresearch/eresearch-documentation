@@ -1,124 +1,92 @@
 # High Performance Computing (HPC)
 
-## Run large-scale compute on UCT infrastructure
+## What this service is
 
-The HPC service provides access to high-performance computing resources for research that cannot be run on a laptop or standard workstation.
+UCT High Performance Computing (HPC) provides shared compute infrastructure for research workloads that are too large, too slow, or too resource-intensive to run effectively on a laptop or standard workstation.
 
 Use HPC when your work involves:
+
 - large datasets
 - long-running analyses
 - parallel or distributed computation
-- GPU-based workloads (e.g. machine learning, simulation)
+- GPU-based workloads
+- batch workflows that need to run reliably on shared infrastructure
 
 ---
 
-## What this service provides
+## When to use HPC
 
-- Access to UCT HPC clusters
-- CPU and GPU compute resources
-- High-performance storage systems
-- Job scheduling for efficient resource use
-- Secure remote access (SSH and web-based interfaces)
-- Support for research workflows across disciplines
-
----
-
-## When should you use HPC?
-
-Use HPC if you need to:
+HPC is a good fit when you need to:
 
 - run analyses that take hours or days
-- process large volumes of data
-- scale your code across multiple cores or nodes
-- use GPUs for training or simulation
-- run reproducible batch workflows
+- process data at a scale that exceeds local machines
+- request CPUs, memory, GPUs, or wall time explicitly
+- separate interactive work from production-scale runs
+- move from exploratory work to repeatable batch execution
 
-If your work is lightweight or interactive, consider whether a local machine or other service is sufficient.
+If your work is lightweight, short-running, or mostly document-based, another service may be more appropriate.
 
----
-
-## Before you start
-
-To use HPC, you will need:
-
-- a UCT account
-- approved access to HPC systems
-- basic familiarity with the Linux command line
-- your research code or software ready to run
+If you are unsure where to begin, see [Choose the right service](../../start-here/choose-the-right-service.md).
 
 ---
 
-## Get started
+## What HPC provides
 
-Follow these steps to begin using HPC:
+HPC gives researchers access to:
 
-### 1. Get access
-- Request HPC access through the appropriate UCT process  
-- Wait for account activation and credentials
+- shared CPU and GPU compute resources
+- scheduled batch execution on compute nodes
+- interactive and browser-based access options
+- high-performance storage integration
+- a platform for running research software at scale
 
-### 2. Prepare your workflow
-- Organise your code and data
-- Ensure your software can run from the command line
-
-### 3. Connect to the cluster
-- Use SSH or a web-based interface (e.g. Open OnDemand)
-
-### 4. Run your first job
-- Submit a job to the scheduler
-- Monitor progress and outputs
+UCT HPC uses scheduled job submission rather than direct execution on shared infrastructure, and the reference section already separates core topics such as scheduling, storage, GPU access, graphical applications, and Open OnDemand. :contentReference[oaicite:1]{index=1}
 
 ---
 
-## Common tasks
+## How HPC fits with other services
 
-Go here when you want to **do something specific**:
+HPC is usually part of a broader workflow rather than a standalone service.
 
-- Submit a job to the cluster → `tasks/hpc/run-a-job.md`
-- Transfer data to or from HPC → `tasks/data/transfer-data.md`
-- Use GPUs → `tasks/hpc/use-gpu.md`
-- Run graphical applications → `tasks/hpc/run-graphical-applications.md`
+It is commonly used together with:
 
----
-
-## How-to guides
-
-Go here for **step-by-step guidance**:
-
-- Connecting to HPC → `how-to/hpc/connect.md`
-- Writing job scripts → `how-to/hpc/job-scripts.md`
-- Managing files and storage → `how-to/hpc/files-and-storage.md`
-- Using software modules → `how-to/hpc/modules.md`
+- [Research data storage](../storage/index.md) for active project data and HPC-linked storage
+- [Data transfer](../data-transfer/index.md) for moving data between systems and collaborators
+- [Research software](../research-software/index.md) for managing code, scripts, and workflows
 
 ---
 
-## Reference
+## Start from your task
 
-Go here to **understand how HPC works**:
+If you already know what you are trying to do, go to:
 
-- Overview of HPC systems → `reference/hpc/index.md`
-- Storage and file systems → `reference/hpc/storage-and-file-systems.md`
-- Scheduler and job submission → `reference/hpc/scheduler-and-job-submission.md`
-- GPU access and partitions → `reference/hpc/gpu-access-and-partitions.md`
-- Software and modules → `reference/hpc/software-and-modules.md`
-- Graphical applications → `reference/hpc/graphical-applications.md`
-- Policies and service conditions → `reference/hpc/policies-and-service-conditions.md`
+- [Run large-scale analysis](../../tasks/run-large-scale-analysis.md)
+- [Store and share research data](../../tasks/store-and-share-research-data.md)
+- [Move data securely](../../tasks/move-data-securely.md)
+- [Collaborate on code](../../tasks/collaborate-on-code.md)
 
 ---
 
-## Support
+## Understand how HPC works
 
-If you need help:
+Go to Reference when you need concepts, system behaviour, or constraints:
 
-- Contact the eResearch team
-- Include details of your issue (job ID, error messages, steps taken)
-- Provide context about your workflow where possible
+- [HPC overview](../../reference/hpc/index.md)
+- [Storage and file systems](../../reference/hpc/storage-and-file-systems.md)
+- [Scheduler and job submission](../../reference/hpc/scheduler-and-job-submission.md)
+- [GPU access and partitions](../../reference/hpc/gpu-access-and-partitions.md)
+- [Software and modules](../../reference/hpc/software-and-modules.md)
+- [Graphical applications](../../reference/hpc/graphical-applications.md)
+- [Open OnDemand](../../reference/hpc/open-ondemand.md)
+- [Data transfer and movement](../../reference/hpc/data-transfer-and-movement.md)
+- [Policies and service conditions](../../reference/hpc/policies-and-service-conditions.md)
 
 ---
 
-## Related services
+## Need help?
 
-HPC is often used together with:
+If you need support, go to:
 
-- Research Data Storage → `services/storage/index.md`
-- Data Transfer → `services/data-transfer/index.md`
-- Research Software support → `services/research-software/index.md`
+- [Support overview](../../support/index.md)
+- [FAQ](../../support/faq.md)
+- [Contact points](../../support/contact-points.md)

@@ -15,29 +15,27 @@ You want to:
 
 Storing and sharing research data at UCT typically uses:
 
-- Research data storage services for secure and managed storage
-- Data transfer tools to move data between systems
-- Access controls to manage who can view or use the data
+- research data storage services for secure and managed storage
+- data transfer tools to move data between systems and people
+- access controls to manage who can view or use the data
 
 ---
 
 ## Start here
 
-1. **Use research data storage**
-   - [Research data storage service](../services/storage/index.md)
+1. **Use research data storage**  
+   [Research data storage service](../services/storage/index.md)
 
-2. **Move your data**
-   - [Data transfer service](../services/data-transfer/index.md)
+2. **Move or share data**  
+   [Data transfer service](../services/data-transfer/index.md)
 
-3. **Work with your data**
-   - [Manage files and storage](../how-to/hpc/manage-files-and-storage.md)
+3. **Understand storage and movement constraints**  
+   [Storage and file systems](../reference/hpc/storage-and-file-systems.md)  
+   [Data transfer and movement](../reference/hpc/data-transfer-and-movement.md)
 
 ---
 
 ## If you are not sure
 
-- Not sure where your data should live?  
-  → [Choose the right service](../start-here/choose-the-right-service.md)
-
-- Need to understand storage options and constraints?  
-  → [Storage and file systems](../reference/hpc/storage-and-file-systems.md)
+- Not sure where your data should live? → [Choose the right service](../start-here/choose-the-right-service.md)
+- Need help? → [Support](../support/index.md)
