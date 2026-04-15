@@ -1,128 +1,114 @@
-# High Performance Computing (HPC)
+# Services
 
-## Run large-scale compute on UCT infrastructure
+## Research services available through UCT eResearch
 
-The HPC service provides access to high-performance computing resources for research that cannot be run on a laptop or standard workstation.
+This section helps you understand what each service is for, when to use it, and where to go next.
 
-Use HPC when your work involves:
+Use the services section when you need to:
+- understand what a service provides
+- decide whether it fits your research workflow
+- see how services connect to each other
+- move from a broad need to the right next step
 
+If you already know what you want to do, start with [Tasks](../tasks/index.md).
+
+---
+
+## Available services
+
+### [High Performance Computing (HPC)](hpc/index.md)
+Use HPC when your work needs more compute power than a laptop or standard workstation can provide.
+
+Typical reasons to use HPC:
 - large datasets
 - long-running analyses
 - parallel or distributed computation
-- GPU-based workloads such as machine learning, simulation, or accelerated analysis
+- GPU-based workloads
+- repeatable batch workflows
+
+Go to this page if you need to understand whether HPC is the right fit before getting started.
+
+### [Research data storage](storage/index.md)
+Use research data storage when you need reliable, scalable storage for active research data.
+
+Typical reasons to use research data storage:
+- large or growing datasets
+- persistent project storage
+- controlled access for collaborators
+- storage connected to HPC workflows
+- data that should remain within UCT-managed infrastructure
+
+Go to this page if you need to understand how project storage works and when to use it instead of other storage options.
+
+### [Data transfer](data-transfer/index.md)
+Use data transfer services when you need to move data between systems, collaborators, or storage environments.
+
+Typical reasons to use data transfer services:
+- moving large files
+- transferring data to or from HPC
+- sharing data securely
+- avoiding unreliable manual transfer methods
+- supporting repeatable data movement workflows
+
+Go to this page if your main need is moving data rather than storing it or analysing it.
+
+### [Research software](research-software/index.md)
+Use research software services when your work depends on code, version control, repositories, or shared software workflows.
+
+Typical reasons to use research software services:
+- collaborating on code
+- managing versions of scripts and analysis pipelines
+- sharing software within a team
+- improving reproducibility
+- supporting structured development workflows
+
+Go to this page if your main need is managing code and software rather than compute or storage.
 
 ---
 
-## What this service provides
+## How to choose the right service
 
-- access to UCT HPC systems
-- CPU and GPU compute resources
-- high-performance storage environments
-- batch scheduling for efficient use of shared infrastructure
-- secure remote access through terminal and web-based interfaces
-- support for research workflows across disciplines
+A useful way to decide is to ask what your main need is right now:
 
----
+- **I need compute** → [HPC](hpc/index.md)
+- **I need project storage** → [Research data storage](storage/index.md)
+- **I need to move data between systems** → [Data transfer](data-transfer/index.md)
+- **I need to manage or collaborate on code** → [Research software](research-software/index.md)
 
-## When should you use HPC?
-
-Use HPC if you need to:
-
-- run analyses that take hours or days
-- process large volumes of data
-- scale work across multiple cores or nodes
-- use GPUs for suitable workloads
-- run repeatable batch workflows
-
-If your work is lightweight, highly local, or does not benefit from shared compute infrastructure, another service may be more appropriate.
+If you are still unsure, use [Choose the right service](../start-here/choose-the-right-service.md).
 
 ---
 
-## Before you start
+## How the services work together
 
-To use HPC, you will usually need:
+Most research workflows use more than one service.
 
-- a UCT account
-- approved access to the HPC service
-- basic command-line familiarity
-- code, software, or workflows that can run non-interactively or through scheduled jobs
+A common pattern looks like this:
+1. store active data in research data storage
+2. move data where needed using transfer tools
+3. run analysis on HPC when more compute is required
+4. manage code and workflows through research software tools
 
----
+This means the services section should help you understand the role of each service, while other sections help you act:
 
-## Get started
-
-A sensible path for most users is:
-
-1. **Confirm that HPC is the right fit**
-   - Start with the [Start here section](../../start-here/index.md)
-   - Use [Choose the right service](../../start-here/choose-the-right-service.md)
-
-2. **Understand the service**
-   - Read the [HPC reference overview](../../reference/hpc/index.md)
-
-3. **Complete the first practical steps**
-   - [Connect to HPC](../../how-to/hpc/connect-to-hpc.md)
-   - [Submit a job](../../how-to/hpc/submit-a-job.md)
-   - [Manage files and storage](../../how-to/hpc/manage-files-and-storage.md)
-   - [Use software modules](../../how-to/hpc/use-software-modules.md)
+- [Tasks](../tasks/index.md) help you start from a research goal
+- [How-to guides](../how-to/index.md) help you complete a specific action
+- [Reference](../reference/index.md) helps you understand systems, terms, and technical detail
 
 ---
 
-## Common tasks
+## Suggested starting points
 
-Go here when you want to do something specific:
-
-- [Run large-scale analysis](../../tasks/run-large-scale-analysis.md)
-- [Store and share research data](../../tasks/store-and-share-research-data.md)
-
-As the task layer expands, more HPC-specific task pages can be added here.
-
----
-
-## How-to guides
-
-Go here for step-by-step practical guidance:
-
-- [HPC how-to overview](../../how-to/hpc/index.md)
-- [Connect to HPC](../../how-to/hpc/connect-to-hpc.md)
-- [Submit a job](../../how-to/hpc/submit-a-job.md)
-- [Manage files and storage](../../how-to/hpc/manage-files-and-storage.md)
-- [Use software modules](../../how-to/hpc/use-software-modules.md)
+Start here when your need is clear:
+- [Run large-scale analysis](../tasks/run-large-scale-analysis.md)
+- [Store and share research data](../tasks/store-and-share-research-data.md)
+- [Move data securely](../tasks/move-data-securely.md)
+- [Collaborate on code](../tasks/collaborate-on-code.md)
 
 ---
 
-## Reference
+## Need help?
 
-Go here when you need deeper explanation or system detail:
-
-- [HPC overview](../../reference/hpc/index.md)
-- [Storage and file systems](../../reference/hpc/storage-and-file-systems.md)
-- [Scheduler and job submission](../../reference/hpc/scheduler-and-job-submission.md)
-- [GPU access and partitions](../../reference/hpc/gpu-access-and-partitions.md)
-- [Software and modules](../../reference/hpc/software-and-modules.md)
-- [Graphical applications](../../reference/hpc/graphical-applications.md)
-- [Open OnDemand](../../reference/hpc/open-ondemand.md)
-- [Data transfer and movement](../../reference/hpc/data-transfer-and-movement.md)
-- [Policies and service conditions](../../reference/hpc/policies-and-service-conditions.md)
-
----
-
-## Related services
-
-HPC is often used together with:
-
-- [Research data storage](../storage/index.md)
-- [Data transfer](../data-transfer/index.md)
-- [Research software](../research-software/index.md)
-
----
-
-## Support
-
-If you need help:
-
-- contact the eResearch team through the appropriate support route
-- include relevant technical detail where possible
-- include job IDs, error messages, and what you already tried when reporting a problem
-
-See the [Support section](../../support/index.md).
+If you are not sure which service to use, start with:
+- [Choose the right service](../start-here/choose-the-right-service.md)
+- [Support](../support/index.md)

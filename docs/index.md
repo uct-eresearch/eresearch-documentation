@@ -29,7 +29,6 @@ Each stage connects to one or more UCT services.
 
 ## Start here
 
-- [Research workflow at UCT](start-here/research-workflow.md)
 - [Choose the right service](start-here/choose-the-right-service.md)
 
 ---
@@ -57,9 +56,10 @@ Each stage connects to one or more UCT services.
 Step-by-step instructions for common tasks:
 
 - [Log into HPC](how-to/hpc/log-into-hpc.md)
-- [Submit your first job](how-to/hpc/submit-your-first-job.md)
-- [Transfer data using Globus](how-to/storage/transfer-data-using-globus.md)
-- [Create a GitLab project](how-to/research-software/create-a-gitlab-project.md)
+- [Submit a job](how-to/hpc/submit-a-job.md)
+- [Transfer data](how-to/data-transfer/move-data.md)
+- [Create a clone a repository](how-to/research-software/clone-a-repository.md)
+- [Sync a repository](how-to/research-software/sync-repository.md)
 
 ---
 

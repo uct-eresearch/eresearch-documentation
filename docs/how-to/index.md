@@ -15,13 +15,16 @@ Each guide is designed to be:
 ## HPC
 
 - [Log into HPC](hpc/log-into-hpc.md)
-- [Submit your first job](hpc/submit-your-first-job.md)
+- [Submit a job](hpc/submit-a-job.md)
+- [Use software modules](hpc/use-software-modules.md)
+- [Use GPUs](hpc/use-gpus.md)
 
 ---
 
 ## Storage and data transfer
 
-- [Transfer data using Globus](storage/transfer-data-using-globus.md)
+- [Manage files and storage](hpc/manage-files-and-storage.md)
+- [Transfer data](./data-transfer/move-data.md)
 
 ---
 

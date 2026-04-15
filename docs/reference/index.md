@@ -17,11 +17,11 @@ Use the Reference section when you need:
 Reference pages are not step-by-step guides.
 
 If you are trying to complete a task, go to:
-- **Tasks** → to identify what you want to do
-- **How-to guides** → for step-by-step instructions
+- **[Tasks](../tasks/index.md)** → to identify what you want to do
+- **[How-to guides](../how-to/index.md)** → for step-by-step instructions
 
 If you are deciding which service to use:
-- **Services** → to understand what each service is for
+- **[Services](../services/index.md)** → to understand what each service is for
 
 ---
 
@@ -34,7 +34,7 @@ Definitions of common terms used across research computing at UCT:
 - storage concepts (/home, /scratch, RDS)
 - tools and technologies (SSH, GPU, modules)
 
-→ See: **Glossary**
+→ See: **[Glossary](../reference/glossary.md)**
 
 ---
 
@@ -48,17 +48,5 @@ Technical reference information for the UCT HPC service, including:
 - software and module systems
 - service policies and constraints
 
-→ See: **HPC Reference**
+→ See: **[HPC Reference](../reference/hpc/index.md)**
 
----
-
-## A note on scope
-
-Reference pages are intentionally concise and factual.
-
-They:
-- avoid duplication with how-to guides
-- do not repeat full explanations from service pages
-- link to other sections where needed
-
-If something feels like a process or a decision, it likely belongs elsewhere.
