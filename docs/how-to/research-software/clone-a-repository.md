@@ -1,70 +1,112 @@
-# Clone a repository
+# Clone a Repository
 
-## Purpose
+## Overview
 
-Create a local copy of a Git repository so you can work on the code.
-
----
-
-## What you need to decide first
-
-- whether the repository is hosted on GitLab or GitHub
-- whether you need read-only access or write access
-- where the repository should live on your system
+Download a copy of a repository from GitLab to your local machine.
 
 ---
 
-## Go to your working directory
+## Before you begin
+
+Make sure:
+
+- you have access to the repository
+- you have the repository URL
+- Git is installed on your system
+
+---
+
+## Steps
+
+### 1. Open a terminal
+
+Open a terminal on your local machine.
+
+---
+
+### 2. Choose a location
+
+Navigate to the directory where you want the repository:
 
 ```bash
-mkdir -p ~/projects
-cd ~/projects
+cd <target-directory>
 ```
 
 ---
 
-## Clone the repository
-
-Using HTTPS:
+### 3. Clone the repository
 
 ```bash
-git clone https://gitlab.example.org/group/project.git
+git clone <repository-url>
 ```
 
-Using SSH:
+Replace `<repository-url>` with the URL provided by GitLab.
+
+---
+
+### 4. Enter the repository directory
 
 ```bash
-git clone git@gitlab.example.org:group/project.git
+cd <repository-name>
 ```
 
 ---
 
-## Go into the repository
+## Verify
+
+Check that:
+
+- the directory was created:
 
 ```bash
-cd project
+ls
 ```
 
----
+- files are present:
 
-## Check repository status
+```bash
+ls
+```
+
+- the repository is connected:
 
 ```bash
 git status
-git remote -v
 ```
 
 ---
 
-## Notes
+## Troubleshooting
 
-- Store code in your project space
-- Keep large datasets out of the repository
-- Use a separate storage location for data and outputs
+### Permission denied
+
+Possible causes:
+
+- no access to the repository
+- authentication not configured
 
 ---
 
-## Next
+### Repository not found
 
-- Sync repository changes
-- Collaborate on code
+Possible causes:
+
+- incorrect repository URL
+- repository does not exist
+- access not granted
+
+---
+
+### Command not found: git
+
+Possible cause:
+
+- Git is not installed or not available in your environment
+
+---
+
+## Related pages
+
+- [Create a repository](create-a-repository.md)
+- [Sync a repository](sync-repository.md)
+- [UCT GitLab](../../services/research-software/uct-gitlab.md)

@@ -1,20 +1,39 @@
-# Sync repository changes
+# Sync a Repository
 
-## Purpose
+## Overview
 
-Keep your local repository aligned with the remote repository and publish your changes.
-
----
-
-## What you need to decide first
-
-- whether you need to download remote changes
-- whether your local changes are ready to commit
-- whether you are working directly on the main branch or a feature branch
+Update your local repository and send your changes to the remote repository.
 
 ---
 
-## Check repository status
+## Before you begin
+
+Make sure:
+
+- you have cloned the repository  
+  (see: [Clone a repository](clone-a-repository.md))
+- you are inside the repository directory
+- you have permission to update the repository
+
+---
+
+## Steps
+
+### 1. Open a terminal
+
+Open a terminal on your local machine.
+
+---
+
+### 2. Navigate to the repository
+
+```bash
+cd <repository-name>
+```
+
+---
+
+### 3. Check repository status
 
 ```bash
 git status
@@ -22,7 +41,7 @@ git status
 
 ---
 
-## Download remote changes
+### 4. Get latest changes
 
 ```bash
 git pull
@@ -30,29 +49,31 @@ git pull
 
 ---
 
-## Stage local changes
+### 5. Add your changes
+
+```bash
+git add <file-or-directory>
+```
+
+To add all changes:
 
 ```bash
 git add .
 ```
 
-Or stage selected files:
+---
+
+### 6. Commit your changes
 
 ```bash
-git add path/to/file
+git commit -m "<commit-message>"
 ```
+
+Replace `<commit-message>` with a short description of your change.
 
 ---
 
-## Commit local changes
-
-```bash
-git commit -m "Describe the change"
-```
-
----
-
-## Push changes to the remote repository
+### 7. Send changes to the repository
 
 ```bash
 git push
@@ -60,23 +81,73 @@ git push
 
 ---
 
-## Check recent history
+## Verify
+
+Check that:
+
+- your changes are committed:
 
 ```bash
-git log --oneline -5
+git status
+```
+
+- your branch is up to date:
+
+```bash
+git log -n 3
 ```
 
 ---
 
-## Notes
+## Troubleshooting
 
-- Pull before starting new work if others may have changed the repository
-- Commit small, meaningful changes
-- Do not commit large data files or generated outputs unless the project expects them
+### Nothing to commit
+
+Possible causes:
+
+- no changes were made
+- changes were not added
+
+Check:
+
+```bash
+git status
+```
 
 ---
 
-## Next
+### Push rejected
 
-- Collaborate on code
-- Document how to run the project
+Possible causes:
+
+- remote repository has new changes
+- you need to pull before pushing
+
+Run:
+
+```bash
+git pull
+```
+
+then retry:
+
+```bash
+git push
+```
+
+---
+
+### Authentication failed
+
+Possible causes:
+
+- incorrect credentials
+- authentication method not configured
+
+---
+
+## Related pages
+
+- [Clone a repository](clone-a-repository.md)
+- [Create a repository](create-a-repository.md)
+- [UCT GitLab](../../services/research-software/uct-gitlab.md)
