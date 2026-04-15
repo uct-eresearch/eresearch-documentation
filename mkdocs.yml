@@ -99,7 +99,6 @@ nav:
 
   - Start here:
       - Overview: start-here/index.md
-      - Research workflow at UCT: start-here/research-workflow.md
       - Choose the right service: start-here/choose-the-right-service.md
 
   - Tasks:
@@ -111,40 +110,52 @@ nav:
 
   - Services:
       - Overview: services/index.md
-      - HPC: services/hpc/index.md
-      - Research data storage: services/storage/index.md
-      - Data transfer: services/data-transfer/index.md
+
+      - High Performance Computing (HPC):
+          - Overview: services/hpc/index.md
+
+      - Research data storage:
+          - Overview: services/storage/index.md
+
+      - Data transfer:
+          - Overview: services/data-transfer/index.md
+
       - Research software:
           - Overview: services/research-software/index.md
-          - UCT GitLab: services/research-software/uct-gitlab.md
 
   - How-to guides:
       - Overview: how-to/index.md
-      - Log into HPC: how-to/hpc/log-into-hpc.md
-      - Submit your first job: how-to/hpc/submit-your-first-job.md
-      - Transfer data using Globus: how-to/storage/transfer-data-using-globus.md
-      - Create a GitLab project: how-to/research-software/create-a-gitlab-project.md
+
+      - HPC:
+          - Log into the HPC: how-to/hpc/log-into-hpc.md
+          - Manage files and storage: how-to/hpc/manage-files-and-storage.md
+          - Use software modules: how-to/hpc/use-software-modules.md
+          - Submit a job: how-to/hpc/submit-a-job.md
+          - Use GPUs: how-to/hpc/use-gpus.md
+
+      - Data transfer:
+          - Move data: how-to/data-transfer/move-data.md
+
+      - Research software:
+          - Clone a repository: how-to/research-software/clone-a-repository.md
+          - Sync repository changes: how-to/research-software/sync-repository-changes.md
+
+  - Reference:
+      - Overview: reference/index.md
+
+      - HPC:
+          - Overview: reference/hpc/index.md
+          - Scheduler and job submission: reference/hpc/scheduler-and-job-submission.md
+          - Storage and file systems: reference/hpc/storage-and-file-systems.md
+          - GPU access and partitions: reference/hpc/gpu-access-and-partitions.md
+          - Software and modules: reference/hpc/software-and-modules.md
+          - Graphical applications: reference/hpc/graphical-applications.md
+          - Open OnDemand: reference/hpc/open-ondemand.md
+          - Data transfer and movement: reference/hpc/data-transfer-and-movement.md
+          - Policies and service conditions: reference/hpc/policies-and-service-conditions.md
 
   - Good practice:
       - Overview: good-practice/index.md
-      - Reproducible research: good-practice/reproducible-research.md
-      - Project structure: good-practice/project-structure.md
-
-  - Reference:
-    - Overview: reference/index.md
-    - Glossary: reference/glossary.md
-    - HPC:
-      - Overview: reference/hpc/index.md
-      - Storage and file systems: reference/hpc/storage-and-file-systems.md
-      - Scheduler and job submission: reference/hpc/scheduler-and-job-submission.md
-      - GPU access and partitions: reference/hpc/gpu-access-and-partitions.md
-      - Software and modules: reference/hpc/software-and-modules.md
-      - Graphical applications: reference/hpc/graphical-applications.md
-      - Open OnDemand: reference/hpc/open-ondemand.md
-      - Data transfer and movement: reference/hpc/data-transfer-and-movement.md
-      - Policies and service conditions: reference/hpc/policies-and-service-conditions.md
 
   - Support:
       - Overview: support/index.md
-      - FAQ: support/faq.md
-      - Contact points: support/contact-points.md
