@@ -1,76 +1,46 @@
 # UCT eResearch Documentation
 
-## Find the right service for your research workflow
+## Support for your research workflow
 
-Research often involves a combination of code, data, storage, transfer, and compute.
+Research typically involves a combination of code, data, storage, transfer, and compute.
 
-This documentation helps you:
-- identify what you are trying to do
-- choose the right UCT service
-- take the next step with confidence
+This documentation helps you move from goal → action using UCT eResearch services.
 
 ---
 
-## Research workflow at UCT
+## Research workflow
 
 ```mermaid
 flowchart LR
-    A[Plan your workflow] --> B[Collaborate on code]
+    A[Plan your work] --> B[Collaborate on code]
     B --> C[Store and organise data]
-    C --> D[Transfer data securely]
-    D --> E[Run large-scale analysis]
+    C --> D[Move data]
+    D --> E[Run analysis]
     E --> F[Manage outputs]
     F --> G[Share or archive results]
 ```
 
-Each stage connects to one or more UCT services.
+Each stage connects to one or more services.
 
 ---
 
-## Start here
+## Start
 
-- [Choose the right service](start-here/choose-the-right-service.md)
-
----
-
-## Common tasks
-
-- [Run large-scale analysis](tasks/run-large-scale-analysis.md)
-- [Store and share research data](tasks/store-and-share-research-data.md)
-- [Move data securely](tasks/move-data-securely.md)
-- [Collaborate on code](tasks/collaborate-on-code.md)
+- [Start here](start-here/index.md)
+- [Tasks](tasks/index.md)
+- [Services](services/index.md)
 
 ---
 
-## Services
+## How to use this site
 
-- [High Performance Computing (HPC)](services/hpc/index.md)
-- [Research data storage](services/storage/index.md)
-- [Data transfer](services/data-transfer/index.md)
-- [UCT GitLab](services/research-software/uct-gitlab.md)
-
----
-
-## How-to guides
-
-Step-by-step instructions for common tasks:
-
-- [Log into HPC](how-to/hpc/log-into-hpc.md)
-- [Submit a job](how-to/hpc/submit-a-job.md)
-- [Transfer data](how-to/data-transfer/move-data.md)
-- [Create a clone a repository](how-to/research-software/clone-a-repository.md)
-- [Sync a repository](how-to/research-software/sync-repository.md)
+- Start with [Tasks](tasks/index.md) if you know what you want to do  
+- Use [Start here](start-here/index.md) if you are unsure  
+- Use [Services](services/index.md) to understand available systems  
+- Use How-to and Reference for detailed work  
 
 ---
 
-## Good practice
+## Support
 
-- [Reproducible research](good-practice/reproducible-research.md)
-- [Project structure](good-practice/project-structure.md)
-
----
-
-## Need help?
-
-- [Frequently asked questions](support/faq.md)
-- [Contact points](support/contact-points.md)
+- [Get help](support/index.md)

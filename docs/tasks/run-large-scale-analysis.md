@@ -65,7 +65,7 @@ Submit and manage your workload using the appropriate tools:
 If needed:
 
 - [Use GPUs](../how-to/hpc/use-gpus.md)
-- [Use modules](../how-to/hpc/use-modules.md)
+- [Use modules](../how-to/hpc/use-software-modules.md)
 
 ---
 

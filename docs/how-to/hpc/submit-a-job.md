@@ -171,5 +171,5 @@ Possible causes:
 ## Related pages
 
 - [Log into HPC](log-into-hpc.md)
-- [Use modules](use-modules.md)
+- [Use modules](use-software-modules.md)
 - [Use GPUs](use-gpus.md)
