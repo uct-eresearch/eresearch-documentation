@@ -135,8 +135,14 @@ nav:
           - Submit a job: how-to/hpc/submit-a-job.md
           - Use GPUs: how-to/hpc/use-gpus.md
 
+      - Storage:
+          - Request storage: how-to/storage/request-storage.md
+          - Mount RDS: how-to/storage/mount-rds.md
+
       - Data transfer:
           - Move data: how-to/data-transfer/move-data.md
+          - Transer with Globus: how-to/data-transfer/transfer-with-globus.md
+          - Transfer with NextCloud: how-to/data-transfer/transfer-with-nextcloud.md
 
       - Research software:
           - Clone a repository: how-to/research-software/clone-a-repository.md
@@ -164,8 +170,11 @@ nav:
       - Data transfer:
           - Overview: reference/data-transfer/index.md
           - Nextcloud: reference/data-transfer/nextcloud.md
+
+      - Research software:
+          - GitLab: reference/research-software/gitlab.md
       
-      - Glossary: docs/reference/glossary.md
+      - Glossary: reference/glossary.md
 
   - Good practice:
       - Overview: good-practice/index.md
