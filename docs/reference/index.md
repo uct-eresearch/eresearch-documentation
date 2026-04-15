@@ -1,52 +1,66 @@
 # Reference
 
-## Look up key information for UCT eResearch services
+## Look up how systems and services are structured
 
-This section provides factual, stable information that you may need to refer to regularly.
+Use the Reference section when you need to understand how something works or check a specific detail.
 
-Use the Reference section when you need:
-- definitions of terms
-- system-specific details (e.g. storage paths, hostnames, commands)
-- technical constraints and limits
-- policies and service conditions
+For example:
 
----
+- how storage is organised
+- how data is moved between systems
+- how software platforms are structured
+- how compute environments behave
 
-## How to use this section
+Reference pages explain how systems are set up and how they behave.
 
-Reference pages are not step-by-step guides.
+If you need to do something, use:
 
-If you are trying to complete a task, go to:
-- **[Tasks](../tasks/index.md)** → to identify what you want to do
-- **[How-to guides](../how-to/index.md)** → for step-by-step instructions
-
-If you are deciding which service to use:
-- **[Services](../services/index.md)** → to understand what each service is for
+- [Tasks](../tasks/index.md) for outcome-based guidance  
+- [How-to guides](../how-to/index.md) for step-by-step instructions  
+- [Start here](../start-here/index.md) if you are unsure where to begin  
 
 ---
 
-## Available reference areas
-
-### Glossary
-
-Definitions of common terms used across research computing at UCT:
-- HPC concepts (cluster, node, scheduler)
-- storage concepts (/home, /scratch, RDS)
-- tools and technologies (SSH, GPU, modules)
-
-→ See: **[Glossary](../reference/glossary.md)**
-
----
+## Reference by service
 
 ### High Performance Computing (HPC)
 
-Technical reference information for the UCT HPC service, including:
-- access details and hostnames
-- storage systems and file locations
-- scheduler behaviour and job submission concepts
-- GPU access conditions
-- software and module systems
-- service policies and constraints
+Detailed information about the HPC environment.
 
-→ See: **[HPC Reference](../reference/hpc/index.md)**
+- [HPC reference overview](hpc/index.md)
+- [Scheduler and job submission](hpc/scheduler-and-job-submission.md)
+- [Storage and file systems](hpc/storage-and-file-systems.md)
+- [GPU access and partitions](hpc/gpu-access-and-partitions.md)
+- [Software and modules](hpc/software-and-modules.md)
+- [Graphical applications](hpc/graphical-applications.md)
+- [Open OnDemand](hpc/open-ondemand.md)
+- [Data transfer and movement](hpc/data-transfer-and-movement.md)
+- [Policies and service conditions](hpc/policies-and-service-conditions.md)
 
+---
+
+### Storage
+
+How research data is stored, accessed, and managed.
+
+- [Storage reference](storage/index.md)
+- [Research Data Store (RDS)](storage/rds.md)
+- [Storage comparison](storage/storage-comparison.md)
+
+---
+
+### Data transfer
+
+How data is moved between systems and environments.
+
+- [Data transfer reference](data-transfer/index.md)
+- [Data transfer methods](data-transfer/methods.md)
+- [Nextcloud](data-transfer/nextcloud.md)
+
+---
+
+### Research software
+
+How code and collaborative software development are structured.
+
+- [GitLab](research-software/gitlab.md)

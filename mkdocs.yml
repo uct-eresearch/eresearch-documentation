@@ -8,6 +8,8 @@ theme:
   name: material
   logo: assets/images/eresearch-logo.png
   favicon: assets/images/favicon.png
+  custom_dir: overrides
+
   features:
     - navigation.top
     - navigation.tabs

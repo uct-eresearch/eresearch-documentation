@@ -1,8 +1,6 @@
 # Choose the right service
 
-## Start here
-
-What do you need to do?
+## What do you need to do?
 
 ---
 

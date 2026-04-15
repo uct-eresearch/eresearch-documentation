@@ -488,85 +488,98 @@ body,
    CUSTOM FOOTER (UCT + eResearch)
    ========================= */
 
-.site-footer-custom {
+/* =========================
+   FOOTER PRE-BAND (branding only)
+   ========================= */
+
+.site-footer-pre {
   background-color: var(--uct-dark-blue);
-  color: var(--uct-white);
-  margin-top: 2rem;
+  color: rgba(255, 255, 255, 0.92);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.site-footer-inner {
+.site-footer-pre__inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1.4rem 1.2rem;
+  padding: 0.8rem 1.2rem;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem 2rem;
   flex-wrap: wrap;
 }
 
-/* Brand block */
-.site-footer-brand {
+.site-footer-identity {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0.9rem;
+  gap: 0.4rem;
+  font-size: 0.85rem;
 }
 
-.site-footer-brand img {
-  height: 42px;
-  width: auto;
-  background: white;
-  border-radius: 4px;
-  padding: 4px;
-}
-
-.site-footer-brand__text {
-  line-height: 1.3;
-  font-size: 0.9rem;
-}
-
-.site-footer-brand__text strong {
-  display: block;
+.site-footer-identity__name {
   font-weight: 600;
+  color: var(--uct-white);
 }
 
-/* Links */
+.site-footer-identity__sep {
+  opacity: 0.5;
+}
+
+.site-footer-identity__tagline {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* =========================
+   FOOTER LINKS (clear affordance)
+   ========================= */
+
 .site-footer-links {
   display: flex;
-  gap: 1.2rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
 }
 
 .site-footer-links a {
-  color: var(--uct-white);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.24rem 0.55rem;
+  border-radius: 6px;
+
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.2;
+
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
-  font-size: 0.9rem;
-  opacity: 0.9;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: all 0.15s ease;
 }
 
-.site-footer-links a:hover {
-  color: var(--eresearch-blue);
-  opacity: 1;
+.site-footer-links a:hover,
+.site-footer-links a:focus {
+  color: var(--uct-white);
+  background: rgba(30, 150, 210, 0.18);
+  border-color: rgba(30, 150, 210, 0.38);
+  text-decoration: none;
+  transform: translateY(-1px);
 }
 
-/* Bottom bar */
-.site-footer-meta {
-  background-color: #001826;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.8rem;
-  text-align: center;
+.site-footer-links a[href^="http"]::after {
+  content: "↗";
+  font-size: 0.7rem;
+  opacity: 0.72;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .site-footer-inner {
+@media screen and (max-width: 76.234375em) {
+  .site-footer-pre__inner {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .site-footer-links {
-    margin-top: 0.6rem;
   }
 }
 
@@ -669,4 +682,76 @@ body,
   .md-typeset .home-lower-band {
     grid-template-columns: 1fr;
   }
+}
+
+/* =========================
+   SHARED LINK CHIP SYSTEM
+   ========================= */
+
+.link-chip,
+.md-typeset .grid.cards > ul > li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.65rem;
+  border-radius: 6px;
+
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.2;
+
+  color: var(--eresearch-blue);
+  text-decoration: none;
+
+  background: rgba(30, 150, 210, 0.08);
+  border: 1px solid rgba(30, 150, 210, 0.16);
+
+  transition: all 0.15s ease;
+}
+
+.link-chip:hover,
+.link-chip:focus,
+.md-typeset .grid.cards > ul > li a:hover,
+.md-typeset .grid.cards > ul > li a:focus {
+  color: var(--eresearch-blue-dark);
+  background: rgba(30, 150, 210, 0.14);
+  border-color: rgba(30, 150, 210, 0.28);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   HOMEPAGE CARD LAYOUT FIX
+   ========================= */
+
+/* Make each card a vertical layout container */
+.md-typeset .grid.cards > ul > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  min-height: 180px; /* adjust if needed */
+  padding: 1rem 1rem 1.1rem;
+}
+
+/* Ensure text blocks behave consistently */
+.md-typeset .grid.cards > ul > li > p {
+  margin-bottom: 0.6rem;
+}
+
+/* Title (first paragraph or strong text) */
+.md-typeset .grid.cards > ul > li > p:first-child,
+.md-typeset .grid.cards > ul > li strong {
+  margin-bottom: 0.35rem;
+}
+
+/* Push the link to the bottom */
+.md-typeset .grid.cards > ul > li a {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* tighten body text block */
+.md-typeset .grid.cards > ul > li > p:nth-child(2) {
+  flex-grow: 1;
 }
