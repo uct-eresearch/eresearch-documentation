@@ -116,7 +116,7 @@ nav:
 
       - Research data storage:
           - Overview: services/storage/index.md
-
+          
       - Data transfer:
           - Overview: services/data-transfer/index.md
 
@@ -155,6 +155,15 @@ nav:
           - Open OnDemand: reference/hpc/open-ondemand.md
           - Data transfer and movement: reference/hpc/data-transfer-and-movement.md
           - Policies and service conditions: reference/hpc/policies-and-service-conditions.md
+
+      - Storage:
+          - Overview: reference/storage/index.md
+          - RDS: reference/storage/rds.md
+          - Comparison: reference/storage/storage-comparison.md
+
+      - Data transfer:
+          - Overview: reference/data-transfer/index.md
+          - Nextcloud: reference/data-transfer/nextcloud.md
       
       - Glossary: docs/reference/glossary.md
 

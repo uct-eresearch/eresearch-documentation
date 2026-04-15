@@ -1,76 +1,140 @@
-# Research Data Storage
+# Storage
 
-## What this service is
+## Choose the right storage for your research
 
-Research data storage provides managed, secure storage for active research data at UCT.
+Research data storage is not one-size-fits-all.
 
-It supports storing, organising, and accessing data throughout a research project, including integration with compute environments such as HPC.
+The right choice depends on:
+- how actively the data is used
+- how much data you have
+- whether it contains sensitive information
+- whether it needs to integrate with compute (e.g. HPC)
+- how long it needs to be retained
 
----
-
-## When to use this service
-
-Use research data storage when you need to:
-
-- store active research data during a project
-- organise datasets for ongoing analysis
-- share data with collaborators within or across institutions
-- ensure data is stored in a managed and backed-up environment
-- connect storage to compute platforms such as HPC
-
-If your data is small, temporary, or not part of a research workflow, other storage options may be more appropriate.
-
-If you are unsure where to begin, see [Choose the right service](../../start-here/choose-the-right-service.md).
+UCT provides multiple storage options to support different stages of the research lifecycle.
 
 ---
 
-## What this service provides
+## Storage options at UCT
 
-Research data storage typically includes:
+### Research Data Store (RDS)
 
-- centrally managed storage systems
-- controlled access for individuals and teams
-- integration with HPC and other research services
-- support for large datasets and structured organisation
+**Best for:** Active research data, large datasets, HPC workflows
 
-Storage is designed for active research use, not long-term archiving or publication.
+- On-premise, secure storage located at UCT
+- POPIA compliant (data remains in South Africa)
+- High performance (low latency, high bandwidth)
+- Scalable as projects grow
+- Integrated with HPC
+- Reliable backup and disaster recovery
 
----
+Use RDS when your data is:
+- large or growing
+- actively analysed
+- sensitive or compliance-bound
+- part of compute workflows
 
-## How this fits with other services
-
-Research data storage is part of a broader workflow and is commonly used with:
-
-- [High Performance Computing (HPC)](../hpc/index.md) for large-scale analysis
-- [Data transfer](../data-transfer/index.md) for moving data between systems
-- [Research software](../research-software/index.md) for managing code and workflows
-
----
-
-## Start from your task
-
-If you know what you want to do, go to:
-
-- [Store and share research data](../../tasks/store-and-share-research-data.md)
-- [Move data securely](../../tasks/move-data-securely.md)
-- [Run large-scale analysis](../../tasks/run-large-scale-analysis.md)
+→ See `reference/storage/rds.md`
 
 ---
 
-## Understand how storage works
+### Tape storage (long-term)
 
-Go to Reference when you need concepts or system behaviour:
+**Best for:** Archival storage, infrequently accessed data
 
-- [Storage and file systems](../../reference/hpc/storage-and-file-systems.md)
-- [Data transfer and movement](../../reference/hpc/data-transfer-and-movement.md)
-- [Policies and service conditions](../../reference/hpc/policies-and-service-conditions.md)
+- Lower cost than RDS
+- Designed for long-term retention
+- Not suitable for active analysis or frequent access
+
+Use tape when:
+- the project is complete
+- data must be retained but not actively used
 
 ---
 
-## Need help?
+### Microsoft OneDrive / SharePoint
 
-If you need support, go to:
+**Best for:** Collaboration and lightweight storage
 
-- [Support overview](../../support/index.md)
-- [FAQ](../../support/faq.md)
-- [Contact points](../../support/contact-points.md)
+- Cloud-based storage within UCT’s Microsoft environment
+- Suitable for documents and small-to-medium datasets
+- Easy sharing within and outside UCT
+- Subject to quotas and sync limitations
+
+Use OneDrive/SharePoint when:
+- collaboration is the primary need
+- data volumes are modest
+- HPC integration is not required
+
+---
+
+### DIRISA (national infrastructure)
+
+**Best for:** No-cost storage where replication is sufficient
+
+- National research infrastructure
+- Free to use
+- Provides replication (not full backup)
+- Limited direct integration with UCT workflows
+
+Use DIRISA when:
+- budget is constrained
+- replication is sufficient for your needs
+- institutional integration is not critical
+
+---
+
+### ZivaHub
+
+**Best for:** Publishing and sharing research outputs
+
+- Open data repository
+- Assigns DOIs to datasets
+- Supports long-term access and citation
+
+Use ZivaHub when:
+- your data is ready to be shared or published
+- you want to support reproducibility and reuse
+
+---
+
+## How to choose
+
+Use this simple framing:
+
+- **Active + large + compute-intensive → RDS**
+- **Inactive but must be retained → Tape**
+- **Collaborative + lightweight → OneDrive / SharePoint**
+- **No budget → DIRISA (with limitations)**
+- **Publishing outputs → ZivaHub**
+
+If your needs span multiple categories, you will likely use more than one service.
+
+---
+
+## What we need to advise you
+
+Before recommending a storage solution, we typically need to understand:
+
+- What type of data are you working with?
+- How much data do you need to store?
+- How long will it need to be retained?
+- Does the data contain personal or sensitive information?
+- Do you need active access or long-term preservation only?
+- Will collaborators need access (internal or external)?
+- Is there funding available for storage?
+
+→ See `how-to/storage/request-storage.md`
+
+---
+
+## Storage and your workflow
+
+Storage is part of a broader research workflow.
+
+You may also need:
+- **Data transfer tools** → see `services/data-transfer/`
+- **Compute resources (HPC)** → see `services/hpc/`
+- **Guidance on managing research data** → see `good-practice/`
+
+---
