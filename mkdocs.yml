@@ -114,7 +114,9 @@ nav:
       - HPC: services/hpc/index.md
       - Research data storage: services/storage/index.md
       - Data transfer: services/data-transfer/index.md
-      - UCT GitLab: services/research-software/uct-gitlab.md
+      - Research software:
+          - Overview: services/research-software/index.md
+          - UCT GitLab: services/research-software/uct-gitlab.md
 
   - How-to guides:
       - Overview: how-to/index.md
@@ -129,9 +131,17 @@ nav:
       - Project structure: good-practice/project-structure.md
 
   - Reference:
-      - Overview: reference/index.md
-      - Glossary: reference/glossary.md
-      - HPC scheduler reference: reference/hpc-scheduler-reference.md
+    - Overview: reference/index.md
+    - Glossary: reference/glossary.md
+    - HPC:
+      - Overview: reference/hpc/index.md
+      - Access and hostnames: reference/hpc/access-and-hostnames.md
+      - Storage and file systems: reference/hpc/storage-and-file-systems.md
+      - Scheduler and job submission: reference/hpc/scheduler-and-job-submission.md
+      - GPU access and partitions: reference/hpc/gpu-access-and-partitions.md
+      - Software and modules: reference/hpc/software-and-modules.md
+      - Graphical applications: reference/hpc/graphical-applications.md
+      - Policies and service conditions: reference/hpc/policies-and-service-conditions.md
 
   - Support:
       - Overview: support/index.md
