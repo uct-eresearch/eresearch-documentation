@@ -1,65 +1,74 @@
-# Submit a job (UCT-specific)
+# Submit a job
 
-## Purpose
+## Run your work on HPC using the scheduler
 
-Run workloads on UCT HPC using the SLURM scheduler.
+Use this guide to run your analysis or script on HPC.
 
----
-
-## UCT HPC scheduler model
-
-UCT HPC uses SLURM:
-- jobs are submitted with `sbatch`
-- resources are allocated via partitions
-- queues may differ (CPU vs GPU)
-
-Reference:
-../../reference/hpc/scheduler-and-job-submission.md
+Do not run compute-intensive work directly on login nodes.
 
 ---
 
-## Minimal job script (UCT example)
+## Before you begin
+
+Make sure you:
+
+- can [connect to HPC](connect-to-hpc.md)
+- have your code or script ready
+- know where your input data is stored
+
+---
+
+## 1. Create a working directory
+
+```bash
+mkdir -p ~/projects/my-project
+cd ~/projects/my-project
+```
+
+---
+
+## 2. Create a job script
+
+Create a file (for example, `job.sh`):
 
 ```bash
 #!/bin/bash
-#SBATCH --job-name=uct-test
-#SBATCH --partition=compute
+#SBATCH --job-name=my-job
 #SBATCH --time=01:00:00
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=8G
 #SBATCH --output=logs/job-%j.out
 #SBATCH --error=logs/job-%j.err
 
-module load python/3.10
+module load python
 
 python script.py
 ```
 
----
-
-## Directory setup
-
-```bash
-mkdir -p ~/projects/my-project/{logs,results}
-cd ~/projects/my-project
-```
+Adjust:
+- time
+- memory
+- CPUs
+- modules
+- script name
 
 ---
 
-## Submit job
+## 3. Submit the job
 
 ```bash
 sbatch job.sh
 ```
 
-Expected output:
+You should see output similar to:
+
 ```
 Submitted batch job <jobid>
 ```
 
 ---
 
-## Monitor jobs
+## 4. Check job status
 
 ```bash
 squeue -u $USER
@@ -67,17 +76,9 @@ squeue -u $USER
 
 ---
 
-## Inspect job
+## 5. Check results
 
-```bash
-scontrol show job <jobid>
-```
-
----
-
-## After completion
-
-Check outputs:
+When the job finishes, inspect:
 
 ```bash
 cat logs/job-<jobid>.out
@@ -86,50 +87,19 @@ cat logs/job-<jobid>.err
 
 ---
 
-## GPU jobs (UCT example)
+## If something does not work
 
-```bash
-#SBATCH --partition=gpu
-#SBATCH --gres=gpu:1
-```
+Check:
 
-Full example:
-
-```bash
-#!/bin/bash
-#SBATCH --job-name=gpu-test
-#SBATCH --partition=gpu
-#SBATCH --gres=gpu:1
-#SBATCH --time=02:00:00
-
-module load cuda
-
-python train.py
-```
-
-Reference:
-../../reference/hpc/gpu-access-and-partitions.md
+- output and error files
+- file paths
+- that required modules are loaded
+- resource requests (time, memory, CPUs)
 
 ---
 
-## Common UCT-specific pitfalls
+## Learn more
 
-- using wrong partition (job stays pending)
-- exceeding memory limits (job killed)
-- forgetting module load
-- writing outputs to wrong directory
-
----
-
-## Good practice
-
-- always test with small jobs first
-- monitor queue behaviour
-- keep logs organised
-- match partition to workload
-
----
-
-## Next step
-
-manage-files-and-storage.md
+- [Scheduler and job submission](../../reference/hpc/scheduler-and-job-submission.md)
+- [Software and modules](../../reference/hpc/software-and-modules.md)
+- [GPU access and partitions](../../reference/hpc/gpu-access-and-partitions.md)

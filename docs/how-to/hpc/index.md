@@ -2,58 +2,45 @@
 
 ## Step-by-step guidance for common HPC tasks
 
-Use these guides when you already know that you need HPC and want practical help completing a specific task.
+These guides help you complete specific tasks on UCT HPC systems.
 
-These pages are action-oriented. They help you get something done.
+They assume:
+- you already know you need HPC
+- you are ready to take action
 
-If you need background information first, start with the [HPC reference section](../../reference/hpc/index.md).  
-If you are still deciding whether HPC is the right service, start with the [HPC service overview](../../services/hpc/index.md).
+If you need conceptual understanding, see the reference section:
+- ../../reference/hpc/index.md
+
+If you are still deciding whether to use HPC:
+- ../../services/hpc/index.md
 
 ---
 
-## Start here
+## Start here (recommended path)
 
-If you are new to HPC, work through these in order:
+If you are new to HPC:
 
-1. [Connect to HPC](connect-to-hpc.md)
-2. [Submit a job](submit-a-job.md)
-3. [Manage files and storage](manage-files-and-storage.md)
-4. [Use software modules](use-software-modules.md)
+1. connect to HPC
+2. submit a job
+3. manage files and storage
+4. use software modules
 
 ---
 
 ## Guides
 
-### Access and connection
-- [Connect to HPC](connect-to-hpc.md)
-
-### Running work
-- [Submit a job](submit-a-job.md)
-
-### Files and data
-- [Manage files and storage](manage-files-and-storage.md)
-
-### Software environment
-- [Use software modules](use-software-modules.md)
+- connect-to-hpc.md — access and login
+- submit-a-job.md — run work through the scheduler
+- manage-files-and-storage.md — organise and manage data
+- use-software-modules.md — manage software environments
 
 ---
 
-## Related reference
+## Design principle
 
-For deeper explanation, see:
+These pages are:
+- practical
+- minimal but sufficient
+- aligned with how HPC systems actually operate
 
-- [HPC overview](../../reference/hpc/index.md)
-- [Scheduler and job submission](../../reference/hpc/scheduler-and-job-submission.md)
-- [Storage and file systems](../../reference/hpc/storage-and-file-systems.md)
-- [Software and modules](../../reference/hpc/software-and-modules.md)
-- [Policies and service conditions](../../reference/hpc/policies-and-service-conditions.md)
-- [Open OnDemand](../../reference/hpc/open-ondemand.md)
-
----
-
-## Related tasks
-
-You may also find these useful:
-
-- [Run large-scale analysis](../../tasks/run-large-scale-analysis.md)
-- [Store and share research data](../../tasks/store-and-share-research-data.md)
+They are not conceptual explanations — those live in reference.

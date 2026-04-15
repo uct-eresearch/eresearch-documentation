@@ -1,41 +1,62 @@
 # Tasks
 
-## What are you trying to do?
+## Start from what you want to do
 
-Start here if you have a goal in mind but are not sure which tool or service to use.
+Use this section when you have a goal and want to take the next step.
 
-These pages help you:
+Tasks help you:
+- identify the right service
+- move quickly to the relevant guidance
+- avoid needing to understand the full system upfront
 
-- understand your options
-- choose the right approach
-- move forward with a clear next step
+Each task gives you a clear starting point and directs you to:
+- the right service
+- the relevant how-to guides
+- deeper reference material if needed
 
 ---
 
-## Common tasks
+## Common research tasks
 
 ### Compute and analysis
-- [Run large-scale analysis](run-large-scale-analysis.md)
+
+- [Run large-scale analysis](run-large-scale-analysis.md)  
+  Use HPC to run compute-intensive workloads, scale analyses, or process large datasets.
+
+---
 
 ### Data management
-- [Store and share research data](store-and-share-research-data.md)
-- [Move data securely](move-data-securely.md)
 
-### Research software and collaboration
-- [Collaborate on code](collaborate-on-code.md)
+- [Store and share research data](store-and-share-research-data.md)  
+  Store data securely, organise it for ongoing work, and share it with collaborators.
+
+---
+
+### Code and collaboration
+
+- [Collaborate on code](collaborate-on-code.md)  
+  Work with others on code, track changes, and manage shared development workflows.
 
 ---
 
 ## How to use this section
 
-Each task page answers:
+If you are not sure where to start:
 
-- When should I do this?
-- What options do I have?
-- What should I use at UCT?
-- What do I do next?
+1. Choose the task that best matches what you want to do  
+2. Follow the links to the relevant service and how-to guides  
+3. Use the reference section if you need deeper understanding  
 
-If you already know what tool you need, go to:
+If you are still unsure:
 
-- [Services](../services/index.md)
-- [How-to guides](../how-to/index.md)
+→ [Choose the right service](../start-here/choose-the-right-service.md)
+
+---
+
+## Prefer a different entry point?
+
+You can also start from:
+
+- [Services](../services/index.md) — explore available services  
+- [How-to guides](../how-to/index.md) — go directly to step-by-step instructions  
+- [Reference](../reference/index.md) — understand how systems work

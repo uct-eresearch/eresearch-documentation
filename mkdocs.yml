@@ -135,12 +135,13 @@ nav:
     - Glossary: reference/glossary.md
     - HPC:
       - Overview: reference/hpc/index.md
-      - Access and hostnames: reference/hpc/access-and-hostnames.md
       - Storage and file systems: reference/hpc/storage-and-file-systems.md
       - Scheduler and job submission: reference/hpc/scheduler-and-job-submission.md
       - GPU access and partitions: reference/hpc/gpu-access-and-partitions.md
       - Software and modules: reference/hpc/software-and-modules.md
       - Graphical applications: reference/hpc/graphical-applications.md
+      - Open OnDemand: reference/hpc/open-ondemand.md
+      - Data transfer and movement: reference/hpc/data-transfer-and-movement.md
       - Policies and service conditions: reference/hpc/policies-and-service-conditions.md
 
   - Support:
