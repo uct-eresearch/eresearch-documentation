@@ -4,38 +4,25 @@
 
 Tutorials show how multiple steps fit together in a real research workflow.
 
-They guide you through a sequence of tasks, from starting point to outcome, using UCT eResearch services.
+They help you move from a starting point to an outcome by connecting Tasks and How-to guides.
 
 ---
 
-## What tutorials are for
+## When to use tutorials
 
 Use tutorials when you want to:
 
-- understand how a full workflow fits together
-- see how multiple services are used in combination
-- follow a structured path through a research task
-- move from a starting point to a clear outcome
+- see how a workflow fits together end-to-end  
+- understand how multiple services are used in combination  
+- follow a structured path through a research task  
 
-Tutorials help you connect individual steps into a coherent process.
+If you already know what you need to do:
 
----
+→ [Tasks](../tasks/index.md)
 
-## What tutorials are not
+If you need exact steps:
 
-Tutorials do not:
-
-- explain concepts in depth
-- replace step-by-step instructions
-- document services or systems
-
-For those, use:
-
-- [Start here](../start-here/index.md) to orient yourself
-- [Tasks](../tasks/index.md) to identify what you want to do
-- [How-to guides](../how-to/index.md) for exact steps
-- [Services](../services/index.md) to understand available capabilities
-- [Reference](../reference/index.md) for factual information
+→ [How-to guides](../how-to/index.md)
 
 ---
 
@@ -43,11 +30,11 @@ For those, use:
 
 Each tutorial:
 
-- presents a real research scenario
-- outlines the full workflow
-- links to the relevant tasks and how-to guides for execution
+- presents a real research scenario  
+- outlines the workflow at a high level  
+- links to Tasks and How-to guides for execution  
 
-You follow the flow, then use linked pages to complete each step.
+Tutorials do not contain commands or detailed instructions.
 
 ---
 
@@ -55,17 +42,16 @@ You follow the flow, then use linked pages to complete each step.
 
 ### Digital Humanities
 
-- [Text analysis workflow](dh/text-analysis.md)
+- [Text analysis workflow](digital-humanities/text-analysis-workflow.md)
 
 ---
 
-## Choosing the right place to start
+## Contribute a tutorial
 
-If you already know your goal:
-- go to [Tasks](../tasks/index.md)
+Tutorials are based on real research workflows.
 
-If you want to see how a workflow fits together:
-- start with a tutorial
+If you have a workflow that could help others:
 
-If you need exact commands or steps:
-- use [How-to guides](../how-to/index.md)
+→ [Contribute on GitHub](https://github.com/uct-eresearch/eresearch-documentation)
+
+Good tutorials connect steps clearly and link to existing guidance.
