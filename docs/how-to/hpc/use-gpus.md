@@ -137,5 +137,5 @@ cat gpu-<job-id>.err
 ## Related pages
 
 - [Submit a job](submit-a-job.md)
-- [Use modules](use-modules.md)
+- [Use modules](use-software-modules.md)
 - [Log into HPC](log-into-hpc.md)

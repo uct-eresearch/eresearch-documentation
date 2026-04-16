@@ -45,7 +45,7 @@ Store your raw and working data in a reliable location before analysis.
 
 Move your dataset to the environment where analysis will run.
 
-→ [Transfer data](../../tasks/transfer-data.md)
+→ [Transfer data](../../tasks/move-data-securely.md)
 
 ---
 

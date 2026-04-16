@@ -110,5 +110,5 @@ Possible cause:
 ## Related pages
 
 - [Submit a job](submit-a-job.md)
-- [Use modules](use-modules.md)
+- [Use modules](use-software-modules.md)
 - [Use GPUs](use-gpus.md)

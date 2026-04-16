@@ -18,7 +18,7 @@ If you are still deciding whether HPC is the right service, see:
 
 If you are new to HPC, work through these guides in order:
 
-1. [Connect to HPC](connect-to-hpc.md)
+1. [Log into the HPC](log-into-hpc.md)
 2. [Manage files and storage](manage-files-and-storage.md)
 3. [Use software modules](use-software-modules.md)
 4. [Submit a job](submit-a-job.md)
