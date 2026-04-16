@@ -1,0 +1,27 @@
+name: Tutorial contribution
+description: Propose or contribute a tutorial
+title: "[Tutorial]: "
+labels: ["tutorial"]
+
+body:
+  - type: textarea
+    attributes:
+      label: What does this tutorial show?
+      description: Describe the workflow
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Who is this for?
+      description: Target user
+
+  - type: textarea
+    attributes:
+      label: Steps involved
+      description: High-level steps
+
+  - type: textarea
+    attributes:
+      label: Notes
+      description: Constraints, tools, or context

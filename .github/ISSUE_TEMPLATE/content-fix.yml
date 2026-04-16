@@ -1,0 +1,22 @@
+name: Content fix
+description: Report an issue or suggest a small improvement
+title: "[Fix]: "
+labels: ["content"]
+
+body:
+  - type: textarea
+    attributes:
+      label: What is wrong?
+      description: Describe the issue clearly
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Suggested fix
+      description: What should it say instead?
+
+  - type: input
+    attributes:
+      label: Page / file
+      description: Link or path

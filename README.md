@@ -2,7 +2,7 @@
 
 Research computing, software, data, and infrastructure guidance at the University of Cape Town.
 
-→ **View the documentation:** https://uct-eresearch.github.io/eresearch-documentation/
+→ **View the documentation:** [https://uct-eresearch.github.io/eresearch-documentation/](https://uct-eresearch.github.io/eresearch-documentation/)
 
 ---
 
@@ -24,11 +24,11 @@ It is designed for **clarity, speed, and execution**.
 
 The site follows a strict content model:
 
-- **Tasks** — what you want to do  
-- **How-to** — how to do one thing  
-- **Services** — what each service is for  
-- **Reference** — factual system information  
-- **Tutorials** — how steps fit together  
+- **[Tasks](./docs/tasks/index.md)** — what you want to do  
+- **[How-to](./docs/how-to/index.md)** — how to do one thing  
+- **[Services](./docs/services/index.md)** — what each service is for  
+- **[Reference](./docs/reference/index.md)** — factual system information  
+- **[Tutorials](./docs/tutorials/index.md)** — how steps fit together  
 
 Each layer has a specific role. Content should not overlap.
 
@@ -78,18 +78,18 @@ The site is deployed automatically via GitHub Actions.
 
 Contributions are welcome.
 
-You can contribute by:
+If something is unclear, missing, or incorrect — you can either let us know by email or creating an issue or by suggesting a fix.
 
-- fixing errors or unclear guidance  
-- improving how-to steps  
-- adding tutorials based on real workflows  
-- identifying gaps in documentation  
-
-→ **Contribute on GitHub:** https://github.com/uct-eresearch/eresearch-documentation
-
-For contribution guidelines:
+Start here:
 
 → See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+This explains:
+
+- how to report a problem (issue, email, Service-Now request)
+- how to contribute (issue → fork → PR)
+- where content belongs
+- the rules that must be followed
 
 ---
 
