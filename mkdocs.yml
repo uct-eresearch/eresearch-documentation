@@ -151,6 +151,7 @@ nav:
           - Transfer with NextCloud: how-to/data-transfer/transfer-with-nextcloud.md
 
       - Research software:
+          - Create a repository: how-to/research-software/create-a-repository.md 
           - Clone a repository: how-to/research-software/clone-a-repository.md
           - Sync repository changes: how-to/research-software/sync-repository.md
 
@@ -175,6 +176,7 @@ nav:
 
       - Data transfer:
           - Overview: reference/data-transfer/index.md
+          - Methods: reference/data-transfer/methods.md
           - Nextcloud: reference/data-transfer/nextcloud.md
 
       - Research software:
@@ -182,8 +184,13 @@ nav:
       
       - Glossary: reference/glossary.md
 
+  - Tutorials:
+      - Overview: tutorials/index.md
+      - DH - Text analysis: tutorials/dh/text-analysis.md
+
   - Good practice:
       - Overview: good-practice/index.md
+      - Research software collaboration: good-practice/research-software-collaboration.md
 
   - Support:
       - Overview: support/index.md

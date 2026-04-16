@@ -95,6 +95,12 @@
 
     [Browse how-to guides](how-to/index.md)
 
+-   **Tutorials**
+    
+    Use tutorials to follow complete research workflows and see how multiple steps fit together in practice.
+
+    [Browse tutorials](tutorials/index.md)
+
 -   **Reference**
     
     Use reference pages when you need factual detail about systems, services, constraints, or terminology.
