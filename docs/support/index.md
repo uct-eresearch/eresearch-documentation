@@ -34,3 +34,30 @@ If you are not sure where to begin:
 
 - go to [Tasks](../tasks/index.md)
 - or [Start here](../start-here/index.md)
+
+## Contribute to this documentation
+
+This documentation is developed openly. You can contribute by:
+
+- suggesting improvements
+- reporting errors or outdated content
+- adding examples or tutorials based on real research workflows
+
+If you are comfortable working on GitHub:
+
+→ [Contribute on GitHub](https://github.com/uct-eresearch/eresearch-documentation)
+
+If you prefer not to use GitHub, you can contact the support team.
+
+---
+
+### What to contribute
+
+Useful contributions include:
+
+- fixing incorrect or unclear guidance  
+- improving how-to steps  
+- adding tutorials that show real workflows  
+- identifying gaps in available guidance  
+
+Focus on practical improvements that help others move from a research need to action.
