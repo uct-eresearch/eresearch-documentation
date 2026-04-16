@@ -42,7 +42,7 @@ Tutorials do not contain commands or detailed instructions.
 
 ### Digital Humanities
 
-- [Text analysis workflow](digital-humanities/text-analysis-workflow.md)
+- [Text analysis workflow](dh/text-analysis.md)
 
 ---
 
