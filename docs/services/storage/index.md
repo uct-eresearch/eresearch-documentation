@@ -5,11 +5,13 @@
 Storage provides places to keep research data during a project.
 
 Different storage systems are designed for different purposes, including:
+
 - active data used in computation
 - shared research datasets
 - collaborative file access
 
 Storage systems differ in:
+
 - performance
 - access patterns
 - sharing capabilities
@@ -27,6 +29,7 @@ Use storage when you need to:
 - maintain a shared data location for collaborators
 
 If your data does not need to be stored long-term, and only needs to move between systems, see:
+
 - [Data transfer](../data-transfer/index.md)
 
 ---

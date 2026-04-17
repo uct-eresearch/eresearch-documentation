@@ -5,6 +5,7 @@
 This section helps you understand what each service is for, when to use it, and where to go next.
 
 Use the services section when you need to:
+
 - understand what a service provides
 - decide whether it fits your research workflow
 - see how services connect to each other
@@ -20,6 +21,7 @@ If you already know what you want to do, start with [Tasks](../tasks/index.md).
 Use HPC when your work needs more compute power than a laptop or standard workstation can provide.
 
 Typical reasons to use HPC:
+
 - large datasets
 - long-running analyses
 - parallel or distributed computation
@@ -32,6 +34,7 @@ Go to this page if you need to understand whether HPC is the right fit before ge
 Use research data storage when you need reliable, scalable storage for active research data.
 
 Typical reasons to use research data storage:
+
 - large or growing datasets
 - persistent project storage
 - controlled access for collaborators
@@ -44,6 +47,7 @@ Go to this page if you need to understand how project storage works and when to 
 Use data transfer services when you need to move data between systems, collaborators, or storage environments.
 
 Typical reasons to use data transfer services:
+
 - moving large files
 - transferring data to or from HPC
 - sharing data securely
@@ -56,6 +60,7 @@ Go to this page if your main need is moving data rather than storing it or analy
 Use research software services when your work depends on code, version control, repositories, or shared software workflows.
 
 Typical reasons to use research software services:
+
 - collaborating on code
 - managing versions of scripts and analysis pipelines
 - sharing software within a team
@@ -100,6 +105,7 @@ This means the services section should help you understand the role of each serv
 ## Suggested starting points
 
 Start here when your need is clear:
+
 - [Run large-scale analysis](../tasks/run-large-scale-analysis.md)
 - [Store and share research data](../tasks/store-and-share-research-data.md)
 - [Move data securely](../tasks/move-data-securely.md)
@@ -110,5 +116,6 @@ Start here when your need is clear:
 ## Need help?
 
 If you are not sure which service to use, start with:
+
 - [Choose the right service](../start-here/choose-the-right-service.md)
 - [Support](../support/index.md)

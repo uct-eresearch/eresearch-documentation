@@ -49,6 +49,7 @@ The partition and GPU type must match.
 ## Behaviour
 
 GPU jobs:
+
 - may queue longer due to limited availability
 - require correct configuration to use GPU resources
 
@@ -59,10 +60,12 @@ Not all workloads benefit from GPUs.
 ## Common issues
 
 Jobs may not start if:
+
 - GPU access has not been granted
 - incorrect partition is specified
 
 GPUs may not be used if:
+
 - software is not configured for GPU execution
 
 ---

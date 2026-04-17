@@ -5,6 +5,7 @@
 This page explains how data moves into, within, and out of the HPC environment.
 
 It focuses on:
+
 - how data transfer works conceptually
 - constraints and performance considerations
 - common patterns and trade-offs
@@ -18,12 +19,14 @@ It does **not** provide step-by-step instructions.
 Data transfer is often the **hidden bottleneck** in research workflows.
 
 Poor transfer strategies can:
+
 - slow down analysis significantly
 - overload shared systems
 - cause failed or incomplete jobs
 - create unnecessary duplication of data
 
 Efficient data movement is essential for:
+
 - reproducibility
 - performance
 - responsible use of shared infrastructure
@@ -35,11 +38,13 @@ Efficient data movement is essential for:
 ### 1. Ingress (data into HPC)
 
 Moving data from:
+
 - personal machines (laptops/desktops)
 - institutional storage (e.g. network drives)
 - external systems (cloud, collaborators)
 
 Typical use cases:
+
 - uploading input datasets
 - staging data before computation
 
@@ -48,11 +53,13 @@ Typical use cases:
 ### 2. Internal movement (within HPC)
 
 Moving data between:
+
 - directories
 - storage tiers (e.g. home vs scratch)
 - compute nodes and storage systems
 
 Typical use cases:
+
 - preparing data for jobs
 - reorganising outputs
 - optimising I/O performance
@@ -62,11 +69,13 @@ Typical use cases:
 ### 3. Egress (data out of HPC)
 
 Moving data from HPC to:
+
 - local machines
 - institutional storage
 - external collaborators or repositories
 
 Typical use cases:
+
 - retrieving results
 - archiving outputs
 - sharing datasets
@@ -105,6 +114,7 @@ Data movement crosses different network zones:
 - HPC ↔ external systems  
 
 Each boundary may introduce:
+
 - bandwidth limits
 - security controls
 - authentication requirements
@@ -116,10 +126,12 @@ Each boundary may introduce:
 HPC systems often distinguish between:
 
 - **Login nodes**  
+
   - intended for light interaction  
   - not designed for heavy data transfer  
 
 - **Transfer nodes (if available)**  
+
   - optimised for data movement  
   - designed to handle large transfers efficiently  
 
@@ -132,6 +144,7 @@ Using the wrong node type can degrade performance for all users.
 HPC environments typically use shared storage systems.
 
 Implications:
+
 - many users access the same storage simultaneously  
 - metadata operations (e.g. listing files) can be expensive  
 - large numbers of small files can degrade performance  
@@ -155,6 +168,7 @@ Different protocols are suited to different use cases:
   - handles retries and parallelism  
 
 Each protocol has trade-offs in:
+
 - performance
 - reliability
 - ease of use
@@ -168,11 +182,13 @@ Each protocol has trade-offs in:
 This is one of the most common performance problems.
 
 Issues:
+
 - high overhead per file  
 - slow transfer speeds  
 - heavy load on filesystem metadata  
 
 Common mitigation approach:
+
 - aggregate files before transfer (e.g. archive)
 
 ---
@@ -180,10 +196,12 @@ Common mitigation approach:
 ### Large datasets
 
 Challenges:
+
 - long transfer times  
 - potential interruptions  
 
 Considerations:
+
 - use tools that support resuming transfers  
 - minimise repeated transfers of unchanged data  
 
@@ -192,6 +210,7 @@ Considerations:
 ### Parallel vs sequential transfer
 
 Some tools support parallel transfer:
+
 - can improve throughput  
 - may increase load on shared systems  
 
@@ -214,10 +233,12 @@ A common HPC workflow:
 ### Use of scratch storage
 
 Temporary (scratch) storage is often:
+
 - faster  
 - optimised for computation  
 
 Typical pattern:
+
 - move data to scratch before running jobs  
 - write outputs to scratch  
 - move final results to long-term storage  
@@ -234,6 +255,7 @@ Data transfer is subject to system constraints:
 - security and access controls  
 
 Users are expected to:
+
 - avoid excessive or unnecessary transfers  
 - use appropriate tools for the task  
 - minimise impact on shared infrastructure  
@@ -272,6 +294,7 @@ Effective data transfer in HPC requires understanding:
 - which systems and constraints apply  
 
 Good data movement practices:
+
 - improve performance  
 - reduce system load  
 - support reproducible research workflows  

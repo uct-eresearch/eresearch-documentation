@@ -5,6 +5,7 @@
 This page describes Nextcloud as a system used for file access, synchronisation, and sharing.
 
 It covers:
+
 - how Nextcloud is structured
 - how data is accessed and synchronised
 - key characteristics of the platform

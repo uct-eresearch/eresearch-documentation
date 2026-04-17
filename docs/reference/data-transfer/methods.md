@@ -7,6 +7,7 @@ This page describes common methods used to move research data between systems.
 It is a reference page, not a setup guide. Use it to understand the role, strengths, and limitations of each method.
 
 For task-oriented guidance, see:
+
 - [Move data securely](../../tasks/move-data-securely.md)
 - [Data transfer](../../services/data-transfer/index.md)
 
@@ -172,6 +173,7 @@ For more detail, see:
 Data transfer methods move data between systems.
 
 They do not all provide:
+
 - durable storage
 - authoritative data management
 - collaboration controls

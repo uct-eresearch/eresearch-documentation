@@ -25,6 +25,7 @@ Use data transfer when you need to:
 - keep data synchronised across locations
 
 If your data does not need to move, see:
+
 - [Storage](../storage/index.md)
 
 ---

@@ -5,6 +5,7 @@
 This section provides factual, system-specific information about the UCT High Performance Computing (HPC) service.
 
 Use this section to:
+
 - look up hostnames, storage paths, and system behaviour
 - understand how the scheduler works
 - check software availability and module usage
@@ -18,6 +19,7 @@ Use this section to:
 ### Access and hostnames
 
 Information about:
+
 - how to connect to HPC
 - login hostnames
 - on-campus and off-campus access requirements
@@ -27,6 +29,7 @@ Information about:
 ### Storage and file systems
 
 Details about:
+
 - `/home` and `/scratch`
 - what each storage area is for
 - storage limits and expected usage
@@ -36,6 +39,7 @@ Details about:
 ### Scheduler and job submission
 
 Reference information about:
+
 - how jobs are managed
 - scheduler concepts (queues, resources)
 - job output behaviour
@@ -45,6 +49,7 @@ Reference information about:
 ### GPU access and partitions
 
 Information about:
+
 - GPU-enabled resources
 - how GPU access is granted
 - relevant constraints and expectations
@@ -54,6 +59,7 @@ Information about:
 ### Software and modules
 
 Details about:
+
 - available software environments
 - how software is organised on the system
 - module system basics
@@ -63,6 +69,7 @@ Details about:
 ### Graphical applications
 
 Information about:
+
 - running graphical tools on HPC
 - X11 forwarding and limitations
 
@@ -71,6 +78,7 @@ Information about:
 ### Policies and service conditions
 
 Key rules and expectations, including:
+
 - acceptable use
 - restrictions on usage
 - responsibilities of users
@@ -88,12 +96,14 @@ Key rules and expectations, including:
 ## When to use this section
 
 Use this section when:
+
 - you need exact system details
 - you want to understand how something works under the hood
 - you are troubleshooting or configuring workflows
 
 If you are trying to complete a task, start with:
-- Tasks or How-to guides
+
+- [Tasks](../../tasks/index.md) or [How-to guides](../../how-to/index.md)
 
 ---
 

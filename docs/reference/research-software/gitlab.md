@@ -5,6 +5,7 @@
 This page describes GitLab as a platform for managing version-controlled code and collaborative software development.
 
 It covers:
+
 - the structure of repositories
 - how changes are tracked
 - how collaboration is organised

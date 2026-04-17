@@ -21,6 +21,7 @@ For most users, graphical applications should be run via:
 This provides a more stable, accessible, and persistent interface.
 
 See:
+
 - Open OnDemand → Reference > HPC
 
 ---

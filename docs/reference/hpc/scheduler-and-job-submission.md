@@ -26,6 +26,7 @@ sinfo
 Compute resources are grouped into partitions.
 
 Common partitions include:
+
 - `ada` — general CPU workloads
 - `curie` — additional CPU capacity
 - `l40s`, `a100` — GPU-enabled nodes
@@ -100,11 +101,13 @@ srun --partition=ada --cpus-per-task=2 --mem=8G --time=01:00:00 --pty bash
 The login node is a shared access point.
 
 Use it for:
+
 - connecting
 - editing files
 - submitting jobs
 
 Do not use it for:
+
 - running computations
 - long-running processes
 

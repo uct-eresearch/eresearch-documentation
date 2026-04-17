@@ -5,6 +5,7 @@
 This page provides a high-level comparison of how data is stored, accessed, and moved.
 
 It distinguishes between:
+
 - storage systems (where data lives)
 - access and synchronisation tools
 - data transfer tools
