@@ -41,9 +41,11 @@ Before transferring data, clarify:
 ### 1. Choose an appropriate transfer method
 
 Start here:
+
 - [Data transfer](../services/data-transfer/index.md)
 
 Understand available approaches:
+
 - [Data transfer methods](../reference/data-transfer/methods.md)
 
 ---

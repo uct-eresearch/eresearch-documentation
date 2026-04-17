@@ -5,6 +5,7 @@
 You want to work with others on code in a structured and reproducible way.
 
 This typically involves:
+
 - sharing code with collaborators
 - tracking changes over time
 - coordinating contributions across a team
@@ -40,6 +41,7 @@ Before choosing an approach, clarify:
 ### 1. Use a version-controlled repository
 
 Start here:
+
 - [Research software service](../services/research-software/index.md)
 
 ---
@@ -63,6 +65,7 @@ Ensure your local work stays aligned with the shared repository:
 ### 4. Share and collaborate
 
 Use repository features to:
+
 - share access with collaborators
 - manage contributions
 - coordinate work across the team

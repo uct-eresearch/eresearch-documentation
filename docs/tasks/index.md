@@ -5,11 +5,13 @@
 Use this section when you have a goal and want to take the next step.
 
 Tasks help you:
+
 - identify the right service
 - move quickly to the relevant guidance
 - avoid needing to understand the full system upfront
 
 Each task gives you a clear starting point and directs you to:
+
 - the right service
 - the relevant how-to guides
 - deeper reference material if needed

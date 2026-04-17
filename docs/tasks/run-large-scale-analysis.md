@@ -5,6 +5,7 @@
 You want to run analysis that exceeds the capacity of a local machine.
 
 This typically involves:
+
 - using shared compute infrastructure
 - running jobs in a managed environment
 - working with larger datasets or longer-running processes
@@ -40,6 +41,7 @@ Before starting, clarify:
 ### 1. Use an appropriate compute service
 
 Start here:
+
 - [HPC service](../services/hpc/index.md)
 
 ---
@@ -47,6 +49,7 @@ Start here:
 ### 2. Prepare your data
 
 Ensure that:
+
 - your data is available in the compute environment
 - input and output locations are clearly defined
 

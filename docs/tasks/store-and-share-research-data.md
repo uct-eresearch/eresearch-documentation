@@ -3,6 +3,7 @@
 ## What you are trying to do
 
 You want to store research data so that it can be:
+
 - accessed during your project
 - shared with collaborators
 - organised and maintained over time
@@ -46,9 +47,11 @@ Before choosing a solution, clarify:
 ### 1. Choose the appropriate storage approach
 
 Start here:
+
 - [Storage service](../services/storage/index.md)
 
 Compare options:
+
 - [Storage comparison](../reference/storage/storage-comparison.md)
 
 ---
