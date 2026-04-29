@@ -86,6 +86,9 @@ markdown_extensions:
 plugins:
   - glightbox
   - search
+  - git-revision-date-localized:
+        type: date
+        enable_creation_date: false
 
 extra:
   homepage: /
@@ -165,6 +168,7 @@ nav:
 
       - HPC:
           - Overview: reference/hpc/index.md
+          - Available software: reference/hpc/available-software.md
           - Scheduler and job submission: reference/hpc/scheduler-and-job-submission.md
           - Storage and file systems: reference/hpc/storage-and-file-systems.md
           - GPU access and partitions: reference/hpc/gpu-access-and-partitions.md

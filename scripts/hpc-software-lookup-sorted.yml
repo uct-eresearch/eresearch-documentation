@@ -1,0 +1,513 @@
+# Descriptions are keyed by base module name (no version).
+# Keep descriptions short (one line).
+# Only include widely used or high-impact tools.
+
+abaqus:
+  category: Engineering and simulation
+  description: Finite element analysis software.
+  url: https://discover.3ds.com/
+
+ansys:
+  category: Engineering and simulation
+  description: Engineering simulation software suite.
+  url: https://ansys.com/
+
+autoconf: 
+  category: Programming and development
+  description: A set of M4 macros which expand into shell code to test the features of Unix-like systems.
+  url: https://hpc.guix.info/package/autoconf
+
+bamtools:
+  category: Bioinformatics and genomics
+  description: BamTools provides a fast, flexible C++ API & toolkit for reading, writing, and managing BAM files.
+  url: https://bio.tools/bamtools
+
+bbmap:
+  category: Bioinformatics and genomics
+  description: Splice-aware global aligner for DNA and RNA sequencing reads.
+  url: https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbmap-guide/
+
+bcftools:
+  category: Bioinformatics and genomics
+  description: Variant calling and VCF/BCF file processing.
+  url: https://sourceforge.net/projects/samtools/
+
+bedtools:
+  category: Bioinformatics and genomics
+  description: Tools for genomic interval manipulation.
+  url: https://github.com/arq5x/bedtools2
+
+boost:
+  category: Programming and development
+  description: a general-purpose, high-level C++ template metaprogramming framework of compile-time algorithms, sequences and metafunctions.
+  url: https://www.boost.org/libraries/latest/grid/
+
+bowtie:
+  category: Bioinformatics and genomics
+  description: Short read aligner.
+  url: https://sourceforge.net/projects/bowtie-bio/files/bowtie/0.12.9/
+
+bowtie2:
+  category: Bioinformatics and genomics
+  description: Aligns sequencing reads to reference genomes.
+  url: http://bowtie-bio.sourceforge.net/bowtie2
+
+breakdancer:
+  category: Bioinformatics and genomics
+  description: Genome-wide detection of structural variants.
+  url: https://github.com/genome/breakdancer
+
+bwa:
+  category: Bioinformatics and genomics
+  description: Aligns sequencing reads to a reference genome.
+  url: https://github.com/lh3/bwa
+
+castep:
+  category: Physics, chemistry and materials
+  description: Tool for calculating the properties of materials from first principles.
+  url: https://www.castep.org/
+
+cdo:
+  category: Earth, climate and geospatial
+  description: A large tool set for working on climate and NWP model data.
+  url: https://code.mpimet.mpg.de/projects/cdo/wiki
+
+cellranger:
+  category: Bioinformatics and genomics
+  description: Single-cell RNA-seq analysis pipeline (10x Genomics).
+  url: https://www.10xgenomics.com/support/software/cell-ranger-atac/latest
+
+cellranger-arc:
+  category: Bioinformatics and genomics
+  description: Advanced analytical suite designed for Chromium Single Cell Multiome ATAC + Gene Expression sequencing.
+  url: https://www.10xgenomics.com/support/software/cell-ranger-arc/latest
+
+cellranger-atac:
+  category: Bioinformatics and genomics
+  description: Analysis pipelines that process Epi ATAC data.
+  url: https://www.10xgenomics.com/support/software/cell-ranger-atac/latest
+
+dealii:
+  category: Engineering and simulation
+  description: A C++ software library supporting the creation of finite element codes.
+  url: https://www.gidsimulation.com
+
+delly:
+  category: Bioinformatics and genomics
+  description: Integrated structural variant prediction method
+  url: https://github.com/dellytools/delly
+
+diamond:
+  category: Bioinformatics and genomics
+  description: Fast sequence aligner for protein and translated DNA searches.
+  url: https://github.com/bbuchfink/diamond
+
+diann:
+  category: Bioinformatics and genomics
+  description: Proteomics data processing.
+  url: https://github.com/vdemichev/DiaNN
+
+dorado: 
+  category: Bioinformatics and genomics
+  description: Basecaller for Oxford Nanopore reads.
+  url: https://github.com/nanoporetech/dorado
+
+dualsphysics:
+  category: Engineering and simulation
+  description: Smoothed Particle Hydrodynamics model.
+  url: https://dual.sphysics.org/
+
+fastqc:
+  category: Bioinformatics and genomics
+  description: Quality control tool for sequencing data.
+  url: https://www.bioinformatics.babraham.ac.uk/projects
+
+freebayes:
+  category: Bioinformatics and genomics
+  description: Variant calling based on haplotype reconstruction.
+  url: https://github.com/freebayes/freebayes
+
+freesurfer:
+  category: Data analysis, publishing and visualisation
+  description: Structural and Functional Neuroimaging data.
+  url: https://surfer.nmr.mgh.harvard.edu/
+
+fsl:
+  category: Data analysis, publishing and visualisation
+  description: Analysis tools for FMRI MRI and diffusion brain imaging data.
+  url: https://fsl.fmrib.ox.ac.uk/
+
+gatk:
+  category: Bioinformatics and genomics
+  description: Toolkit for variant discovery in genomic data.
+  url: https://software.broadinstitute.org/gatk
+
+gcc:
+  category: Programming and development
+  description: Compiler suite for C, C++, and Fortran.
+  url: https://gcc.gnu.org/
+
+geva:
+  category: Bioinformatics and genomics
+  description: Genealogical Estimation of Variant Age.
+  url: https://github.com/pkalbers/geva  
+
+gffread:
+  category: Bioinformatics and genomics
+  description: Format conversions filtering FASTA sequence extraction and more.
+  url: https://github.com/gpertea/gffread
+
+gid-simulation:
+  category: Engineering and simulation
+  description: Pre- and post processor for numerical simulations in science and engineering.
+  url: pre and post processor for numerical simulations in science and engineering.
+
+gmstar:
+  category: Earth, climate and geospatial
+  description: InSAR processing system
+  url: https://topex.ucsd.edu/gmtsar
+
+gnu-parallel:
+  category: HPC, parallel computing and workflows
+  description: A shell tool for executing jobs in parallel using one or more computers.
+  url: https://docs.hpc.qmul.ac.uk/apps/general/gnuparallel/
+
+google-cloud-utils:
+  category: Programming and development
+  description:
+  url:
+
+gromacs:
+  category: Physics, chemistry and materials
+  description: Molecular dynamics simulation package.
+  url: https://www.gromacs.org/
+
+hdf5:
+  category: Programming and development
+  description: 
+  url: 
+
+hisat2:
+  category: Bioinformatics and genomics
+  description: Fast alignment tool for RNA sequencing reads.
+  url: http://daehwankimlab.github.io/hisat2
+
+intel-compiler:
+  category: Programming and development
+  description: Intel C and Fortran.
+  url: https://www.intel.com/content/www/us/en/developer/tools
+
+intel-compiler-ifort:
+  category: Programming and development
+  description: 
+  url:
+
+iqtree2:
+  category: Bioinformatics and genomics
+  description: Phylogenomic inference.
+  url: https://github.com/iqtree/iqtree2
+
+jags:
+  category: Data analysis, publishing and visualisation
+  description: Bayesian hierarchical model analysis.
+  url: https://mcmc-jags.sourceforge.io/
+
+java:
+  category: Programming and development
+  description: General-purpose programming language and runtime environment.
+  url: https://www.oracle.com/za/java/
+
+jellyfish:
+  category: Bioinformatics and genomics
+  description: Tool for fast memory-efficient counting of k-mers in DNA.
+  url: https://www.genome.umd.edu/jellyfish.html
+
+jewel:
+  category: Physics, chemistry and materials
+  description: A Monte Carlo event generator simulating QCD jet evolution in heavy-ion collisions.
+  url: https://jewel.hepforge.org/
+
+julia:
+  category: Data analysis, publishing and visualisation
+  description: Julia compiler.
+  url: https://julialang.org/
+
+kallisto:
+  category: Bioinformatics and genomics
+  description: Transcript quantification using pseudo-alignment.
+  url: https://pachterlab.github.io/kallisto/starting  
+
+kraken2:
+  category: Bioinformatics and genomics
+  description: Taxonomic classification of metagenomic sequences.
+  url: https://github.com/DerrickWood/kraken2
+
+lammps:
+  category: Physics, chemistry and materials
+  description: Classical molecular dynamics simulator.
+  url: https://www.lammps.org/#gsc.tab=0
+
+load-test:
+  category: HPC, parallel computing and workflows
+  description: 
+  url:
+
+ls-dyna:
+  category: Engineering and simulation
+  description: Finite element simulation.
+  url: https://www.ansys.com/products/structures/ansys-ls-dyna
+
+mafft:
+  category: Bioinformatics and genomics
+  description: Multiple sequence alignment program.
+  url: https://mafft.cbrc.jp/alignment/software
+
+mathematica:
+  category: Data analysis, publishing and visualisation
+  description: Symbolic mathematics, numerical analysis, data visualization, and programming in an interactive notebook environment.
+  url: https://www.wolfram.com/mathematica/
+
+matlab:
+  category: Data analysis, publishing and visualisation
+  description: Numerical computing environment and programming platform.
+  url: https://www.mathworks.com/products/matlab.html
+
+maxquant:
+  category: Bioinformatics and genomics
+  description: Quantitative proteomics software package.
+  url: https://www.maxquant.org/maxquant/
+
+metabat:
+  category: Bioinformatics and genomics
+  description: A robust statistical framework for reconstructing genomes from metagenomic data.
+  url: https://bitbucket.org/berkeleylab/metabat
+
+miniconda3:
+  category: Programming and development
+  description: Python distribution and environment manager.
+  url: https://docs.conda.io/en/latest/miniconda.html
+
+minimap2:
+  category: Bioinformatics and genomics
+  description: Sequence alignment program for DNA and RNA reads.
+  url: https://github.com/lh3/minimap2
+
+mothur:
+  category: Bioinformatics and genomics
+  description: Software to analyze community sequence data.
+  url: https://mothur.org/
+
+motifbinner2:
+  category: Bioinformatics and genomics
+  description: MotifBinner processes high-throughput sequencing data of an RNA virus population.
+  url: https://github.com/HIVDiversity/MotifBinner2
+
+mpich:
+  category: HPC, parallel computing and workflows
+  description: Message Passing Interface for parallel software.
+  url: http://www.mpich.org/
+
+mummer:
+  category: Bioinformatics and genomics
+  description: Rapid alignment of entire genomes.
+  url: http://mummer.sourceforge.net/
+
+mzmine:
+  category: Bioinformatics and genomics
+  description: Software for mass spectrometry (MS) data processing and visualization
+  url: https://mzmine.github.io/mzmine_documentation/index.html
+
+namd:
+  category: Physics, chemistry and materials
+  description: Molecular dynamics simulation package.
+  url: http://www.ks.uiuc.edu/Research/namd
+
+nextflow:
+  category: HPC, parallel computing and workflows
+  description: Workflow manager for reproducible computational pipelines.
+  url: https://www.nextflow.io/
+
+openmpi:
+  category: HPC, parallel computing and workflows
+  description: Implementation of the MPI standard for parallel computing.
+  url: https://www.open-mpi.org/
+
+paraview:
+  category: Data analysis, publishing and visualisation
+  description: Scientific data visualisation tool.
+  url: https://www.paraview.org/
+
+picard:
+  category: Bioinformatics and genomics
+  description: Java-based command-line utilities that manipulate SAM files.
+  url: https://github.com/broadinstitute/picard/releases/tag/2.20.1
+
+pipseeker:
+  category: Bioinformatics and genomics
+  description: Single cell RNA analysis.
+  url: https://www.fluentbio.com/
+
+plink:
+  category: Bioinformatics and genomics
+  description: Whole genome association analysis toolset.
+  url: https://www.cog-genomics.org/plink/
+
+pythia:
+  category: Physics, chemistry and materials
+  description: Program for the generation of high-energy physics collision events.
+  url: https://www.pythia.org/
+
+qiime2-amplicon:
+  category: Bioinformatics and genomics
+  description: Microbiome analysis package.
+  url: https://docs.qiime2.org/
+
+qiime2-metagenome:
+  category: Bioinformatics and genomics
+  description: Microbiome analysis package.
+  url: https://docs.qiime2.org/
+
+qiime2-tiny:
+  category: Bioinformatics and genomics
+  description: Microbiome analysis package.
+  url: https://docs.qiime2.org/
+
+quarto:
+  category: Data analysis, publishing and visualisation
+  description: Scientific and technical publishing system.
+  url: https://quarto.org/
+
+quast:
+  category: Bioinformatics and genomics
+  description: Genome assembly quality assessment tool.
+  url: https://quast.sourceforge.net/
+
+r:
+  category: Data analysis, publishing and visualisation
+  description: Statistical computing environment and programming language.
+  url: http://www.r-project.org/
+
+racon:
+  category: Bioinformatics and genomics
+  description: Consensus module for raw de novo DNA assembly of long uncorrected reads.
+  url: https://github.com/isovic/racon
+
+rsem: 
+  category: Bioinformatics and genomics
+  description: Accurate quantification of gene and isoform expression from RNA-Seq data.
+  url: https://github.com/deweylab/RSEM
+
+rstudio:
+  category: Data analysis, publishing and visualisation
+  description: Integrated development environment for R.
+  url: https://docs.posit.co/ide/user/
+
+salmon:
+  category: Bioinformatics and genomics
+  description: Quantifies transcript expression from RNA-seq data.
+  url: https://salmon.readthedocs.io/en/latest/salmon.html
+
+samtools:
+  category: Bioinformatics and genomics
+  description: Tools for manipulating SAM/BAM files.
+  url: http://sourceforge.net/projects/samtools/
+
+skesa:
+  category: Bioinformatics and genomics
+  description: Short read assembler.
+  url: https://github.com/ncbi/SKESA
+
+snap:
+  category: Earth, climate and geospatial
+  description: Earth Observation processing.
+  url: https://step.esa.int/main/download/snap-download/
+
+snpeff:
+  category: Bioinformatics and genomics
+  description: Annotates and predicts effects of genetic variants.
+  url: https://pcingola.github.io/SnpEff
+
+spades:
+  category: Bioinformatics and genomics
+  description: Genome assembler for short-read sequencing data.
+  url: http://cab.spbu.ru/software/spades/
+
+sratoolkit:
+  category: Bioinformatics and genomics
+  description: SRA data tools.
+  url: https://github.com/ncbi/sra-tools
+
+star:
+  category: Bioinformatics and genomics
+  description: RNA-seq aligner for high-throughput sequencing data.
+  url: https://github.com/alexdobin/STAR
+
+star-fusion:
+  category: Bioinformatics and genomics
+  description: Identify candidate fusion transcripts supported by Illumina reads.
+  url: https://github.com/STAR-Fusion/STAR-Fusion
+
+subread:
+  category: Bioinformatics and genomics
+  description: Next-gen sequencing read data processing.
+  url: https://subread.sourceforge.net/
+
+tortoise-gpu:
+  category: Data analysis, publishing and visualisation
+  description: CUDA enabled Diffusion MRI Processing Pipeline.
+  url: https://github.com/QMICodeBase/TORTOISEV4
+
+trimgalore:
+  category: Bioinformatics and genomics
+  description: Wrapper tool for quality and adapter trimming.
+  url: https://github.com/FelixKrueger/TrimGalore
+
+trimal:
+  category: Bioinformatics and genomics
+  description: Removal of spurious sequences or poorly aligned regions from a multiple sequence alignment.
+  url: https://trimal.cgenomics.org/
+
+trimmomatic:
+  category: Bioinformatics and genomics
+  description: Trims adapters and low-quality bases from sequencing reads.
+  url: https://github.com/usadellab/Trimmomatic
+
+trinity:
+  category: Bioinformatics and genomics
+  description: RNA-Seq de novo transcriptome assembly.
+  url: https://github.com/trinityrnaseq/trinityrnaseq
+
+trinotate:
+  category: Bioinformatics and genomics
+  description: Transcriptome and protein data search.
+  url: https://github.com/Trinotate/Trinotate/releases
+
+vasp:
+  category: Physics, chemistry and materials
+  description: Electronic structure and materials modelling software.
+  url: https://www.vasp.at/
+
+vcftools:
+  category: Bioinformatics and genomics
+  description: Tools for working with VCF files.
+  url: https://vcftools.github.io/
+
+vep:
+  category: Bioinformatics and genomics
+  description: Variant Effect Predictor.
+  url: https://www.ensembl.org/info/docs/tools/vep
+
+vmd:
+  category: Data analysis, publishing and visualisation
+  description: Molecular visualisation and analysis software for structures and simulation trajectories.
+  url: https://www.ks.uiuc.edu/Research/vmd/
+
+vscode:
+  category: Programming and development
+  description: An integrated development environment.
+  url: https://code.visualstudio.com/
+
+vsearch:
+  category: Bioinformatics and genomics
+  description: Sequence search and detection.
+  url: https://github.com/torognes/vsearch
