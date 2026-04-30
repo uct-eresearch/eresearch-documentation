@@ -1,0 +1,10 @@
+{% if page.edit_url %}
+<a href="{{ 'support/feedback-fixes/' | url }}{% if page.edit_url %}?from={{ page.edit_url | urlencode }}{% endif %}"
+  title="Give feedback or suggest a fix for this page"
+  aria-label="Give feedback or suggest a fix for this page"
+  class="md-content__button docs-feedback-action"
+>
+  {% include ".icons/material/bug-outline.svg" %}
+<span class="docs-feedback-action__label">Improve this page</span>
+</a>
+{% endif %}

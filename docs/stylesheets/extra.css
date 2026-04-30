@@ -755,3 +755,67 @@ body,
 .md-typeset .grid.cards > ul > li > p:nth-child(2) {
   flex-grow: 1;
 }
+
+.docs-issue-options {
+  margin: 1.5rem 0;
+}
+
+.docs-issue-options .md-button {
+  margin-right: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.docs-issue-footer-link {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.docs-suggest-fix-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  width: auto;
+}
+
+.docs-suggest-fix-link__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.md-content__button.docs-feedback-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  width: auto;
+  height: auto;
+
+  padding: 0.25rem 0.55rem;
+  border-radius: 0.4rem;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.2;
+
+  color: var(--md-primary-fg-color);
+  border: 1px solid var(--md-primary-fg-color);
+  text-decoration: none;
+}
+
+.md-content__button.docs-feedback-action:hover,
+.md-content__button.docs-feedback-action:focus {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.docs-feedback-action svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex-shrink: 0;
+}
+
+.docs-feedback-action__label {
+  display: inline;
+  white-space: nowrap;
+}

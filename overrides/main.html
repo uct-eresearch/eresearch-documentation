@@ -14,7 +14,17 @@
 
       <nav class="site-footer-links" aria-label="Footer">
 
-        <!-- Internal -->
+        <!-- Help -->
+      {% if page.edit_url %}
+        <a href="{{ 'support/feedback-fixes/' | url }}?from={{ page.edit_url | urlencode }}">
+          🐞 Feedback & fixes
+        </a>
+      {% else %}
+        <a href="{{ 'support/feedback-fixes/' | url }}">
+          🐞 Feedback & fixes
+        </a>
+      {% endif %}
+
         <!-- External -->
         <a href="https://www.uct.ac.za" target="_blank" rel="noopener">UCT</a>
         <a href="https://uct.ac.za/eresearch" target="_blank" rel="noopener">UCT eResearch</a>

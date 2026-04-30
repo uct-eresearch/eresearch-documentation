@@ -44,6 +44,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/passwords.js
+  - javascripts/feedback.js
 
 markdown_extensions:
   - footnotes
@@ -142,12 +143,21 @@ nav:
       - Overview: how-to/index.md
 
       - HPC: 
-          - Overview: how-to/hpc/index.md
-          - Log into the HPC: how-to/hpc/log-into-hpc.md
-          - Manage files and storage: how-to/hpc/manage-files-and-storage.md
-          - Use software modules: how-to/hpc/use-software-modules.md
-          - Submit a job: how-to/hpc/submit-a-job.md
-          - Use GPUs: how-to/hpc/use-gpus.md
+        - Overview: how-to/hpc/index.md
+        - Log into the HPC: how-to/hpc/log-into-hpc.md
+        - Manage files and storage: how-to/hpc/manage-files-and-storage.md
+        - Use software modules: how-to/hpc/use-software-modules.md
+
+        # Core job workflow
+        - Submit a job: how-to/hpc/submit-a-job.md
+        - Check job status: how-to/hpc/check-job-status.md
+        - Cancel a job: how-to/hpc/cancel-a-job.md
+
+        # Advanced usage
+        - Run interactive jobs: how-to/hpc/run-interactive-jobs.md
+        - Run parallel jobs: how-to/hpc/run-parallel-jobs.md
+        - Run R, Python and MATLAB jobs: how-to/hpc/run-r-python-matlab-jobs.md
+        - Use GPUs: how-to/hpc/use-gpus.md
 
       - Storage:
           - Request storage: how-to/storage/request-storage.md
@@ -155,7 +165,7 @@ nav:
 
       - Data transfer:
           - Move data: how-to/data-transfer/move-data.md
-          - Transer with Globus: how-to/data-transfer/transfer-with-globus.md
+          - Transfer with Globus: how-to/data-transfer/transfer-with-globus.md
           - Transfer with NextCloud: how-to/data-transfer/transfer-with-nextcloud.md
 
       - Research software:
@@ -168,6 +178,7 @@ nav:
 
       - HPC:
           - Overview: reference/hpc/index.md
+          - System overview: reference/hpc/system-overview.md
           - Available software: reference/hpc/available-software.md
           - Scheduler and job submission: reference/hpc/scheduler-and-job-submission.md
           - Storage and file systems: reference/hpc/storage-and-file-systems.md
@@ -203,3 +214,5 @@ nav:
 
   - Support:
       - Overview: support/index.md
+  
+  - Feedback & fixes: support/feedback-fixes.md

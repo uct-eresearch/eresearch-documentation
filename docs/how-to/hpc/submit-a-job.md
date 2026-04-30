@@ -1,123 +1,148 @@
-# Submit a Job
+# Submit a job
 
-## Overview
-
-Run a batch job on the HPC system using the job scheduler.
+Submit a batch job to the UCT HPC cluster using the scheduler.
 
 ---
 
-## Before you begin
+## Before you start
 
-Make sure:
+You should:
 
-- you can log into the HPC system  
-  (see: [Log into HPC](log-into-hpc.md))
-- your code or executable is available on the system
-- your input data is accessible
-- you know how long your job is expected to run
-- you have identified the resources your job requires (CPU, memory, GPU if needed)
+- have an active HPC account  
+- are logged into the HPC system  
+- have your code or script ready to run  
+
+See:
+
+- [Log into HPC](log-into-hpc.md)  
+- [Scheduler and job submission](../../reference/hpc/scheduler-and-job-submission.md)
 
 ---
 
-## Steps
+## Create a job script
 
-### 1. Log into HPC
+Jobs are submitted using a shell script that defines:
+
+- the resources your job needs  
+- the command to run your program  
+
+Create a file (e.g. `job.sh`):
 
 ```bash
-ssh <username>@hpc.uct.ac.za
+#!/bin/sh
+#SBATCH --account=myaccount
+#SBATCH --partition=ada
+#SBATCH --time=10:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --job-name="MyJob"
+
+myprogram input.txt
 ```
 
 ---
 
-### 2. Create a job script
+## Specify resources
 
-Create a file called `job.slurm`:
+Adjust the `#SBATCH` directives:
+
+- `--account` → your research group or allocation  
+- `--partition` → compute queue  
+- `--time` → expected runtime  
+- `--nodes` → number of nodes  
+- `--ntasks` → number of CPU cores  
+
+### Optional directives
+
+You can also include:
+
+- `--mail-user=<your-email>` → receive email notifications  
+- `--mail-type=ALL` → notify on job start, end, and failure  
+
+Example:
 
 ```bash
-nano job.slurm
+#SBATCH --mail-user=yourname@uct.ac.za
+#SBATCH --mail-type=ALL
 ```
 
-Add the following content:
-
-```bash
-#!/bin/bash
-#SBATCH --job-name=<job-name>
-#SBATCH --output=job-%j.out
-#SBATCH --error=job-%j.err
-#SBATCH --time=01:00:00
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
-#SBATCH --mem=4G
-
-# Load required modules (if needed)
-# module load <module-name>
-
-# Run your program
-<command-to-run>
-```
-
-Replace:
-- `<job-name>` with a meaningful name
-- `<command-to-run>` with your actual command
+!!! note "Request only what you need"
+    Over-requesting resources can delay your job.
 
 ---
 
-### 3. Submit the job
+## Submit the job
 
 ```bash
-sbatch job.slurm
+sbatch job.sh
 ```
 
-You should see output similar to:
+You should see:
 
 ```text
 Submitted batch job <job-id>
 ```
 
+This sends the job to the scheduler queue.
+
+!!! warning "Do not run scripts directly"
+    Do not run `bash job.sh`.  
+    This runs the job on the login node and may result in termination.
+
 ---
 
-### 4. Check job status
+## Check job output
+
+Output is written to:
+
+```
+slurm-<jobid>.out
+```
+
+View it:
+
+```bash
+tail -f slurm-123456.out
+```
+
+---
+
+## Check job status
+
+```bash
+squeue
+```
+
+To view only your jobs:
 
 ```bash
 squeue -u <username>
 ```
 
-This shows your running and queued jobs.
+You may also use:
+
+```bash
+qstat
+```
 
 ---
 
-## Verify
+## Verify your job
 
-### Check output files
+After submission:
 
-After the job completes:
+- your job should appear in the queue  
+- output files will be created when the job runs  
+
+Check your files:
 
 ```bash
 ls
 ```
 
-You should see:
+Typical output:
 
-- `job-<job-id>.out`
-- `job-<job-id>.err`
-
-Inspect output:
-
-```bash
-cat job-<job-id>.out
-```
-
----
-
-### Check job completion
-
-If the job no longer appears in the queue:
-
-```bash
-squeue -u <username>
-```
-
-then it has finished or failed.
+- `slurm-<jobid>.out`
 
 ---
 
@@ -125,51 +150,51 @@ then it has finished or failed.
 
 ### Job stays in queue
 
-Possible causes:
+- resources requested may not be available  
+- queue may be busy  
 
-- insufficient resources requested
-- queue is busy
-- job requires a specific partition or resource
+### Job fails
 
----
-
-### Job fails immediately
-
-Check:
+Check output:
 
 ```bash
-cat job-<job-id>.err
+cat slurm-<jobid>.out
 ```
-
-Possible causes:
-
-- incorrect command
-- missing input files
-- required modules not loaded
-
----
-
-### Output files are empty
-
-Possible causes:
-
-- job did not execute correctly
-- command produced no output
-- job terminated early
-
----
 
 ### Command not found
 
-Possible causes:
-
-- required software is not loaded
-- incorrect command path
+- required software may not be loaded  
 
 ---
 
-## Related pages
+## Example
 
-- [Log into HPC](log-into-hpc.md)
-- [Use modules](use-software-modules.md)
-- [Use GPUs](use-gpus.md)
+```bash
+#!/bin/sh
+#SBATCH --account=myaccount
+#SBATCH --partition=ada
+#SBATCH --time=10:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --job-name="ExampleJob"
+
+module load software/package
+myprogram -i input.txt -o output.txt
+```
+
+---
+
+## Common mistakes
+
+- running jobs on the login node instead of using `sbatch`  
+- requesting multiple nodes for non-parallel jobs  
+- not specifying a time limit  
+- writing output to the same file across multiple jobs  
+
+---
+
+## Next steps
+
+- [Check job status](check-job-status.md)  
+- [Cancel a job](cancel-a-job.md)  
+- [Run parallel jobs](run-parallel-jobs.md)

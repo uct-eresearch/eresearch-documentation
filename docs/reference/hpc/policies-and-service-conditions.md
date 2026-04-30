@@ -29,16 +29,53 @@ Use of HPC is based on the following principles:
 
 HPC resources may be used for:
 
-- academic research
-- data analysis and modelling
-- simulation and computation
-- development of research software
+- academic research  
+- data analysis and modelling  
+- simulation and computation  
+- development of research software  
 
 HPC should not be used for:
 
-- personal or non-research purposes
-- unrelated commercial activities
-- activities that violate institutional policies or law
+- personal or non-research purposes  
+- unrelated commercial activities  
+- activities that violate institutional policies or law  
+
+---
+
+## Access and account eligibility
+
+Access to HPC is restricted to:
+
+- active UCT staff  
+- registered UCT students  
+
+Third-party accounts are not permitted.
+
+Access is granted through an approved account request process.
+
+---
+
+## Security and access
+
+Users are responsible for:
+
+- keeping credentials secure  
+- ensuring appropriate access to data  
+
+### Account security
+
+!!! warning "Account security"
+    Sharing of user credentials is a serious violation of institutional policy and may result in disciplinary action.
+
+    You must not:
+    
+    - share passwords or accounts  
+    - allow others to access HPC using your credentials  
+
+Users must also not:
+
+- bypass authentication mechanisms  
+- expose HPC services insecurely  
 
 ---
 
@@ -46,24 +83,29 @@ HPC should not be used for:
 
 The login (head) node is a **shared access point**, not a compute resource.
 
+!!! warning "Login node is not for computation"
+    Do not run computational workloads on the login node.
+
+    Jobs must be submitted via the scheduler. Misuse may result in processes being terminated or access being restricted.
+
 Allowed:
 
-- connecting to the system
-- editing files
-- submitting jobs
-- lightweight commands
+- connecting to the system  
+- editing files  
+- submitting jobs  
+- lightweight commands  
 
 Not allowed:
 
-- running computational workloads
-- running graphical applications
-- compiling large software packages
-- long-running or resource-intensive processes
+- running computational workloads  
+- running graphical applications  
+- compiling large software packages  
+- long-running or resource-intensive processes  
 
 Misuse of the login node may result in:
 
-- termination of processes
-- temporary or permanent restriction of access
+- termination of processes  
+- temporary or permanent restriction of access  
 
 ---
 
@@ -71,14 +113,14 @@ Misuse of the login node may result in:
 
 All computational work must be run via:
 
-- batch jobs (scheduled)
-- interactive jobs (for development or GUI use)
+- batch jobs (scheduled)  
+- interactive jobs (for development or GUI use)  
 
 Users must:
 
-- request appropriate resources (CPU, memory, time)
-- avoid over-requesting resources unnecessarily
-- release resources when no longer needed
+- request appropriate resources (CPU, memory, time)  
+- avoid over-requesting resources unnecessarily  
+- release resources when no longer needed  
 
 ---
 
@@ -86,15 +128,15 @@ Users must:
 
 To ensure equitable access:
 
-- jobs may be prioritised or limited by the scheduler
-- excessive or inefficient use may be restricted
-- users may be contacted if usage patterns affect others
+- jobs may be prioritised or limited by the scheduler  
+- excessive or inefficient use may be restricted  
+- users may be contacted if usage patterns affect others  
 
 Good practice includes:
 
-- testing jobs on small inputs before scaling
-- optimising code before large runs
-- avoiding repeated failed jobs
+- testing jobs on small inputs before scaling  
+- optimising code before large runs  
+- avoiding repeated failed jobs  
 
 ---
 
@@ -102,16 +144,21 @@ Good practice includes:
 
 Users are responsible for managing their data.
 
+!!! note "Storage is not guaranteed backup"
+    HPC storage is not a guaranteed backup environment unless explicitly stated.
+
+    You are responsible for backing up important data.
+
 Expectations:
 
-- store only active and relevant research data
-- remove unnecessary or duplicate files
-- avoid using HPC storage for long-term archiving (unless designated)
+- store only active and relevant research data  
+- remove unnecessary or duplicate files  
+- avoid using HPC storage for long-term archiving (unless designated)  
 
 Large or unmanaged datasets may:
 
-- impact system performance
-- be subject to cleanup policies
+- impact system performance  
+- be subject to cleanup policies  
 
 ---
 
@@ -121,30 +168,14 @@ Software environments are shared.
 
 Users must:
 
-- use centrally provided software where appropriate
-- avoid modifying shared environments
-- install personal packages in user space
+- use centrally provided software where appropriate  
+- avoid modifying shared environments  
+- install personal packages in user space  
 
 Heavy installation or compilation must:
 
-- not be performed on the login node
-- be done via interactive jobs
-
----
-
-## Security and access
-
-Users are responsible for:
-
-- keeping credentials secure
-- not sharing accounts
-- ensuring appropriate access to data
-
-Do not:
-
-- expose HPC services insecurely
-- bypass authentication mechanisms
-- run services that create security risks
+- not be performed on the login node  
+- be done via interactive jobs  
 
 ---
 
@@ -152,28 +183,54 @@ Do not:
 
 Users are responsible for:
 
-- the integrity of their data
-- backing up important results where required
-- complying with data governance and ethical requirements
+- the integrity of their data  
+- backing up important results where required  
+- complying with data governance and ethical requirements  
 
 HPC systems are not guaranteed backup environments unless explicitly stated.
 
 ---
 
+## Publication and reporting
+
+Researchers must complete the following for any work based on computations performed on UCT HPC:
+
+### 1. Acknowledge HPC use
+
+Researchers must acknowledge the use of UCT HPC infrastructure in any published outputs, including:
+
+- theses  
+- papers  
+- presentations  
+
+**Suggested acknowledgement:**
+
+> Computations were performed using facilities provided by the University of Cape Town’s ICTS High Performance Computing team: hpc.uct.ac.za – https://doi.org/10.5281/zenodo.10021612
+
+---
+
+### 2. Provide references to outputs
+
+Researchers must provide references to these outputs to the HPC team.
+
+This enables institutional reporting and recognition of research supported by HPC.
+
+---
+
 ## Monitoring and enforcement
 
-System usage may be monitored to ensure:
+System usage is monitored to ensure:
 
-- compliance with policies
-- system stability
-- fair resource allocation
+- compliance with policies  
+- system stability  
+- fair resource allocation  
 
 If misuse is detected, actions may include:
 
-- warning or guidance from support staff
-- termination of running processes
-- temporary suspension of access
-- escalation under institutional policies
+- warning or guidance from support staff  
+- termination of running processes  
+- temporary suspension of access  
+- escalation under institutional policies  
 
 ---
 
@@ -181,10 +238,10 @@ If misuse is detected, actions may include:
 
 Contact HPC support if you are unsure about:
 
-- whether a workflow is appropriate
-- how to use resources efficiently
-- large-scale or unusual workloads
-- software installation requirements
+- whether a workflow is appropriate  
+- how to use resources efficiently  
+- large-scale or unusual workloads  
+- software installation requirements  
 
 Early engagement helps avoid issues.
 
@@ -192,19 +249,19 @@ Early engagement helps avoid issues.
 
 ## Good practice summary
 
-- use compute nodes, not the login node
-- run jobs through the scheduler
-- request appropriate resources
-- clean up unused data
-- document and structure workflows
-- respect that HPC is a shared system
+- use compute nodes, not the login node  
+- run jobs through the scheduler  
+- request appropriate resources  
+- clean up unused data  
+- document and structure workflows  
+- respect that HPC is a shared system  
 
 ---
 
 ## Related pages
 
-- Scheduler and job submission → `Reference > HPC`
-- Software and modules → `Reference > HPC`
-- Storage and file systems → `Reference > HPC`
-- Graphical applications → `Reference > HPC`
-- Support → `Support`
+- [Scheduler and job submission](scheduler-and-job-submission.md)  
+- [Software and modules](software-and-modules.md)  
+- [Storage and file systems](storage-and-file-systems.md)  
+- [Graphical applications](graphical-applications.md)  
+- [Support](../../support/index.md)

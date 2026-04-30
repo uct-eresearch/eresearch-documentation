@@ -16,15 +16,27 @@ The site is designed for **clarity, speed, and execution** — not for teaching 
 
 If something is unclear, missing, or incorrect:
 
-### 1. Create an issue (preferred)
+### 1. Create or confirm an issue (preferred)
 
 → https://github.com/uct-eresearch/eresearch-documentation/issues
 
-- Select the appropriate issue template
-- Describe the problem clearly
-- Link to the page (if possible)
+Most contributions should be linked to a GitHub issue.
 
-This is the fastest and preferred way to get issues tracked and fixed.
+Issues may originate from:
+
+- a report submitted via the documentation site  
+- direct creation in GitHub  
+- feedback received by the eResearch team  
+
+Before making changes:
+
+- check if an issue already exists  
+- create one if needed  
+- use the appropriate issue template  
+- describe the problem clearly  
+- link to the relevant page (if possible)  
+
+This ensures work is tracked, visible, and not duplicated.
 
 ---
 
