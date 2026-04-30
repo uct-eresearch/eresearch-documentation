@@ -37,6 +37,31 @@ For background on how resources are allocated and scheduled, see:
 - require MPI or similar frameworks  
 - suitable for distributed workloads  
 
+
+!!! warning "Cluster limits apply"
+    - Maximum runtime: **7 days**
+    - Core limits per user:
+        - `ada`: ~320 cores  
+        - `curie`: ~640 cores  
+
+    Jobs exceeding these limits will be terminated or delayed.
+
+    See: [Cluster specifications](../../reference/hpc/cluster-specifications.md)
+
+
+!!! warning "Do not run jobs on the login node"
+    The login node is for preparing and submitting jobs only.
+
+    Running compute workloads here may result in your process being terminated.
+
+    Use an [interactive](./run-interactive-jobs.md) or batch job with `sbatch` instead.
+
+!!! warning "Storage limits apply"
+    - `/home` has strict quotas  
+    - `/scratch` is not backed up  
+
+    See: [Storage and file systems](../../reference/hpc/storage-and-file-systems.md)
+    
 ---
 
 ## Steps

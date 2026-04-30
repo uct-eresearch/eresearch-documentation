@@ -70,6 +70,12 @@ If needed:
 - [Use GPUs](../how-to/hpc/use-gpus.md)
 - [Use modules](../how-to/hpc/use-software-modules.md)
 
+!!! info "Plan for cluster limits"
+    HPC jobs are subject to runtime and core limits.  
+    This affects how you design and split your workload.
+
+    See: ../../reference/hpc/cluster-specifications.md
+
 ---
 
 ### 4. Retrieve and manage results

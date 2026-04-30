@@ -15,6 +15,12 @@ Make sure:
 - you know where your data is stored (home, project, or other locations)
 - you have appropriate permissions for the files you are working with
 
+!!! warning "Storage limits apply"
+    - `/home` has strict quotas  
+    - `/scratch` is not backed up  
+
+    See: [Storage and file systems](../../reference/hpc/storage-and-file-systems.md)
+
 ---
 
 ## Steps
