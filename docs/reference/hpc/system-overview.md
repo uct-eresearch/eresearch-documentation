@@ -1,84 +1,116 @@
 # HPC system overview
 
-This page describes the core technical characteristics of the UCT High Performance Computing (HPC) environment.
+This page explains how the UCT High Performance Computing (HPC) system is structured and how jobs run on it.
 
 ---
 
-## Core system specifications
+## How the HPC system is structured
 
-| Component | Details |
-|----------|--------|
-| **Architecture** | x86_64 |
-| **Operating system** | Rocky Linux 9.7 (Blue Onyx) |
-| **Kernel** | Linux 5.14.0-611.47.1.el9_7.x86_64 |
-| **Scheduler** | SLURM 23.11.5 |
-| **Parallel libraries** | OpenMPI, MPICH, PMI2, PMIx5 |
+![HPC cluster overview](../../assets/images/hpc-system-overview.png)
 
----
+The HPC cluster consists of three main components:
 
-## System components
+### Head node
+- The entry point to the cluster  
+- Where you log in (`hpc.uct.ac.za`)  
+- Used to prepare and submit jobs  
 
-### Architecture
+### Worker nodes
+- High-performance machines where computations run  
+- Provide CPU, memory, and GPU resources  
+- Organised into partitions (queues) based on capabilities  
 
-The system uses a 64-bit x86 architecture (x86_64), which is standard for modern HPC environments and supports a wide range of scientific software.
-
----
-
-### Operating system
-
-Rocky Linux 9.7 provides the base software environment for the cluster. This determines compatibility for compiled software, libraries, and system tools.
+### Shared storage
+- Accessible from all nodes  
+- Main locations:
+  - `/home` → persistent storage  
+  - `/scratch` → high-performance working storage  
 
 ---
 
-### Kernel
+## How jobs actually run
 
-Linux kernel version:
+The cluster uses a job scheduler called SLURM (Simple Linux Utility for Resource Management).
 
-5.14.0-611.47.1.el9_7.x86_64
+- You submit jobs to the scheduler  
+- Jobs are placed in a queue  
+- Jobs run on worker nodes when resources become available  
 
+This ensures:
+- fair sharing between users  
+- efficient use of compute resources  
+- controlled access to CPUs, memory, and GPUs  
 
-The kernel manages hardware resources, process scheduling, and system performance.
-
----
-
-### Scheduler
-
-SLURM (23.11.5) is used to manage all compute workloads.
-
-It is responsible for:
-- allocating compute resources
-- queuing and prioritising jobs
-- managing job execution across nodes
-
-See [Scheduler and job submission](scheduler-and-job-submission.md) for detailed reference information.
+→ Learn more about scheduling behaviour:  
+[Scheduler and queues](../../reference/hpc/scheduler-and-queues.md)
 
 ---
 
-### Parallel libraries
+## Why you must not run jobs on the head node
 
-The system provides multiple parallel computing libraries:
+The head node is a shared system used by all researchers.
 
-- **OpenMPI**
-- **MPICH**
-- **PMI2**
-- **PMIx5**
+- Running compute-intensive commands on the head node:
+  - degrades performance for other users  
+  - interferes with job scheduling  
 
-These libraries support distributed computing across multiple nodes and are typically used for MPI-based workloads.
-
-See [Software and modules](software-and-modules.md) for details on how these are made available.
+Jobs must always be submitted through the scheduler so they run on worker nodes.
 
 ---
 
-## Notes
+## Storage model
 
-- All compute jobs are executed via the scheduler; direct execution on compute nodes is not supported.
-- Software compatibility depends on the operating system and available modules.
-- Parallel libraries enable scaling workloads beyond a single node.
+Storage is shared across the entire cluster:
+
+- Files in `/home` and `/scratch` are:
+  - visible on the head node  
+  - accessible from all worker nodes  
+- Data written during a job is immediately available everywhere  
+
+This shared model enables:
+- seamless job execution across nodes  
+- consistent access to input and output data  
 
 ---
 
-## Related reference pages
+## Partitions (queues)
 
-- [Scheduler and job submission](scheduler-and-job-submission.md)
-- [Software and modules](software-and-modules.md)
-- [Storage and file systems](storage-and-file-systems.md)
+Worker nodes are grouped into partitions.
+
+- Each partition represents a **queue of resources**  
+- Partitions differ in:
+  - number of cores  
+  - memory  
+  - GPU availability  
+  - time limits  
+
+When you submit a job, you request resources from a specific partition.
+
+→ View detailed specifications:  
+[Cluster specifications](../../reference/hpc/cluster-specifications.md)
+
+---
+
+## Key concepts at a glance
+
+- Log in via the **head node**  
+- Submit jobs to the **scheduler (SLURM)**  
+- Jobs run on **worker nodes**, not the head node  
+- Storage is **shared across all nodes**  
+- Resources are accessed through **partitions (queues)**  
+
+---
+
+## Related pages
+
+- **Choosing resources**  
+  Understand how to select cores, memory, and time  
+  → [Choosing resources](../../good-practice/hpc/choosing-resources.md)
+
+- **Memory and CPU allocation**  
+  Learn how memory is assigned and requested  
+  → [Memory and CPU allocation](../../reference/hpc/memory-and-cpu-allocation.md)
+
+- **Submit a job**  
+  Step-by-step guide to running jobs on the cluster  
+  → [Submit a job](../../how-to/hpc/submit-a-job.md)
