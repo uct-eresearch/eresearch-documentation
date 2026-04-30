@@ -118,7 +118,7 @@ Using multiple nodes does not combine memory into a single pool unless the softw
   → [Choosing resources](../../good-practice/hpc/choosing-resources.md)
 
 - **Scheduler and queues**  
-  → [Scheduler and queues](../../reference/hpc/scheduler-and-queues.md)
+  → [Scheduler and job submission](../../reference/hpc/scheduler-and-job-submission.md)
 
 - **Submit a job**  
   → [Submit a job](../../how-to/hpc/submit-a-job.md)

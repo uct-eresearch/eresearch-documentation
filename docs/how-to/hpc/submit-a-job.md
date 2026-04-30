@@ -1,200 +1,117 @@
 # Submit a job
 
-Submit a batch job to the UCT HPC cluster using the scheduler.
+## Overview
+
+Submit a batch job to the HPC system using the scheduler.
+
+Jobs are submitted from the login node and executed on compute nodes.
 
 ---
 
-## Before you start
+## Before you begin
 
-You should:
+Make sure:
 
-- have an active HPC account  
-- are logged into the HPC system  
-- have your code or script ready to run  
+- you can log into the HPC system  
+  (see: [Log into HPC](log-into-hpc.md))
+- your code or executable is available
+- your input data is accessible
+- you know roughly how long your job will run
+- you have identified required resources  
+  (see: [Choosing resources](../../good-practice/hpc/choosing-resources.md))
 
-See:
-
-- [Log into HPC](log-into-hpc.md)  
-- [Scheduler and job submission](../../reference/hpc/scheduler-and-job-submission.md)
+For background on how jobs are scheduled, see:  
+[Scheduler and job submission](../../reference/hpc/scheduler-and-job-submission.md)
 
 ---
 
-## Create a job script
+## Steps
 
-Jobs are submitted using a shell script that defines:
-
-- the resources your job needs  
-- the command to run your program  
-
-Create a file (e.g. `job.sh`):
+### 1. Log into HPC
 
 ```bash
-#!/bin/sh
-#SBATCH --account=myaccount
+ssh <username>@hpc.uct.ac.za
+```
+
+---
+
+### 2. Create a job script
+
+Create a file, for example `job.sh`:
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=my-job
 #SBATCH --partition=ada
-#SBATCH --time=10:00:00
-#SBATCH --nodes=1
-#SBATCH --ntasks=4
-#SBATCH --job-name="MyJob"
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=16G
+#SBATCH --time=02:00:00
+#SBATCH --output=logs/job-%j.out
+#SBATCH --error=logs/job-%j.err
 
-myprogram input.txt
+module purge
+module load python/miniconda3-py3.12
+
+python script.py
 ```
 
 ---
 
-## Specify resources
-
-Adjust the `#SBATCH` directives:
-
-- `--account` → your research group or allocation  
-- `--partition` → compute queue  
-- `--time` → expected runtime  
-- `--nodes` → number of nodes  
-- `--ntasks` → number of CPU cores  
-
-### Optional directives
-
-You can also include:
-
-- `--mail-user=<your-email>` → receive email notifications  
-- `--mail-type=ALL` → notify on job start, end, and failure  
-
-Example:
-
-```bash
-#SBATCH --mail-user=yourname@uct.ac.za
-#SBATCH --mail-type=ALL
-```
-
-!!! note "Request only what you need"
-    Over-requesting resources can delay your job.
-
----
-
-## Submit the job
+### 3. Submit the job
 
 ```bash
 sbatch job.sh
 ```
 
-You should see:
-
-```text
-Submitted batch job <job-id>
-```
-
-This sends the job to the scheduler queue.
-
-!!! warning "Do not run scripts directly"
-    Do not run `bash job.sh`.  
-    This runs the job on the login node and may result in termination.
+This returns a job ID.
 
 ---
 
-## Check job output
-
-Output is written to:
-
-```
-slurm-<jobid>.out
-```
-
-View it:
+### 4. Check job status
 
 ```bash
-tail -f slurm-123456.out
+squeue -u $USER
 ```
 
 ---
 
-## Check job status
+### 5. View output
 
 ```bash
-squeue
-```
-
-To view only your jobs:
-
-```bash
-squeue -u <username>
-```
-
-You may also use:
-
-```bash
-qstat
+cat logs/job-<jobid>.out
+cat logs/job-<jobid>.err
 ```
 
 ---
 
-## Verify your job
+## After submission
 
-After submission:
-
-- your job should appear in the queue  
-- output files will be created when the job runs  
-
-Check your files:
-
-```bash
-ls
-```
-
-Typical output:
-
-- `slurm-<jobid>.out`
+- the job enters the queue
+- it runs when resources become available
+- output is written to log files
 
 ---
 
 ## Troubleshooting
 
-### Job stays in queue
+**Job not starting**
+- check partition and resource requests
+- reduce requested resources if too large
 
-- resources requested may not be available  
-- queue may be busy  
+**Job fails**
+- check `.err` file
+- verify modules and paths
 
-### Job fails
-
-Check output:
-
-```bash
-cat slurm-<jobid>.out
-```
-
-### Command not found
-
-- required software may not be loaded  
+**No output**
+- confirm script runs locally
+- check working directory
 
 ---
 
-## Example
+## Related pages
 
-```bash
-#!/bin/sh
-#SBATCH --account=myaccount
-#SBATCH --partition=ada
-#SBATCH --time=10:00:00
-#SBATCH --nodes=1
-#SBATCH --ntasks=4
-#SBATCH --job-name="ExampleJob"
-
-module load software/package
-myprogram -i input.txt -o output.txt
-```
-
----
-
-## Common mistakes
-
-- running jobs on the login node instead of using `sbatch`  
-- requesting multiple nodes for non-parallel jobs  
-- not specifying a time limit  
-- writing output to the same file across multiple jobs  
-
----
-
-## Next steps
-
-- [Check job status](check-job-status.md)  
-- [Cancel a job](cancel-a-job.md)  
-- [Run parallel jobs](run-parallel-jobs.md)
+- [Check job status](check-job-status.md)
+- [Cancel a job](cancel-a-job.md)
+- [Run interactive jobs](run-interactive-jobs.md)
+- [Choosing resources](../../good-practice/hpc/choosing-resources.md)
+- [Scheduler and job submission](../../reference/hpc/scheduler-and-job-submission.md)

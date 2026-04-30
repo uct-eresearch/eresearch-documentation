@@ -158,7 +158,7 @@ For new workflows:
   → [Memory and CPU allocation](../../reference/hpc/memory-and-cpu-allocation.md)
 
 - **Scheduler and queues**  
-  → [Scheduler and queues](../../reference/hpc/scheduler-and-queues.md)
+  → [Scheduler and job submission](../../reference/hpc/scheduler-and-job-submission.md)
 
 - **Submit a job**  
   → [Submit a job](../../how-to/hpc/submit-a-job.md)

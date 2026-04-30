@@ -42,7 +42,7 @@ This ensures:
 - controlled access to CPUs, memory, and GPUs  
 
 → Learn more about scheduling behaviour:  
-[Scheduler and queues](../../reference/hpc/scheduler-and-queues.md)
+[Scheduler and job submission](../../reference/hpc/scheduler-and-job-submission.md)
 
 ---
 

@@ -2,121 +2,128 @@
 
 ## Overview
 
-UCT HPC uses SLURM to manage how work runs on the system.
+UCT HPC uses a job scheduler called SLURM to manage how work runs on the system.
 
-Jobs are submitted to a queue and executed on compute nodes.  
+All computational work is submitted as jobs. These jobs are queued and executed on compute nodes when the required resources become available.
+
 Work should not be run directly on the login node.
 
 ---
 
-## Key commands
+## What the scheduler does
 
-```bash
-sbatch job.sh
-squeue -u $USER
-sacct -j <jobid>
-scancel <jobid>
-sinfo
-```
+The scheduler is responsible for coordinating all work on the cluster.
 
----
+It:
 
-## Partitions
+- allocates resources (CPU, memory, GPU)
+- decides when and where jobs run
+- ensures fair usage across users
+- manages queues and priorities
 
-Compute resources are grouped into partitions.
-
-Common partitions include:
-
-- `ada` — general CPU workloads
-- `curie` — additional CPU capacity
-- `l40s`, `a100` — GPU-enabled nodes
-
-Check current partitions and availability:
-
-```bash
-sinfo
-```
+This allows many users to share the system efficiently.
 
 ---
 
-## Job script
+## How jobs are scheduled
 
-```bash
-#!/bin/bash
-#SBATCH --job-name=my-job
-#SBATCH --partition=ada
-#SBATCH --cpus-per-task=4
-#SBATCH --mem=16G
-#SBATCH --time=02:00:00
-#SBATCH --output=logs/job-%j.out
-#SBATCH --error=logs/job-%j.err
+When a job is submitted:
 
-module purge
-module load python/miniconda3-py3.12
+- it is placed in a queue
+- it waits until the requested resources are available
+- it runs on a suitable compute node
 
-python script.py
-```
+Jobs do not run immediately unless resources are free.
 
 ---
 
-## Resource requests
+## Partitions (queues)
 
-Each job defines its required resources.
+Compute resources are grouped into partitions (also called queues).
 
-- more resources than needed → longer queue times  
-- fewer resources than needed → job failure or reduced performance  
+Each partition represents a set of nodes with specific capabilities.
 
-Shorter jobs are often scheduled sooner.
+Examples include:
+
+- CPU partitions for general workloads
+- GPU partitions for accelerated workloads
+
+Jobs must specify a partition that matches their requirements.
 
 ---
 
 ## Job lifecycle
 
-1. submit job (`sbatch`)
-2. wait in queue
-3. run on compute node
-4. complete or fail
+All jobs follow the same lifecycle:
 
-Check output:
+1. **Submission** — job is sent to the scheduler  
+2. **Pending** — job waits in the queue  
+3. **Running** — job executes on compute resources  
+4. **Completion** — job finishes successfully or fails  
 
-```bash
-cat logs/job-<jobid>.out
-cat logs/job-<jobid>.err
-```
+Output and error logs are written during execution.
 
 ---
 
-## Interactive jobs
+## Resource allocation
 
-Use for short or exploratory work:
+Each job requests a set of resources, such as:
 
-```bash
-srun --partition=ada --cpus-per-task=2 --mem=8G --time=01:00:00 --pty bash
-```
+- number of CPU cores
+- amount of memory
+- number and type of GPUs
+- wall time (maximum runtime)
+
+The scheduler uses these requests to determine when and where the job can run.
+
+Accurate resource requests are important:
+
+- requesting more than needed can increase queue time
+- requesting too little can cause failures or poor performance
 
 ---
 
-## Login node usage
+## Backfill scheduling
 
-The login node is a shared access point.
+SLURM may run smaller jobs earlier if they can fit into available gaps between larger jobs.
 
-Use it for:
+This is known as backfill scheduling.
 
-- connecting
-- editing files
+Providing accurate wall time increases the likelihood that a job can be scheduled sooner.
+
+---
+
+## Job isolation
+
+Each job runs in an isolated allocation of resources:
+
+- dedicated CPU cores
+- dedicated memory
+- optionally dedicated GPUs
+
+This prevents interference between users and ensures predictable performance.
+
+---
+
+## Login node vs compute nodes
+
+The login node is a shared access point used for:
+
+- connecting to the system
+- preparing jobs
 - submitting jobs
 
-Do not use it for:
+Compute nodes are used for:
 
-- running computations
-- long-running processes
+- running all computational work
 
-Processes that impact other users may be terminated.
+Running heavy workloads on the login node is not permitted and may result in processes being terminated.
 
 ---
 
-## Good practice
+## Related pages
 
-- test jobs with small inputs
-- request only what you need
-- use logs to diagnose issues
+- [Submit a job](../../how-to/hpc/submit-a-job.md)
+- [Run interactive jobs](../../how-to/hpc/run-interactive-jobs.md)
+- [Choosing resources](../../good-practice/hpc/choosing-resources.md)
+- [System overview](../../reference/hpc/system-overview.md)

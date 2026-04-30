@@ -1,251 +1,161 @@
 # Run R, Python and MATLAB jobs
 
-Run R, Python and MATLAB scripts on the UCT HPC cluster using the scheduler.
+## Overview
+
+Run R, Python and MATLAB scripts on the HPC system using the scheduler.
+
+These jobs are submitted as batch jobs and run on compute nodes.
 
 ---
 
-## When to use this guide
-
-Use this guide when you already have an R, Python or MATLAB script and want to run it as a scheduled batch job on the HPC system.
-
-Do not run computationally intensive R, Python or MATLAB scripts directly on the login node. Submit them to the scheduler using `sbatch`.
-
----
-
-## Before you start
+## Before you begin
 
 Make sure:
 
 - you can log into the HPC system  
   (see: [Log into HPC](log-into-hpc.md))
-- your script is saved on the HPC system
-- your input data is accessible from the HPC system
-- you know which software module you need to load
-- you know your HPC account or research group allocation
+- your script is available on the system
+- your input data is accessible
+- you know which software module to use  
+- you have identified the required resources  
+  (see: [Choosing resources](../../good-practice/hpc/choosing-resources.md))
 
-You can list available software modules with:
-
-```bash
-module avail
-```
+For background on how jobs are scheduled, see:  
+[Scheduler and job submission](../../reference/hpc/scheduler-and-job-submission.md)
 
 ---
 
-## General job script structure
+## Steps
 
-R, Python and MATLAB jobs all use the same basic pattern:
+### 1. Create a job script
 
-1. create a shell script
-2. request resources using `#SBATCH` directives
-3. load the required software module
-4. run your script
-5. submit the job with `sbatch`
+All jobs follow the same structure:
 
-!!! warning "Do not run the job script directly"
-    Submit the job with `sbatch`.  
-    Do not run `bash job.sh`, because this runs the script on the login node.
+- request resources using `#SBATCH`
+- load the required module
+- run your script
 
 ---
 
-## Run an R job
-
-Create a job script, for example `run-r-job.sh`:
+### 2. Run an R job
 
 ```bash
-#!/bin/sh
+#!/bin/bash
 #SBATCH --account=myaccount
 #SBATCH --partition=ada
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --time=10:00
-#SBATCH --job-name="MyRJob"
+#SBATCH --time=00:10:00
+#SBATCH --job-name=my-r-job
 
 module load software/R-4.3.3
+
 R CMD BATCH MyRScript.R
 ```
 
-Submit the job:
-
-```bash
-sbatch run-r-job.sh
-```
-
-Replace:
-
-- `myaccount` with your HPC account or research group allocation
-- `MyRScript.R` with the name of your R script
-- `software/R-4.3.3` with the appropriate R module, if needed
-
 ---
 
-## Run a Python job
-
-Create a job script, for example `run-python-job.sh`:
+### 3. Run a Python job
 
 ```bash
-#!/bin/sh
+#!/bin/bash
 #SBATCH --account=myaccount
 #SBATCH --partition=ada
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --time=10:00
-#SBATCH --job-name="MyPythonJob"
+#SBATCH --time=00:10:00
+#SBATCH --job-name=my-python-job
 
 module load python/miniconda3-py3.12
+
 python MyPythonScript.py
 ```
 
-Submit the job:
-
-```bash
-sbatch run-python-job.sh
-```
-
-Replace:
-
-- `myaccount` with your HPC account or research group allocation
-- `MyPythonScript.py` with the name of your Python script
-- `python/miniconda3-py3.12` with the appropriate Python module, if needed
-
-!!! note "Python modules"
-    UCT HPC uses Miniconda for Python modules. The Python version is usually included in the module name.
-
 ---
 
-## Run a MATLAB job
-
-Create a job script, for example `run-matlab-job.sh`:
+### 4. Run a MATLAB job
 
 ```bash
-#!/bin/sh
+#!/bin/bash
 #SBATCH --account=myaccount
 #SBATCH --partition=ada
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --time=10:00
-#SBATCH --job-name="MyMatlabJob"
+#SBATCH --time=00:10:00
+#SBATCH --job-name=my-matlab-job
 
 module load software/matlab-R2024b
+
 matlab -batch MyMatlabScript
 ```
 
-Submit the job:
+---
+
+### 5. Submit the job
 
 ```bash
-sbatch run-matlab-job.sh
+sbatch job.sh
 ```
-
-Replace:
-
-- `myaccount` with your HPC account or research group allocation
-- `MyMatlabScript` with the name of your MATLAB script
-- `software/matlab-R2024b` with the appropriate MATLAB module, if needed
-
-!!! warning "MATLAB script names"
-    When using `matlab -batch`, do not include the `.m` extension.  
-    Use `matlab -batch MyMatlabScript`, not `matlab -batch MyMatlabScript.m`.
 
 ---
 
-## Check job status
-
-After submitting your job, check whether it is queued or running:
+### 6. Check job status
 
 ```bash
-squeue -u <username>
+squeue -u $USER
 ```
 
-Replace `<username>` with your UCT username.
+---
 
-You can also check the output file:
+## Important notes
 
-```bash
-tail -f slurm-<jobid>.out
-```
+- do not run scripts directly on the login node  
+- always submit jobs using `sbatch`  
+- loading the correct module is required  
+- requesting more resources does not automatically improve performance  
 
 ---
 
 ## Adjust resources
 
-The examples above request one node and one task:
+The examples above use a single task:
 
 ```bash
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 ```
 
-This is suitable for many simple R, Python and MATLAB scripts.
+If your script supports parallel execution:
 
-If your script can use multiple cores, adjust the resource request and make sure your code is configured to use those cores. Requesting more cores will not automatically make a script run faster.
+- increase `--ntasks`
+- configure your code to use multiple cores  
 
-For parallel jobs, see:
-
-- [Run parallel jobs](run-parallel-jobs.md)
-
----
-
-## Common mistakes
-
-- running the job script with `bash` instead of `sbatch`
-- forgetting to load the required software module
-- using the wrong module version
-- requesting more cores than the script can use
-- running large jobs from the login node
-- including `.m` when using `matlab -batch`
+For parallel execution, see:  
+[Run parallel jobs](run-parallel-jobs.md)
 
 ---
 
 ## Troubleshooting
 
-### Command not found
+**Command not found**
+- ensure the correct module is loaded  
 
-The required software module may not be loaded.
+**Job fails immediately**
+- check output files for errors  
 
-Check available modules:
+**Missing packages (R/Python)**
+- verify installed packages or use appropriate environments  
 
-```bash
-module avail
-```
-
-Load the relevant module before running your script.
-
-### Job fails immediately
-
-Check the Slurm output file:
-
-```bash
-cat slurm-<jobid>.out
-```
-
-Look for errors such as missing files, incorrect paths, missing packages or incorrect module names.
-
-### Script cannot find input files
-
-Check that your input files are in the expected location and that your job script uses the correct paths.
-
-### Python package is missing
-
-Check whether a suitable Python module is available. If you need additional Python packages, follow the local guidance for using Python environments on the HPC system or contact support.
-
-### R package is missing
-
-Check whether the package is already available in the loaded R module. If not, you may need to install it in your user environment or request advice from support.
-
-### MATLAB script does not start
-
-Make sure you are using:
-
-```bash
-matlab -batch MyMatlabScript
-```
-
-Do not include the `.m` extension in the command.
+**MATLAB script does not start**
+- use `matlab -batch MyMatlabScript` (no `.m` extension)  
 
 ---
 
-## Next steps
+## Related pages
 
 - [Submit a job](submit-a-job.md)
-- [Check job status](check-job-status.md)
 - [Run parallel jobs](run-parallel-jobs.md)
 - [Run interactive jobs](run-interactive-jobs.md)
+- [Check job status](check-job-status.md)
+- [Choosing resources](../../good-practice/hpc/choosing-resources.md)
+- [Scheduler and job submission](../../reference/hpc/scheduler-and-job-submission.md)

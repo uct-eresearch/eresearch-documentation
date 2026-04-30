@@ -1,6 +1,10 @@
 # Run parallel jobs
 
-Run jobs that use multiple CPU cores or nodes on the HPC system.
+## Overview
+
+Run jobs that use multiple CPU cores or multiple nodes on the HPC system.
+
+Parallel jobs are used for workloads that can execute simultaneously across cores or machines.
 
 ---
 
@@ -9,10 +13,13 @@ Run jobs that use multiple CPU cores or nodes on the HPC system.
 Use parallel jobs when your software:
 
 - can use multiple CPU cores  
-- supports MPI or multithreading  
-- benefits from distributed computation across nodes  
+- supports multithreading (e.g. OpenMP)  
+- supports distributed computing (e.g. MPI)  
 
-If your software is not parallel-aware, requesting more cores or nodes will not make it faster.
+If your software is not parallel-aware, requesting more resources will not improve performance.
+
+For background on how resources are allocated and scheduled, see:  
+[Scheduler and job submission](../../reference/hpc/scheduler-and-job-submission.md)
 
 ---
 
@@ -20,43 +27,49 @@ If your software is not parallel-aware, requesting more cores or nodes will not 
 
 ### Single-node parallel jobs
 
-- use multiple cores on one node  
+- run on one node  
+- use multiple CPU cores  
 - suitable for multithreaded applications  
 
 ### Multi-node parallel jobs
 
-- use cores across multiple nodes  
-- require MPI or distributed computing support  
+- run across multiple nodes  
+- require MPI or similar frameworks  
+- suitable for distributed workloads  
 
 ---
 
-## Example: single-node parallel job
+## Steps
+
+### 1. Create a job script
+
+#### Single-node parallel job
 
 ```bash
-#!/bin/sh
+#!/bin/bash
 #SBATCH --account=myaccount
 #SBATCH --partition=ada
 #SBATCH --time=02:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=8
-#SBATCH --job-name="ParallelJob"
+#SBATCH --job-name=parallel-job
 
 myprogram -n ${SLURM_NTASKS}
 ```
 
 ---
 
-## Example: multi-node MPI job
+#### Multi-node MPI job
 
 ```bash
-#!/bin/sh
+#!/bin/bash
 #SBATCH --account=myaccount
 #SBATCH --partition=ada
 #SBATCH --time=02:00:00
 #SBATCH --nodes=2
 #SBATCH --ntasks=8
 #SBATCH --ntasks-per-node=4
-#SBATCH --job-name="MPIJob"
+#SBATCH --job-name=mpi-job
 
 module load mpi/openmpi
 
@@ -65,28 +78,39 @@ srun my_mpi_program
 
 ---
 
-## Key directives
+### 2. Submit the job
 
-- `--nodes` → number of nodes  
-- `--ntasks` → total number of cores  
-- `--ntasks-per-node` → cores per node  
+```bash
+sbatch job.sh
+```
 
 ---
 
-## Important notes
+### 3. Monitor the job
 
-- Do not request multiple nodes unless your software supports it  
-- More cores do not always mean faster performance  
-- Jobs may run slower across nodes due to communication overhead  
+```bash
+squeue -u $USER
+```
+
+---
+
+## Key directives
+
+- `--nodes` → number of nodes  
+- `--ntasks` → total number of tasks (cores)  
+- `--ntasks-per-node` → tasks per node  
+
+Choose resources carefully:  
+[Choosing resources](../../good-practice/hpc/choosing-resources.md)
 
 ---
 
 ## Using environment variables
 
-Use SLURM variables to match your program to allocated resources:
+Match your program to allocated resources:
 
-- `${SLURM_NTASKS}` → total number of cores  
-- `${SLURM_TASKS_PER_NODE}` → cores per node  
+- `${SLURM_NTASKS}` → total number of tasks  
+- `${SLURM_TASKS_PER_NODE}` → tasks per node  
 
 Example:
 
@@ -106,22 +130,30 @@ export OMP_NUM_THREADS=${SLURM_NTASKS}
 
 ---
 
+## Important notes
+
+- only request multiple nodes if your software supports it  
+- more resources do not always mean faster performance  
+- multi-node jobs may incur communication overhead  
+
+---
+
 ## Troubleshooting
 
-### Job does not scale
-
+**Job does not scale**
 - software may not support parallel execution  
-- try running on fewer cores  
+- try fewer cores  
 
-### Poor performance
-
-- avoid spreading jobs across nodes unless necessary  
+**Poor performance**
+- avoid multi-node jobs unless necessary  
 - check CPU and memory usage  
 
 ---
 
-## Next steps
+## Related pages
 
-- [Submit a job](submit-a-job.md)  
-- [Check job status](check-job-status.md)  
+- [Submit a job](submit-a-job.md)
 - [Run interactive jobs](run-interactive-jobs.md)
+- [Check job status](check-job-status.md)
+- [Choosing resources](../../good-practice/hpc/choosing-resources.md)
+- [Scheduler and job submission](../../reference/hpc/scheduler-and-job-submission.md)

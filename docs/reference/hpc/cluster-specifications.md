@@ -27,4 +27,4 @@ The UCT HPC cluster consists of multiple node types grouped into partitions with
 
 ## Related pages
 
-- [Choosing resources](../../good-practice/choose-resources/)
+- [Choosing resources](../../good-practice/hpc/choosing-resources.md)
